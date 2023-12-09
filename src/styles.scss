@@ -39,5 +39,6 @@ background-color: rgba(2, 99, 82, 0.125)
     border: 1px solid rgba(0, 56, 46);
     color: white !important;
   }
-html, body { height: 100%; }
+html, body { height: 100%;
+  scroll-behavior: smooth; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
