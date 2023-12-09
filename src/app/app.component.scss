@@ -1,10 +1,10 @@
 .btn{
-    background: #AF5FC3 !important;
-    border: 1px solid #AF5FC3;
+    background: #026352 !important;
+    border: 1px solid #026352;
     color: white;
 }
 .icon-sun-tabler{
-    background: #AF5FC3;
+    background: #026352;
 }
 html{
     background: #d9f7fe;
@@ -12,3 +12,17 @@ html{
 body{
     background-color: #d9f7fe;
 }
+.active {
+    color: #026352!important;
+  }
+  span{
+    color: white !important;
+    background: #026352;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+    border: 6px solid rgba($color: white, $alpha: 0.8);
+    letter-spacing: 8px;
+    font-weight: bold;
+    font-size: 28px;
+  }
