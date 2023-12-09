@@ -1,6 +1,6 @@
 <body>
-  <nav class="navbar navbar-expand-md fixed-top navbar-shrink py-3 navbar-light" id="mainNav" style="background: #95aeb4;">
-      <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span>CSI</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+  <nav class="navbar navbar-expand-md fixed-top navbar-shrink "  [ngClass]="{'transparent-navbar': isNavbarTransparent, 'colored-navbar': !isNavbarTransparent}">
+      <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span>CSI</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navcol-1">
               <ul class="navbar-nav mx-auto">
                   <li class="nav-item"><a class="nav-link" routerLink="home" routerLinkActive="active">Home</a></li>
@@ -62,8 +62,6 @@
           </div>
       </div>
   </footer>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/startup-modern.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/js/startup-modern.js"></script>
   </body>

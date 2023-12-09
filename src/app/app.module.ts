@@ -8,6 +8,7 @@ import { FeaturesComponent } from './features/features.component';
 import { IntegrationsComponent } from './integrations/integrations.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { HomeComponent } from './home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
