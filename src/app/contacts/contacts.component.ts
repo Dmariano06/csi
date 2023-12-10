@@ -14,7 +14,7 @@ export class ContactsComponent {
   constructor(private http: HttpClient) {}
 
     onSubmit() {
-      this.http.post('http://localhost:8080/api/contact', this.entity)
+      this.http.post('https://csi-backend-service.onrender.com/api/contact', this.entity)
         .subscribe((response) => {
           console.log('Email sent successfully!', response);
   
