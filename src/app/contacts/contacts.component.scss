@@ -1,0 +1,18 @@
+#contacts{
+    label{
+        border-radius: 100px !important;
+    }
+}
+input,textarea,.btn{
+    border-radius: 30px !important;
+    padding: 10px;
+}
+.bs-icon-circle{
+    background-color: #026352 !important;
+}
+::placeholder{
+    margin: 5px !important;
+}
+.container{
+    margin-top: 5%;
+}

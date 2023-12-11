@@ -6,6 +6,21 @@
 .icon-sun-tabler{
     background: #026352;
 }
+a{
+    padding-left: 5px;
+    font-weight: bold;
+}
+.navbar{
+    img{
+        height: 50px;
+        width: 120px;
+    }
+}
+a:hover{
+    background: rgba($color: #026352, $alpha: 0.3);
+    border-radius: 3px;
+    color: #026352;
+}
 html{
     background: #d9f7fe;
 }
