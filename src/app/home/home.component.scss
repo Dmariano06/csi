@@ -19,7 +19,15 @@
     text-decoration: none;
   }
 }
-  
+  .bs-icon-lg{
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    svg{
+      height: 32px;
+      width: 32px;
+    }
+  }
 .underline::after {
     content: "";
 position: absolute;
