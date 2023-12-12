@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Spice&display=swap');
 #appweb{
     background: linear-gradient(0deg, rgba(2, 99, 82, 0.05) 0%, rgba(84, 94, 161, 0.18) 100%);
     p{
@@ -25,7 +26,44 @@ padding-left: 5px !important;
       width: 32px;
     }
   }
+  .accordion-item,.accordion-body,.accordion-header,.accordion-button{
+    background: transparent !important;
+  }
+  .slide-up {
+   // position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateY(-200%);
+    animation: slideUp 3s forwards; /* Animation de 3 secondes */
+  }
+  @keyframes slideUp {
+    to {
+      transform: translateX(0%) translateY(-20%); /* Déplacez l'image vers le haut de la page */
+      opacity: 1; /* Rendez l'image invisible à la fin de l'animation */
+    }
+  }
+header{
 
+  h1,p{
+    padding-bottom: 20px;
+  color: #00e7a7 !important;
+  text-shadow: -1px -1px 3px #020202, 
+  2px 2px 4px #1b1b1b;
+  font-family: 'Bungee Inline', sans-serif;
+  }
+
+  background-repeat: no-repeat;
+  object-fit: contain;
+  background-image:url("../../assets/img/illustrations/Design\ sans\ titre.png");
+}
+@media(max-width:800px){
+  header{
+    background-image: url("../../assets/img/illustrations/fondmobile.png");
+  }
+} 
+.highlight-text {
+
+}
   #techno{
     margin-top: 30%;
   }
