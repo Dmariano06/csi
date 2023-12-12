@@ -7,13 +7,7 @@
       color: #212529 !important;
     }
 }
-#bg-icon{
-    background-color: transparent !important;
-}
-.underline {
-    position: relative;
-    display: inline-block;
-  }
+
 *{
   a{
     text-decoration: none;
@@ -31,33 +25,11 @@ padding-left: 5px !important;
       width: 32px;
     }
   }
-.underline::after {
-    content: "";
-position: absolute;
-bottom: -2px;
-left: 0;
-width: 100%;
-height: 8px;
-z-index: 0;
-border-radius: 5px;
-background-color: rgba(2, 99, 82, 0.125)
-  }
+
   #techno{
     margin-top: 30%;
   }
- span {
-    color:rgba(2, 99, 82, 1) !important;
-  }
-  .btn{
-    padding: 5px !important;
-    background-color: rgba(2, 99, 82, 1);
-    border: 1px solid rgba(2, 99, 82, 1);
-    color: white;
-  }
-  .btn:hover{
-    background-color: rgb(0, 56, 46);
-    border: 1px solid rgba(0, 56, 46);
-  }
+ 
   @media (max-width: 800px) {
     #techno{
       margin-top: 0;
