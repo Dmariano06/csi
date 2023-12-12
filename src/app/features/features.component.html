@@ -1,10 +1,10 @@
 <section class="py-5 mt-5">
     <div class="container py-4 py-xl-5">
         <div class="row gy-4 gy-md-0">
-            <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+            <div *ngFor = "let text of texts" class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
                 <div style="max-width: 350px;">
-                    <h1 class="display-6 fw-bold mb-4">Everything your team needs in one&nbsp;<span class="underline">platform</span>.</h1>
-                    <p class="my-4">Tincidunt laoreet leo, adipiscing taciti tempor. Primis senectus sapien, risus donec ad fusce augue interdum.</p><a class="btn btn-primary btn-lg me-2" role="button" href="#">Button</a><a class="btn btn-light btn-lg" role="button" href="#">Button</a>
+                    <h1 class="display-6 fw-bold mb-4">{{text.name}}&nbsp;<span class="underline">platforme</span>.</h1>
+                    <p class="my-4">{{text.name1}}</p><a class="btn btn-primary btn-lg me-2" role="button" href="#">Button</a><a class="btn btn-light btn-lg" role="button" href="#">Button</a>
                 </div>
             </div>
             <div class="col-md-6">

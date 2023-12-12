@@ -1,3 +1,35 @@
 .mb-0{
     color:#505a5f !important;
   }
+  .btn{
+    margin: auto;
+  }
+  .gy-4{
+  }
+  .card-body{
+    padding: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+ul{
+    li{
+        font-size: 22px;
+        color: #505a5f !important;
+    }
+}
+.popular{
+    border: 2px solid rgb(255,210,0) ;
+}
+.badge{
+    border-radius: 0 !important;
+    color: #505a5f !important;
+    font-weight: lighter !important;
+    background-color: rgb(255,210,0) !important;
+}
+.btn-popular{
+    background-color: rgb(255,210,0) !important;
+    border: rgb(255,210,0) 1px solid;
+}
+.btn-popular:hover{
+    background-color: rgb(153, 125, 0) !important;   
+    border:1px solid rgb(153, 125, 0) ;
+}
