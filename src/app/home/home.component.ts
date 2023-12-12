@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -35,4 +35,11 @@ export class HomeComponent {
   image3="../../assets/img/illustrations/Le_pape_de_Jsus_developpementmodernworkinguxuidecoration3dvecto_ee2908ff-4600-43ca-97f8-82cb4afeedfd - Modifié.png";
   image4 = "../../assets/img/illustrations/Le_pape_de_Jsus_modern_working_ux_ui_decoration_2d_vector_art_c_f27fa1ac-a22d-449c-91cb-da7f473d333c - Modifié.png";
 */
+scrollOffset = 0;
+
+@HostListener('window:scroll', ['$event'])
+onScroll(event: Event): void {
+  this.scrollOffset = window.scrollY;
+}
+
 }
