@@ -5,7 +5,7 @@ import { Component, HostListener } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent{
   headers = [
     {text: "Explorez le potentiel du", text1:"digital"}
   ]
@@ -14,7 +14,6 @@ export class HomeComponent {
     {text:"Explorez notre application web révolutionnaire, alliant simplicité d'utilisation et fonctionnalités avancées.", title:"Application Web"},
     {text:"Nos sites sur mesure sont conçu avec expertise pour répondre à vos besoins spécifiques.", title:"Site sur mesure"}
   ];
- 
 
 scrollOffset = 0;
 
