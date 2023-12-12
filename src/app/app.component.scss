@@ -1,7 +1,9 @@
 .btn{
     background: #026352 !important;
     border: 1px solid #026352;
-    color: white;
+    color: white !important;
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
 }
 .icon-sun-tabler{
     background: #026352;
@@ -10,7 +12,7 @@ a{
     text-transform: uppercase;
     padding-left: 10px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
 }
 .navbar{
     img{
@@ -35,10 +37,6 @@ html{
 body{
     background-color: #d9f7fe;
 }
-.active {
-    color: #026352!important;
-    font-weight: bold;
-  }
 
     .navbar-toggler-icon{
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(2, 99, 82, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -57,7 +55,22 @@ body{
   .colored-navbar {
     background-color: #95aeb4 !important; 
     transition: background-color 0.5s ease;
+    a{
+        color: white !important;
+    }
+    .active{
+        color:#026352 !important;
+    }
   }
+  .active {
+    color: #026352!important;
+    font-weight: bold;
+  }
+  footer{
+    a{color: #3f4a4d !important;
+    font-weight: lighter;}
+  }
+
 @media (max-width:800px){
     nav{
         li{
