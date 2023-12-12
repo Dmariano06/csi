@@ -11,7 +11,6 @@ export class AppComponent {
   onWindowScroll() {
     const offset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-    // Changez la valeur 100 par la position à partir de laquelle la couleur doit changer
     if (offset > 100) {
       this.isNavbarTransparent = false;
     } else {
