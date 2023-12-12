@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ComposantComponent } from './composant/composant.component';
+import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     FeaturesComponent,
     IntegrationsComponent,
     PricingComponent,
-    HomeComponent
+    HomeComponent,
+    ComposantComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
