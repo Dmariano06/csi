@@ -8,6 +8,9 @@
 .icon-sun-tabler{
     background: #026352;
 }
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(2, 99, 82, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
 a{
     text-transform: uppercase;
     padding-left: 10px;
@@ -17,7 +20,7 @@ a{
 .navbar{
     img{
         height: 50px;
-        width: 115px;
+        width: 120px;
     }
 }
 .navbar-nav{
@@ -38,50 +41,53 @@ body{
     background-color: #d9f7fe;
 }
 
-    .navbar-toggler-icon{
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(2, 99, 82, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-    }
-
 .navbar-toggler{
     border-color: transparent;
 }
-
 .transparent-navbar {
     background: transparent !important;
     transition: background-color 0.5s ease;
   }
-  
-  
   .colored-navbar {
-    background-color: #95aeb4 !important; 
+    background-color: #d9f7fe!important; 
     transition: background-color 0.5s ease;
-    a{
-        color: white !important;
-    }
     .active{
         color:#026352 !important;
     }
   }
+
+.navbar-toggler{
+    outline: none !important;
+    box-shadow: none !important;
+}
   .active {
     color: #026352!important;
     font-weight: bold;
   }
+  
   footer{
     a{color: #3f4a4d !important;
     font-weight: lighter;}
   }
 
 @media (max-width:800px){
+    .transparent-navbar {
+        background: #d9f7fe !important;
+        transition: background-color 0.5s ease;
+
+      }
     nav{
         li{
-        background-color: rgba($color: #95aeb4, $alpha: 0.3)!important;
-        border-top: 2px solid #3f4a4d;
-        padding: 4px;
+        border-top: 2px solid #026352;
         font-weight: 300;
         }
         li:hover{
-            background-color: #d9f7fe !important;
             transition: ease 0.5s;
         }
     }
+
 } 
+.active {
+    color: #026352!important;
+    font-weight: bold;
+  }

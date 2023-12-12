@@ -1,20 +1,46 @@
 <body>
-  <nav class="navbar navbar-expand-md fixed-top navbar-shrink "  [ngClass]="{'transparent-navbar': isNavbarTransparent, 'colored-navbar': !isNavbarTransparent}">
-      <div class="container"><a class="navbar-brand d-flex align-items-center" routerLink="home">
-        <picture>
-            <source srcset="../assets/img/illustrations/logo-png.webp" type="image/webp">
-            <source srcset="../assets/img/illustrations/logo-png.webp" type="image/png">
-        <img src="../assets/img/illustrations/logo-png.webp" alt=""></picture></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse" id="navcol-1">
-              <ul class="navbar-nav mx-auto">
-                  <li class="nav-item"><a class="nav-link" routerLink="home" routerLinkActive="active">Accueil</a></li>
+  <nav class="navbar navbar-dark bg-dark fixed-top"  [ngClass]="{'transparent-navbar': isNavbarTransparent, 'colored-navbar': !isNavbarTransparent}">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><picture>
+        <source srcset="../assets/img/illustrations/logo-png.webp" type="image/webp">
+        <source srcset="../assets/img/illustrations/logo-png.webp" type="image/png">
+    <img src="../assets/img/illustrations/logo-png.webp" alt=""></picture></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item"><a class="nav-link" routerLink="home" routerLinkActive="active">Accueil</a></li>
                   <li class="nav-item"><a class="nav-link" routerLink="features" routerLinkActive="active">Services</a></li>
                   <li class="nav-item"><a class="nav-link" routerLink="integrations" routerLinkActive="active">Contacts</a></li>
                   <li class="nav-item"><a class="nav-link" routerLink="pricing" routerLinkActive="active">Prix</a></li>
                   <li class="nav-item"><a class="nav-link" routerLink="contacts" routerLinkActive="active">A propos</a></li>
-              </ul><a class="btn" role="button" routerLink="signup" routerLinkActive="active">Contact</a>
-          </div>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+        </div>
       </div>
+    </div>
   </nav>
   <router-outlet></router-outlet>
   <footer>

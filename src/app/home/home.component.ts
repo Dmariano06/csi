@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   headers = [
-    {text: "Explorez le potentiel extraordinaire", text1:"du digital"}
+    {text: "Explorez le potentiel du", text1:"digital"}
   ]
   presentations = [
     {text: "Découvrez notre site e-commerce innovant, offrant une gamme exceptionnelle de produits/services.", title:"E-commerce"},

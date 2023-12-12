@@ -44,6 +44,7 @@ html, body { height: 100%;
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 *{
   text-decoration: none !important;
+  list-style: none;
 }
 .btn{
   background: #026352 !important;
@@ -53,55 +54,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .icon-sun-tabler{
   background: #026352;
 }
-a{
-  text-transform: uppercase;
-  padding-left: 10px;
-  font-weight: bold;
-  font-size: 14px;
 
-}
-.navbar{
-  img{
-      height: 50px;
-      width: 120px;
-  }
-}
-.navbar-nav{
-  img{
-      height: 50px;
-      width: 120px;
-  }
-a:hover{
-  background: rgba($color: #026352, $alpha: 0.3);
-  border-radius: 3px;
-  color: #026352;
-}
-}
-
-
-.active {
-  color: #026352!important;
-  font-weight: bold;
-}
-
-  .navbar-toggler-icon{
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(2, 99, 82, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  }
-
-.navbar-toggler{
-  border-color: transparent;
-}
-
-.transparent-navbar {
-  background: transparent !important;
-  transition: background-color 0.5s ease;
-}
-
-
-.colored-navbar {
-  background-color: #95aeb4 !important; 
-  transition: background-color 0.5s ease;
-}
 .button {
   background: #026352;
   border-radius: 999px;
@@ -128,17 +81,3 @@ a:hover{
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   transition: 0.3s ease-in-out;
 }
-@media (max-width:800px){
-  nav{
-      li{
-      background-color: rgba($color: #95aeb4, $alpha: 0.3)!important;
-      border-top: 2px solid #3f4a4d;
-      padding: 4px;
-      font-weight: 300;
-      }
-      li:hover{
-          background-color: #d9f7fe !important;
-          transition: ease 0.5s;
-      }
-  }
-} 
