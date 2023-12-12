@@ -44,6 +44,9 @@ body{
 .navbar-toggler{
     border-color: transparent;
 }
+.btn-close{
+    box-shadow: rgba(0, 231, 167, 0.25) 0px 30px 60px -12px inset, rgba(0, 231, 167, 0.3) 0px 18px 36px -18px inset;
+}
 .transparent-navbar {
     background: transparent !important;
     transition: background-color 0.5s ease;
@@ -71,11 +74,6 @@ body{
   }
 
 @media (max-width:800px){
-    .transparent-navbar {
-        background: #d9f7fe !important;
-        transition: background-color 0.5s ease;
-
-      }
     nav{
         li{
         border-top: 2px solid #026352;
