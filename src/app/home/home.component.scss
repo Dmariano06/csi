@@ -65,7 +65,19 @@ background-position: center; /* Centre la position de l'image */
   .parallax1{
   height: 100vh;
   }
-  background-image:url("../../assets/img/illustrations/fondheader.png");
+
+}
+@supports (background-image: url('../../assets/img/illustrations/fondheader-min.webp')) {
+  header {
+    background-image: url('../../assets/img/illustrations/fondheader-min.webp');
+  }
+}
+
+/* Utilisation de PNG si WebP n'est pas supporté */
+@supports not (background-image: url('../../assets/img/illustrations/fondheader-min.webp')) {
+  header {
+    background-image: url('../../assets/img/illustrations/fondheader-min.png');
+  }
 }
 .parallax {
   height: 100vh;
@@ -83,8 +95,17 @@ background-position: center; /* Centre la position de l'image */
     margin-bottom: 60vh;
     height: 100vh;
   }
-  header{
-    background-image: url("../../assets/img/illustrations/fondmobile.png");
+  @supports (background-image: url('../../assets/img/illustrations/fondmobile-min.webp')) {
+    header {
+      background-image: url('../../assets/img/illustrations/fondmobile-min.webp');
+    }
+  }
+  
+  /* Utilisation de PNG si WebP n'est pas supporté */
+  @supports not (background-image: url('../../assets/img/illustrations/fondmobile-min.webp')) {
+    header {
+      background-image: url('../../assets/img/illustrations/fondmobile-min.png');
+    }
   }
 } 
 
