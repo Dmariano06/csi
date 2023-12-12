@@ -74,14 +74,21 @@ background-position: center; /* Centre la position de l'image */
   background-repeat: no-repeat;
   background-size: cover;
 }
+.parallax2{
+ height: 50vh;
+
+}
 @media(max-width:800px){
+  .parallax2{
+    margin-bottom: 250px;
+    height: 100vh;
+  }
   header{
     background-image: url("../../assets/img/illustrations/fondmobile.png");
   }
 } 
-.highlight-text {
 
-}
+
   #techno{
     margin-top: 30%;
   }
