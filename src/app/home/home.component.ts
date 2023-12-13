@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -16,10 +16,15 @@ export class HomeComponent{
   ];
 
 scrollOffset = 0;
+lastScrollTop = 0;
+
+constructor(private renderer: Renderer2, private el: ElementRef) {}
+
 
 @HostListener('window:scroll', ['$event'])
 onScroll(event: Event): void {
-  this.scrollOffset = window.scrollY;
+
+    this.scrollOffset = window.scrollY;
+  }
 }
 
-}
