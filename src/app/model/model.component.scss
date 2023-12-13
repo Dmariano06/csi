@@ -1,6 +1,16 @@
 div { 
-    width: 200px; height: 200px;
+    width:800px; height: 600px;
     position: absolute;
     top: 20px;
-    right: 50%;
+    right: 15px;
+    overflow-x: hidden ;
+    overflow-y: hidden ;
+ }
+ @media(max-width:800px) {
+    div{
+
+        top: 450px;
+        height: 400px;
+        width: 400px;
+    }
  }
