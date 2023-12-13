@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ComposantComponent } from './composant/composant.component';
 import { FaqComponent } from './faq/faq.component';
+import { ModelComponent } from './model/model.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FaqComponent } from './faq/faq.component';
     PricingComponent,
     HomeComponent,
     ComposantComponent,
-    FaqComponent
+    FaqComponent,
+    ModelComponent
   ],
   imports: [
     BrowserModule,

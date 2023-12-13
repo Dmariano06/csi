@@ -11,7 +11,7 @@ export class AppComponent {
   onWindowScroll() {
     const offset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-    if (offset > 100) {
+    if (offset > 1200) {
       this.isNavbarTransparent = false;
     } else {
       this.isNavbarTransparent = true;
