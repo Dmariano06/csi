@@ -14,6 +14,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ComposantComponent } from './composant/composant.component';
 import { FaqComponent } from './faq/faq.component';
 import { ModelComponent } from './model/model.component';
+import { SceneComponent } from './scene/scene.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ModelComponent } from './model/model.component';
     HomeComponent,
     ComposantComponent,
     FaqComponent,
-    ModelComponent
+    ModelComponent,
+    SceneComponent
   ],
   imports: [
     BrowserModule,

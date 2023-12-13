@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&family=Bungee+Spice&display=swap');
 .btn{
-    background: #026352 !important;
-    border: 1px solid #026352;
+    background: #00e7a7 !important;
     color: white !important;
     border-radius: 999px;
-    box-shadow: #5E5DF0 0 10px 20px -10px;
+   // box-shadow: #026352 0 10px 20px -10px;
 }
 .icon-sun-tabler{
     background: #026352;
@@ -15,9 +14,7 @@
 a{
     text-transform: uppercase;
     padding-left: 10px;
-    font-weight: bold;
-    font-size: 18px;
-    font-family: 'Bungee', sans-serif;
+    font-size: 12px;
 }
 .navbar{
     img{
