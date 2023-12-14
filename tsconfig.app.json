@@ -3,7 +3,10 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [],
+    "paths": {
+      "three/examples/jsm/controls/OrbitControls": ["./node_modules/three/examples/jsm/controls/OrbitControls.js"]
+    }
   },
   "files": [
     "src/main.ts"
