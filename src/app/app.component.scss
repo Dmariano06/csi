@@ -58,6 +58,7 @@ body{
   .flex-row{
     font-weight: bold;
     font-family: 14px;
+
   }
   .flex-row:hover{
 padding: 0 !important;
@@ -99,6 +100,9 @@ padding: 0 !important;
         li:hover{
             transition: ease 0.5s;
         }
+    }
+    .flex-row{
+        display: none;
     }
 
 } 
