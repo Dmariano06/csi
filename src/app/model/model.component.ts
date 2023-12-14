@@ -6,7 +6,7 @@ import * as THREE from 'three';
   templateUrl: './model.component.html',
   styleUrls: ['./model.component.scss']
 })
-export class ModelComponent  {
+export class ModelComponent implements OnInit {
 
   @ViewChild('blobContainer', { static: true }) blobContainer!: ElementRef;
 
@@ -23,41 +23,29 @@ export class ModelComponent  {
   }
 
   ngOnInit() {
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
-    this.blobContainer.nativeElement.appendChild(this.renderer.domElement);
-
-    this.camera.position.z = 5;
+    this.setupRenderer();
+    this.setupCamera();
 
     this.scene.add(this.particles);
 
-    this.renderer.setClearColor(0x000000, 0);
+    this.animate();
+  }
 
+  private setupRenderer() {
+    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.blobContainer.nativeElement.appendChild(this.renderer.domElement);
+    this.renderer.setClearColor(0x000000, 0);
+  }
+
+  private setupCamera() {
+    this.camera.position.z = 5;
+  }
+
+  private animate() {
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // Move particles around
-      this.particles.rotation.x += 0.005;
-      this.particles.rotation.y += 0.005;
-
-      const positions = this.particles.geometry.attributes['position'].array as Float32Array;
-      const speeds = this.particles.geometry.attributes['speed'].array as Float32Array;
-
-      for (let i = 0; i < positions.length; i += 3) {
-        positions[i] += speeds[i]; // Update X position
-        positions[i + 1] += speeds[i + 1]; // Update Y position
-        positions[i + 2] += speeds[i + 2]; // Update Z position
-
-        // Wrap around if particles go beyond a certain range
-        const range = 5;
-        if (positions[i] > range) positions[i] = -range;
-        if (positions[i] < -range) positions[i] = range;
-        if (positions[i + 1] > range) positions[i + 1] = -range;
-        if (positions[i + 1] < -range) positions[i + 1] = range;
-        if (positions[i + 2] > range) positions[i + 2] = -range;
-        if (positions[i + 2] < -range) positions[i + 2] = range;
-      }
-
-      this.particles.geometry.attributes['position'].needsUpdate = true;
+      this.updateParticles();
 
       this.renderer.render(this.scene, this.camera);
     };
@@ -65,11 +53,46 @@ export class ModelComponent  {
     animate();
   }
 
+  private updateParticles() {
+    this.particles.rotation.x += 0.005;
+    this.particles.rotation.y += 0.005;
+
+    const positions = this.particles.geometry.getAttribute('position') as THREE.BufferAttribute;
+    const speeds = this.particles.geometry.getAttribute('speed') as THREE.BufferAttribute;
+
+    for (let i = 0; i < positions.array.length; i += 3) {
+      positions.array[i] += speeds.array[i];
+      positions.array[i + 1] += speeds.array[i + 1];
+      positions.array[i + 2] += speeds.array[i + 2];
+
+      this.wrapAround(positions, i);
+    }
+
+    positions.needsUpdate = true;
+  }
+
+  private wrapAround(positions: THREE.BufferAttribute, index: number) {
+    const range = 5;
+
+    positions.array[index] = this.wrapCoordinate(positions.array[index], range);
+    positions.array[index + 1] = this.wrapCoordinate(positions.array[index + 1], range);
+    positions.array[index + 2] = this.wrapCoordinate(positions.array[index + 2], range);
+  }
+
+  private wrapCoordinate(coord: number, range: number): number {
+    if (coord > range) {
+      return -range;
+    } else if (coord < -range) {
+      return range;
+    }
+    return coord;
+  }
+
   private createParticles(): THREE.Points {
-    const particleGeometry = new THREE.BufferGeometry();
-    const particleMaterial = new THREE.PointsMaterial({
+    const particlesGeometry = new THREE.BufferGeometry();
+    const particlesMaterial = new THREE.PointsMaterial({
       size: 0.02,
-      vertexColors: true, // Activer les couleurs par sommet
+      vertexColors: true,
     });
 
     const particlesCount = 1000;
@@ -86,47 +109,47 @@ export class ModelComponent  {
       const y = radius * Math.sin(phi) * Math.sin(theta);
       const z = radius * Math.cos(phi);
 
+      const color = this.assignColor(i);
+      const speed = this.assignSpeed();
+
       positions[i * 3] = x;
       positions[i * 3 + 1] = y;
       positions[i * 3 + 2] = z;
 
-      // Assigner la couleur en fonction de l'ordre de quantité
-      const colorIndex = i % 4;
-      switch (colorIndex) {
-        case 0:
-          colors[i * 3] = 0x67 / 255;  // R
-          colors[i * 3 + 1] = 0xe4 / 255;  // G
-          colors[i * 3 + 2] = 0x6f / 255;  // B
-          break;
-        case 1:
-          colors[i * 3] = 0x0b / 255;  // R
-          colors[i * 3 + 1] = 0x80 / 255;  // G
-          colors[i * 3 + 2] = 0x9c / 255;  // B
-          break;
-        case 2:
-          colors[i * 3] = 0xd9 / 255;  // R
-          colors[i * 3 + 1] = 0xf7 / 255;  // G
-          colors[i * 3 + 2] = 0xfe / 255;  // B
-          break;
-        case 3:
-          colors[i * 3] = 0xe1 / 255;  // R
-          colors[i * 3 + 1] = 0xcc / 255;  // G
-          colors[i * 3 + 2] = 0x06 / 255;  // B
-          break;
-      }
+      colors[i * 3] = color.r;
+      colors[i * 3 + 1] = color.g;
+      colors[i * 3 + 2] = color.b;
 
-      // Assigner une vitesse aléatoire
-      speeds[i * 3] = (Math.random() - 0.5) * 0.01; // Vitesse X
-      speeds[i * 3 + 1] = (Math.random() - 0.5) * 0.01; // Vitesse Y
-      speeds[i * 3 + 2] = (Math.random() - 0.5) * 0.01; // Vitesse Z
+      speeds[i * 3] = speed.x;
+      speeds[i * 3 + 1] = speed.y;
+      speeds[i * 3 + 2] = speed.z;
     }
 
-    particleGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-    particleGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-    particleGeometry.setAttribute('speed', new THREE.BufferAttribute(speeds, 3));
+    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+    particlesGeometry.setAttribute('speed', new THREE.BufferAttribute(speeds, 3));
 
-    const particles = new THREE.Points(particleGeometry, particleMaterial);
+    return new THREE.Points(particlesGeometry, particlesMaterial);
+  }
 
-    return particles;
+  private assignColor(index: number): THREE.Color {
+    const colors = [
+      new THREE.Color(0x67 / 255, 0xe4 / 255, 0x6f / 255),
+      new THREE.Color(0x0b / 255, 0x80 / 255, 0x9c / 255),
+      new THREE.Color(0xd9 / 255, 0xf7 / 255, 0xfe / 255),
+      new THREE.Color(0xe1 / 255, 0xcc / 255, 0x06 / 255),
+    ];
+
+    return colors[index % colors.length];
+  }
+
+  private assignSpeed(): THREE.Vector3 {
+    const speed = new THREE.Vector3(
+      (Math.random() - 0.5) * 0.01,
+      (Math.random() - 0.5) * 0.01,
+      (Math.random() - 0.5) * 0.01
+    );
+
+    return speed;
   }
 }
