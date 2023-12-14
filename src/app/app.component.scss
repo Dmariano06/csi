@@ -39,11 +39,13 @@ html{
 }
 body{
     background-color: #d9f7fe;
+    overflow-x: hidden;
 }
 
 .navbar-toggler{
     border-color: transparent;
 }
+
 .btn-close{
     box-shadow: rgba(0, 231, 167, 0.25) 0px 30px 60px -12px inset, rgba(0, 231, 167, 0.3) 0px 18px 36px -18px inset;
 }
@@ -74,7 +76,7 @@ body{
   
   footer{
     a{color: #3f4a4d !important;
-    font-weight: lighter;}
+    font-weight: normal;}
   }
 
 @media (max-width:800px){

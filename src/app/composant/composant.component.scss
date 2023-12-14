@@ -8,8 +8,8 @@
     }
 }
 @media (min-width: 1000px){
-section{
-  padding-top: 50px;
+.processus{
+  padding-top: 250px;
 }
 }
 *{
@@ -32,7 +32,6 @@ padding-left: 5px !important;
 
 @media(max-width:800px){
   .parallax2{
-    margin-bottom: 50vh;
     height: 100vh;
   }
   @supports (background-image: url('../../assets/img/illustrations/fondmobile-min.webp')) {
