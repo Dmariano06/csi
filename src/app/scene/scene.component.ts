@@ -76,11 +76,9 @@ export class SceneComponent implements OnInit{
     renderer.domElement.style.top = '0px';
     document.body.appendChild(renderer.domElement);
     this.controls = new OrbitControls(this.camera, renderer.domElement);
-    this.controls.autoRotate = true;
-    this.controls.enableZoom = false;
+    this.controls.enableRotate = false;
     this.controls.enablePan = false;
-    this.controls.enableDamping = false;
-    this.controls.dampingFactor = 0.25;
+    this.controls.enableZoom = false;
 
     this.controls.update();
   };
