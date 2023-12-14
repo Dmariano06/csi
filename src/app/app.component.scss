@@ -11,6 +11,7 @@
 .navbar-toggler-icon{
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(2, 99, 82, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
+
 a{
     text-transform: uppercase;
     padding-left: 10px;
@@ -27,12 +28,6 @@ a{
         height: 50px;
         width: 120px;
     }
-a:hover{
-    background: rgba($color: #026352, $alpha: 0.3);
-    border-radius: 3px;
-    color: white;
-    border: 1px solid #00e7a7;
-}
 }
 html{
     background: #d9f7fe;
@@ -60,7 +55,20 @@ body{
         color:#026352 !important;
     }
   }
+  .flex-row{
+    font-weight: bold;
+    font-family: 14px;
+  }
+  .flex-row:hover{
+padding: 0 !important;
+  }
   .offcanvas{
+    a:hover{
+        background: rgba($color: #026352, $alpha: 0.3);
+        border-radius: 3px;
+        color: white;
+        border: 1px solid #00e7a7;
+    }
     border: 2.5px solid #00e7a7;
     border-radius: 15px;
   }
@@ -72,6 +80,9 @@ body{
   .active {
     color: #026352!important;
     font-weight: bold;
+  }
+  .active:hover{
+    color: white !important;
   }
   
   footer{

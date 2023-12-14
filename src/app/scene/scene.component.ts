@@ -9,8 +9,8 @@ import { CSS2DRenderer } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
   templateUrl: './scene.component.html',
   styleUrls: ['./scene.component.scss']
 })
-export class SceneComponent implements OnInit{
-  @ViewChild('canvas') private canvasRef: ElementRef | undefined;
+export class SceneComponent{
+  @ViewChild('canvas', { static: true }) private canvasRef!: ElementRef;
 
   //* Stage Properties
 
@@ -58,11 +58,19 @@ export class SceneComponent implements OnInit{
    * @memberof ModelComponent
    */
   private animateModel() {
+    let i = 0;
     if (this.model) {
-      this.model.rotation.z += 0.005;
+     
+      this.model.rotation.x += 0.0003;
+      this.model.rotation.z += 0.0003;
+      this.model.rotation.y += 0.00003;
+      
+      }
+   
+  
+      
     }
-  }
-
+  
   /**
    *create controls
    *
@@ -71,10 +79,11 @@ export class SceneComponent implements OnInit{
    */
   private createControls = () => {
     const renderer = new CSS2DRenderer();
-
+    this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true, alpha: true });
     renderer.domElement.style.position = 'absolute';
     renderer.domElement.style.top = '0px';
     document.body.appendChild(renderer.domElement);
+    this.renderer.setClearColor('red', 1);
     this.controls = new OrbitControls(this.camera, renderer.domElement);
     this.controls.enableRotate = false;
     this.controls.enablePan = false;
@@ -92,7 +101,8 @@ export class SceneComponent implements OnInit{
   private createScene() {
     //* Scene
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color(0x000000)
+ this.scene.background = new THREE.Color(0x000000);
+    this.scene.background.setScalar(0);
     this.loaderGLTF.load('assets/img/illustrations/shield_sphere/scene.gltf', (gltf: GLTF) => {
       this.model = gltf.scene.children[0];
       console.log(this.model);
@@ -109,12 +119,15 @@ export class SceneComponent implements OnInit{
       this.nearClippingPane,
       this.farClippingPane
     )
-    this.camera.position.x = 100;
-    this.camera.position.y = 100;
+    // Vous pouvez ajuster cette valeur selon vos besoins
+
+    this.camera.position.x = 0;
+    this.camera.position.y = 0;
+    this.camera.position.z = 100;
   
     this.ambientLight = new THREE.AmbientLight(0x00000, 100);
     this.scene.add(this.ambientLight);
-    this.directionalLight = new THREE.DirectionalLight(0x00e7a7, 3);
+    this.directionalLight = new THREE.DirectionalLight(0x00e7a7, 8);
     this.directionalLight.position.set(0, 1, 0);
     this.directionalLight.castShadow = true;
     this.scene.add(this.directionalLight);
@@ -179,7 +192,6 @@ export class SceneComponent implements OnInit{
     this.createScene();
     this.startRenderingLoop();
     this.createControls();
-    this.model.changeModelColor();
   }
  
  
