@@ -4,7 +4,7 @@
             <div *ngFor = "let text of texts" class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
                 <div style="max-width: 350px;">
                     <h1 class="display-6 fw-bold mb-4">{{text.name}}&nbsp;<span class="underline">Business</span></h1>
-                    <p class="my-4" [ngClass]="{'transparent-text': isTextTransparent, 'display-text': !isTextTransparent}">{{text.name1}}</p><a class="btn btn-primary btn-lg me-2" role="button" href="#">Button</a><a class="btn btn-light btn-lg" role="button" href="#">Button</a>
+                    <p class="my-4" [ngClass]="{'transparent-text': isTextTransparent, 'display-text': !isTextTransparent}">{{text.name1}}</p><a class="button btn-lg me-2" role="button" href="#">En savoir plus</a>
                 </div>
             </div>
             <div class="col-md-6">

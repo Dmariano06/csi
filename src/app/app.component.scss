@@ -15,7 +15,11 @@
 a{
     text-transform: uppercase;
     padding-left: 10px;
+    color: white !important;
     font-size: 12px;
+}
+a:hover{
+    color: #00e7a7 !important;
 }
 .navbar{
     img{
@@ -51,9 +55,7 @@ body{
   .colored-navbar {
     background-color: #d9f7fe!important; 
     transition: background-color 0.5s ease;
-    .active{
-        color:#026352 !important;
-    }
+
   }
   .flex-row{
     font-weight: bold;
@@ -79,7 +81,7 @@ padding: 0 !important;
     box-shadow: none !important;
 }
   .active {
-    color: #026352!important;
+    color: #00e7a7!important;
     font-weight: bold;
   }
   .active:hover{
@@ -106,7 +108,3 @@ padding: 0 !important;
     }
 
 } 
-.active {
-    color: #026352!important;
-    font-weight: bold;
-  }
