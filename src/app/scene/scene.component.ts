@@ -123,7 +123,7 @@ export class SceneComponent{
 
     this.camera.position.x = 0;
     this.camera.position.y = 0;
-    this.camera.position.z = 80;
+    this.camera.position.z = 200;
   
     this.ambientLight = new THREE.AmbientLight(0xFFFFF, 0.05);
     this.scene.add(this.ambientLight);
