@@ -10,7 +10,7 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
       state('in', style({transform:'translateX(0%)', opacity: 1})),
       transition('void => *', [
         style({ transform:'translateX(150%)',opacity: 0 }),
-        animate('1.5s ease-in-out')
+        animate('2.5s ease-in-out')
       ]),
     ]),
   ],

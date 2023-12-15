@@ -87,9 +87,9 @@ background-position: center; /* Centre la position de l'image */
     margin-bottom: 250px;
     height: 100vh;
   }
-  @supports (background-image: url('../../assets/img/illustrations/fondmobile-min.webp')) {
+  @supports (background-image: url('../../assets/img/illustrations/fondmobile-min1.png')) {
     header {
-      background-image: url('../../assets/img/illustrations/fondmobile-min.webp');
+      background-image: url('../../assets/img/illustrations/fondmobile-min1.png');
     }
   }
   
@@ -102,7 +102,7 @@ background-position: center; /* Centre la position de l'image */
 } 
 
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     .parralax2{
       height: 50vh;
     }
@@ -113,4 +113,18 @@ background-position: center; /* Centre la position de l'image */
       height: 350px !important;
       width: 350px !important;
     }
+     @keyframes slideUp {
+    50%, 100%{
+       transform: translateY(-20%);  
+       opacity: 1;
+       transition:ease-in-out 3s;
+     }
+     70%{
+       transform: translateY(-25%);
+       transition:ease-in-out 3s;
+     }
+ 
+   }
+  
+
   }
