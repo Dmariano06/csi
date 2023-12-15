@@ -13,10 +13,11 @@
 }
 
 a{
+    font-weight: bold;
     text-transform: uppercase;
-    padding-left: 10px;
+    padding-left: 25px !important;
     color: white !important;
-    font-size: 12px;
+    font-size: 14px;
 }
 a:hover{
     color: #00e7a7 !important;
@@ -55,11 +56,6 @@ body{
   .colored-navbar {
     background-color: #d9f7fe!important; 
     transition: background-color 0.5s ease;
-
-  }
-  .flex-row{
-    font-weight: bold;
-    font-family: 14px;
 
   }
   .flex-row:hover{

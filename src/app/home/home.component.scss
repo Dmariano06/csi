@@ -87,9 +87,9 @@ background-position: center; /* Centre la position de l'image */
     margin-bottom: 250px;
     height: 100vh;
   }
-  @supports (background-image: url('../../assets/img/illustrations/fondmobile-min1.png')) {
+  @supports (background-image: url('../../assets/img/illustrations/fondmobile-min.png')) {
     header {
-      background-image: url('../../assets/img/illustrations/fondmobile-min1.png');
+      background-image: url('../../assets/img/illustrations/fondmobile-min.png');
     }
   }
   
