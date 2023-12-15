@@ -79,6 +79,7 @@ padding: 0 !important;
 .navbar-toggler{
     outline: none !important;
     box-shadow: none !important;
+    opacity: 0;
 }
   .active {
     color: #00e7a7!important;
@@ -105,6 +106,9 @@ padding: 0 !important;
     }
     .flex-row{
         display: none;
+    }
+    .navbar-toggler{
+        opacity: 1;
     }
 
 } 
