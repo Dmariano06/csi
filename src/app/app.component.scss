@@ -91,7 +91,13 @@ padding: 0 !important;
   
   footer{
     a{color: #3f4a4d !important;
-    font-weight: normal;}
+    font-weight: normal !important;
+span{
+    text-transform: lowercase !important;
+}}
+a:hover{
+    color: #00e7a7 !important;
+}
   }
 
 @media (max-width:800px){
