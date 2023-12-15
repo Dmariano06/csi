@@ -87,7 +87,7 @@ export class SceneComponent{
     this.controls = new OrbitControls(this.camera, renderer.domElement);
     this.controls.enableRotate = false;
     this.controls.enablePan = false;
-    this.controls.enableZoom = false;
+    this.controls.enableZoom = true;
 
     this.controls.update();
   };
@@ -123,7 +123,7 @@ export class SceneComponent{
 
     this.camera.position.x = 0;
     this.camera.position.y = 0;
-    this.camera.position.z = 100;
+    this.camera.position.z = 80;
   
     this.ambientLight = new THREE.AmbientLight(0xFFFFF, 0.05);
     this.scene.add(this.ambientLight);

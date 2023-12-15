@@ -51,9 +51,6 @@ padding-left: 5px !important;
     }
   
   }
-  .container{
-    background: linear-gradient(0deg, rgba(2, 99, 82, 0.05) 0%, rgba(84, 94, 161, 0.18) 100%) !important;
-  }
 header{
 
   h1,p{
@@ -69,24 +66,23 @@ background-size: cover; /* L'image prendra 100% de l'espace, quitte à la crop *
 background-position: center; /* Centre la position de l'image */
   object-fit: contain;
   .parallax1{
-  height: 100vh;
+  height: 100vw;
   }
 
 }
-
-/*@supports (background-image: url('../../assets/img/illustrations/fondheader-min.webp')) {
+@supports (background-image: url('../../assets/img/illustrations/fontheader.png')) {
   header {
-    background-image: url('../../assets/img/illustrations/fondheader-min.webp');
+    background-size: cover;
+    background-image: url('../../assets/img/illustrations/fontheader.png');
   }
-}*/
+}
 
-
-
+/* Utilisation de PNG si WebP n'est pas supporté */
+@supports not (background-image: url('../../assets/img/illustrations/fondheader-min.webp')) {
   header {
-    background-color: #d9f7fe;
-    width: 100%;
+    background-image: url('../../assets/img/illustrations/fondheader-min.png');
   }
-
+}
 .parallax {
   height: 100vh;
   background-attachment: fixed;
@@ -96,9 +92,6 @@ background-position: center; /* Centre la position de l'image */
 }
 .parallax2{
  height: 50vh;
- .card{
-  background: linear-gradient(0deg, rgba(2, 99, 82, 0.05) 0%, rgba(84, 94, 161, 0.18) 100%) !important;
- }
 }
 @media(max-width:800px){
   .parallax2{
@@ -121,7 +114,7 @@ background-position: center; /* Centre la position de l'image */
 
 
   @media (max-width: 800px) {
-    .parallax2{
+    .parralax2{
       height: 50vh;
     }
     #techno{
