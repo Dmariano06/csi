@@ -3,8 +3,11 @@
   <nav class="navbar navbar-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="home">
-      
-          <img src="../assets/img/illustrations/logo.png" alt="Logo">
+        <picture>
+          <source srcset="../assets/img/illustrations/logo-png.webp" type="image/webp">
+          <source srcset="../assets/img/illustrations/logo-png.png" type="image/png">
+          <img src="../assets/img/illustrations/logo-png.png" alt="Logo">
+        </picture>
       </a>
       <ul class="navbar-nav flex-row">
         <li class="nav-item"><a class="nav-link" routerLink="home" routerLinkActive="active">Accueil</a></li>
