@@ -9,7 +9,7 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
     trigger('slideAnimation', [
       state('in', style({transform:'translateX(0%)', opacity: 1})),
       transition('void => *', [
-        style({ transform:'translateX(150%)',opacity: 0 }),
+        style({ transform:'translateX(100%)',opacity: 0 }),
         animate('2.5s ease-in-out')
       ]),
     ]),
