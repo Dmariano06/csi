@@ -15,6 +15,7 @@ import { ComposantComponent } from './composant/composant.component';
 import { FaqComponent } from './faq/faq.component';
 import { ModelComponent } from './model/model.component';
 import { SceneComponent } from './scene/scene.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SceneComponent } from './scene/scene.component';
     ComposantComponent,
     FaqComponent,
     ModelComponent,
-    SceneComponent
+    SceneComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
