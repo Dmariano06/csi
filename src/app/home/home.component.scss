@@ -70,18 +70,20 @@ background-position: center; /* Centre la position de l'image */
   }
 
 }
-@supports (background-image: url('../../assets/img/illustrations/fondheader-min.webp')) {
+
+/*@supports (background-image: url('../../assets/img/illustrations/fondheader-min.webp')) {
   header {
     background-image: url('../../assets/img/illustrations/fondheader-min.webp');
   }
-}
+}*/
 
-/* Utilisation de PNG si WebP n'est pas supporté */
-@supports not (background-image: url('../../assets/img/illustrations/fondheader-min.webp')) {
+
+
   header {
-    background-image: url('../../assets/img/illustrations/fondheader-min.png');
+    background-image: url('../../assets/img/illustrations/fontheader.png');
+    width: 100%;
   }
-}
+
 .parallax {
   height: 100vh;
   background-attachment: fixed;
