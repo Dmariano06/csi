@@ -9,11 +9,11 @@
             </div>
             <div class="col-md-6">
                 <app-model></app-model> 
-     <div><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="../../assets/img/illustrations/testai(3).png"></div>
+     <div><img class="rounded img-fluid w-100 fit-cover" id="feature" src="../../assets/img/illustrations/testai(3).png" [@slideAnimation]="animationState"></div>
             </div>
         </div>
         <div class="text-center mt-5">
-            <p class="mb-4" style="font-size: 1.6rem;">Used by <span class="text-primary bg-warning p-1"><strong>2400+</strong></span>&nbsp;of the best companies in the world.</p><a href="#"> <img class="m-3" src="../../assets/img/illustrations/bootstrap-4.svg" height="48px" width="48px"></a><a href="#"> <img class="m-3" height="48px" width="48px" src="../../assets/img/illustrations/angular_whiteTransparent.svg"></a><a href="#"> <img class="m-3" src="../../assets/img/illustrations/icons8-spring-boot.svg"></a><a href="#"> <img class="m-3" src="../../assets/img/illustrations/logo_bootstrap.png"></a><a href="#"> <img class="m-3" src="assets/img/brands/twitter.png"></a>
+            <p class="mb-4" style="font-size: 1.6rem;">Used by <span class="text-primary bg-warning p-1"><strong>2400+</strong></span>&nbsp;of the best companies in the world.</p><a href="#"> <img class="m-3" [@slideAnimation]="animationState" src="../../assets/img/illustrations/bootstrap-4.svg" height="48px" width="48px"></a><a href="#"> <img class="m-3" height="48px" width="48px" src="../../assets/img/illustrations/angular_whiteTransparent.svg"></a><a href="#"> <img class="m-3" src="../../assets/img/illustrations/icons8-spring-boot.svg"></a><a href="#"> <img class="m-3" src="../../assets/img/illustrations/logo_bootstrap.png"></a><a href="#"> <img class="m-3" src="assets/img/brands/twitter.png"></a>
         </div>
     </div>
 </section>
@@ -65,7 +65,7 @@
 <section class="py-5">
     <div class="container" *ngFor="let other of others">
         <div class="row">
-            <div class="col-md-4 mb-5"><img class="rounded img-fluid" [src]="other.img" style="height: 300px; "></div>
+            <div class="col-md-4 mb-5"><img class="rounded img-fluid" [@slideAnimation]="animationState" [src]="other.img" style="height: 300px; "></div>
             <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
                 <div class="row gy-4 row-cols-1 row-cols-md-2 flex-grow-1">
                     <div class="col">

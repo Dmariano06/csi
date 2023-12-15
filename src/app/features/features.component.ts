@@ -1,9 +1,19 @@
+import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-features',
   templateUrl: './features.component.html',
-  styleUrl: './features.component.scss'
+  styleUrl: './features.component.scss',
+  animations: [
+    trigger('slideAnimation', [
+      state('in', style({transform:'translateX(0%)', opacity: 1})),
+      transition('void => *', [
+        style({ transform:'translateX(150%)',opacity: 0 }),
+        animate('1.5s ease-in-out')
+      ]),
+    ]),
+  ],
 })
 export class FeaturesComponent {
 texts = [ {name:"Bienvenue chez CSI", name1:"votre partenaire de confiance pour des solutions web robustes et performantes."}];
@@ -20,6 +30,20 @@ isTextTransparent : boolean = true;
       this.isTextTransparent = false;
     } else {
       this.isTextTransparent = true;
+    }
+  }
+  animationState = 'in';
+
+  @HostListener('window:scroll', [])
+  onWindowSrcroll() {
+    const scrollPosition = window.scrollY;
+    // Ajustez la valeur de défilement à partir de laquelle l'image doit apparaître
+    const triggerPosition = 500;
+
+    if (scrollPosition > triggerPosition) {
+      this.animationState = 'in';
+    } else {
+      this.animationState = 'void';
     }
   }
 }
