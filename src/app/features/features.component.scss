@@ -5,3 +5,20 @@
         height: 48px;
         width: 48px;
 }
+#appweb-small{
+    margin-bottom: 8px !important;
+}
+.character{
+    position: absolute;
+   right: 5%;
+   object-fit: contains;
+}
+.isTextTransparent{
+    display: none;
+}
+@media(max-width:1000px){
+    .character{
+        height: 100px;
+        width: 125px;
+    }
+}

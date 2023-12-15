@@ -3,11 +3,8 @@
   <nav class="navbar navbar-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="home">
-        <picture>
-          <source srcset="../assets/img/illustrations/logo-png.webp" type="image/webp">
-          <source srcset="../assets/img/illustrations/logo-png.png" type="image/png">
-          <img src="../assets/img/illustrations/logo-png.png" alt="Logo">
-        </picture>
+      
+          <img src="../assets/img/illustrations/logo.png" alt="Logo">
       </a>
       <ul class="navbar-nav flex-row">
         <li class="nav-item"><a class="nav-link" routerLink="home" routerLinkActive="active">Accueil</a></li>
@@ -37,7 +34,7 @@
           </h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
+        <div class="offcanvas-body" data-bs-toggle="offcanvas" data-bs-target="offcanvas-body">
           <ul class="navbar-nav">
             <!-- Liens supplémentaires dans le offcanvas en ligne -->
             <li class="nav-item"><a class="nav-link" routerLink="home" routerLinkActive="active">Accueil</a></li>

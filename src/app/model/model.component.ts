@@ -72,7 +72,7 @@ export class ModelComponent implements OnInit {
   }
 
   private wrapAround(positions: THREE.BufferAttribute, index: number) {
-    const range = 5;
+    let range = 5;
 
     positions.array[index] = this.wrapCoordinate(positions.array[index], range);
     positions.array[index + 1] = this.wrapCoordinate(positions.array[index + 1], range);

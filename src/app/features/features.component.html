@@ -4,11 +4,12 @@
             <div *ngFor = "let text of texts" class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
                 <div style="max-width: 350px;">
                     <h1 class="display-6 fw-bold mb-4">{{text.name}}&nbsp;<span class="underline">Business</span></h1>
-                    <p class="my-4" [ngClass]="{'transparent-text': isTextTransparent, 'display-text': !isTextTransparent}">{{text.name1}}</p><a class="button btn-lg me-2" role="button" href="#">En savoir plus</a>
+                    <p class="my-4" >{{text.name1}}</p><a class="button btn-lg me-2" role="button" href="#">En savoir plus</a>
                 </div>
             </div>
             <div class="col-md-6">
                 <app-model></app-model> 
+                <img src="../../assets/img/illustrations/character.png" class="character" alt=""  [ngClass]="{'transparent-text': isTextTransparent, 'display-text': !isTextTransparent}">
      <div><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="../../assets/img/illustrations/testai(3).png"></div>
             </div>
         </div>
@@ -27,38 +28,14 @@
                 <p class="text-muted">Libero tincidunt magna, leo tempus aenean. Adipiscing vestibulum vehicula vel donec pulvinar aliquam, blandit lorem.</p>
             </div>
         </div>
-        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-            <div class="col">
+        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3" >
+            <div class="col" *ngFor="let service of services">
                 <div class="card border-light border-1 d-flex justify-content-center p-4">
                     <div class="card-body">
                         <div>
-                            <div class="bs-icon-lg bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-4 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-school">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
-                                    <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
-                                </svg></div>
-                            <h4 class="fw-bold">Title</h4>
-                            <p class="text-muted">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p><a class="fw-bold" href="#">Learn more&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <line x1="15" y1="16" x2="19" y2="12"></line>
-                                    <line x1="15" y1="8" x2="19" y2="12"></line>
-                                </svg></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card border-light border-1 d-flex justify-content-center p-4">
-                    <div class="card-body">
-                        <div>
-                            <div class="bs-icon-lg bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-4 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-school">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
-                                    <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
-                                </svg></div>
-                            <h4 class="fw-bold">Title</h4>
-                            <p class="text-muted">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p><a class="fw-bold" href="#">Learn more&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
+                            <div class="bs-icon-lg bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-4 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M264.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 149.8C37.4 145.8 32 137.3 32 128s5.4-17.9 13.9-21.8L264.5 5.2zM476.9 209.6l53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 277.8C37.4 273.8 32 265.3 32 256s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0l152-70.2zm-152 198.2l152-70.2 53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 405.8C37.4 401.8 32 393.3 32 384s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0z"/></svg></div>
+                            <h4 class="fw-bold">{{service.name}}</h4>
+                            <p class="text-muted">{{service.name1}}</p><a class="fw-bold" href="#">&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <line x1="5" y1="12" x2="19" y2="12"></line>
                                     <line x1="15" y1="16" x2="19" y2="12"></line>
@@ -69,37 +46,16 @@
                 </div>
             </div>
             <div class="col d-flex justify-content-between flex-xl-column">
-                <div class="card border-light border-1 d-flex flex-grow-1 justify-content-center p-2 me-3 me-xl-0 mb-xl-4">
+                <div class="card border-light border-1 d-flex flex-grow-1 justify-content-center p-2 me-3 me-xl-0 mb-xl-4" *ngFor="let webapp of webapps">
                     <div class="card-body">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-4 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-school">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
-                                <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
-                            </svg></div>
                         <div class="d-flex justify-content-between align-items-center">
-                            <h4 class="fw-bold mb-0">Title</h4><a class="fw-bold" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
+                            <h4 class="fw-bold mb-0"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"/></svg></h4><a class="fw-bold" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <line x1="5" y1="12" x2="19" y2="12"></line>
                                     <line x1="15" y1="16" x2="19" y2="12"></line>
                                     <line x1="15" y1="8" x2="19" y2="12"></line>
                                 </svg></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card border-light border-1 d-flex flex-grow-1 justify-content-center p-2">
-                    <div class="card-body">
-                        <div class="bs-icon-md bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-4 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-school">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
-                                <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
-                            </svg></div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <h4 class="fw-bold mb-0">Title</h4><a class="fw-bold" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <line x1="15" y1="16" x2="19" y2="12"></line>
-                                    <line x1="15" y1="8" x2="19" y2="12"></line>
-                                </svg></a>
+                              <p>  {{webapp.name1}} </p>
                         </div>
                     </div>
                 </div>
@@ -108,16 +64,16 @@
     </div>
 </section>
 <section class="py-5">
-    <div class="container">
+    <div class="container" *ngFor="let other of others">
         <div class="row">
-            <div class="col-md-4 mb-5"><img class="rounded img-fluid" src="../../assets/img/illustrations/features.png"></div>
+            <div class="col-md-4 mb-5"><img class="rounded img-fluid" [src]="other.img" style="height: 300px; "></div>
             <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
                 <div class="row gy-4 row-cols-1 row-cols-md-2 flex-grow-1">
                     <div class="col">
                         <div class="card border-light border-1 d-flex justify-content-center p-4">
                             <div class="card-body">
                                 <div>
-                                    <h4 class="fw-bold">Title</h4>
+                                    <h4 class="fw-bold">{{other.name}}</h4>
                                     <p class="text-muted d-none d-xl-block">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p><a class="fw-bold" href="#">Learn more&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -146,42 +102,6 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
-                <div class="row gy-4 row-cols-1 row-cols-md-2 flex-grow-1">
-                    <div class="col">
-                        <div class="card border-light border-1 d-flex justify-content-center p-4">
-                            <div class="card-body">
-                                <div>
-                                    <h4 class="fw-bold">Title</h4>
-                                    <p class="text-muted d-none d-xl-block">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p><a class="fw-bold" href="#">Learn more&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            <line x1="15" y1="16" x2="19" y2="12"></line>
-                                            <line x1="15" y1="8" x2="19" y2="12"></line>
-                                        </svg></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card border-light border-1 d-flex justify-content-center p-4">
-                            <div class="card-body">
-                                <div>
-                                    <h4 class="fw-bold">Title</h4>
-                                    <p class="text-muted d-none d-xl-block">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p><a class="fw-bold" href="#">Learn more&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            <line x1="15" y1="16" x2="19" y2="12"></line>
-                                            <line x1="15" y1="8" x2="19" y2="12"></line>
-                                        </svg></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 order-first order-md-last mb-5"><img class="rounded img-fluid" src="../../assets/img/illustrations/feature2.png"></div>
-        </div>
+       
     </div>
 </section>
