@@ -70,10 +70,10 @@ background-position: center; /* Centre la position de l'image */
   }
 
 }
-@supports (background-image: url('../../assets/img/illustrations/fontheader.png')) {
+@supports (background-image: url('../../assets/img/illustrations/fontheader1.png')) {
   header {
     background-size: cover;
-    background-image: url('../../assets/img/illustrations/fontheader.png');
+    background-image: url('../../assets/img/illustrations/fontheader1.png');
   }
 }
 
