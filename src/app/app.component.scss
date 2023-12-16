@@ -57,19 +57,17 @@ body{
     transition: background-color 0.5s ease;
 
   }
-  .flex-row{
-    a{
-        margin-left: 55px !important;
-    }
-    .active{
-        text-decoration: underline !important;
-        text-decoration-thickness: 2px;
-        text-decoration-skip-ink: none;
-        }
+  .flex-row, .flex-fill{
+   a{ margin-left: 55px !important;}
   }
 
   .flex-row:hover{
 padding: 0 !important;
+.active{
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+    }
   }
   .offcanvas{
     background: rgba(33, 37, 41, 0.8);
@@ -116,12 +114,8 @@ a:hover{
         border-top: 2px solid #026352;
         font-weight: 300;
         }
-
         li:hover{
             transition: ease 0.5s;
-        }
-        a{
-            padding-left: 10px;
         }
     }
     .flex-row{
