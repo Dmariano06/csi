@@ -15,7 +15,6 @@
 a{
     font-weight: 500;
    letter-spacing: 0.2px;
-    margin-left: 55px !important;
     color: white !important;
     font-size: 16px;
 }
@@ -58,6 +57,16 @@ body{
     transition: background-color 0.5s ease;
 
   }
+  .flex-row{
+    a{
+        margin-left: 55px !important;
+    }
+    .active{
+        text-decoration: underline !important;
+        text-decoration-thickness: 2px;
+        text-decoration-skip-ink: none;
+        }
+  }
 
   .flex-row:hover{
 padding: 0 !important;
@@ -85,9 +94,6 @@ padding: 0 !important;
     color: #00e7a7!important;
     font-weight: bold;
     text-underline-offset: 30px;
-    text-decoration: underline !important;
-  text-decoration-thickness: 2px;
-  text-decoration-skip-ink: none;
   }
   .active:hover{
     color: white !important;
@@ -110,8 +116,12 @@ a:hover{
         border-top: 2px solid #026352;
         font-weight: 300;
         }
+
         li:hover{
             transition: ease 0.5s;
+        }
+        a{
+            padding-left: 10px;
         }
     }
     .flex-row{
