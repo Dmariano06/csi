@@ -57,17 +57,19 @@ body{
     transition: background-color 0.5s ease;
 
   }
+  .flex-row{
+    .active{
+        text-decoration: underline !important;
+        text-decoration-thickness: 2px;
+        text-decoration-skip-ink: none;
+        }
+  }
   .flex-row, .flex-fill{
    a{ margin-left: 55px !important;}
   }
 
   .flex-row:hover{
 padding: 0 !important;
-.active{
-    text-decoration: underline !important;
-    text-decoration-thickness: 2px;
-    text-decoration-skip-ink: none;
-    }
   }
   .offcanvas{
     background: rgba(33, 37, 41, 0.8);
