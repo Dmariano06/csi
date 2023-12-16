@@ -44,7 +44,7 @@ header{
 
   h1,p{
     padding-bottom: 20px;
-  color: #00e7a7 !important;
+  color: white !important;
   text-shadow: -1px -1px 3px #020202, 
   2px 2px 4px #1b1b1b;
   font-family: 'Bungee Inline', sans-serif;
@@ -58,6 +58,11 @@ background-position: center; /* Centre la position de l'image */
   height: 100vw;
   }
 
+}
+.scroll-blur {
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease-in-out; /* Transition smoothness */
 }
 @supports (background-image: url('../../assets/img/illustrations/fontheader1.png')) {
   header {
@@ -82,6 +87,7 @@ background-position: center; /* Centre la position de l'image */
 .parallax2{
  height: 50vh;
 }
+
 @media(max-width:800px){
   .parallax2{
     margin-bottom: 250px;

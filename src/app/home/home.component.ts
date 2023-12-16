@@ -20,11 +20,12 @@ lastScrollTop = 0;
 
 constructor(private renderer: Renderer2, private el: ElementRef) {}
 
+@HostListener('window:scroll', [])
+onWindowScroll() {
+  const scrollPosition = window.scrollY;
+  const blurValue = Math.min(scrollPosition / 10, 20);
+  this.renderer.setStyle(this.el.nativeElement.querySelector('.scroll-blur'), 'filter', `blur(${blurValue}px)`);
+}
 
-@HostListener('window:scroll', ['$event'])
-onScroll(event: Event): void {
-
-    this.scrollOffset = window.scrollY;
-  }
 }
 

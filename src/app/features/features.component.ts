@@ -9,8 +9,8 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
     trigger('slideAnimation', [
       state('in', style({transform:'translateX(0%)', opacity: 1})),
       transition('void => *', [
-        style({ transform:'translateX(100%)',opacity: 0 }),
-        animate('2.5s ease-in-out')
+        style({ transform:'translateX(150%)',opacity: 0 }),
+        animate('1.5s ease-in-out')
       ]),
     ]),
   ],
@@ -38,11 +38,12 @@ isTextTransparent : boolean = true;
   onWindowSrcroll() {
     const scrollPosition = window.scrollY;
     // Ajustez la valeur de défilement à partir de laquelle l'image doit apparaître
-    const triggerPosition = 500;
+    const triggerPosition = 100;
 
     if (scrollPosition > triggerPosition) {
       this.animationState = 'in';
-    } else {
+    }
+     else {
       this.animationState = 'void';
     }
   }

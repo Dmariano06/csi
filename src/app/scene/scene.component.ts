@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Input, NgZone, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader, GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import * as THREE from 'three';
@@ -9,10 +9,10 @@ import { CSS2DRenderer } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
   templateUrl: './scene.component.html',
   styleUrls: ['./scene.component.scss']
 })
-export class SceneComponent{
+export class SceneComponent implements AfterViewInit{
   @ViewChild('canvas', { static: true }) private canvasRef!: ElementRef;
 
-  //* Stage Properties
+ 
 
   @Input() public fieldOfView: number = 1;
 
@@ -20,7 +20,6 @@ export class SceneComponent{
 
   @Input('farClipping') public farClippingPane: number = 1000;
 
-  //? Scene properties
   private camera!: THREE.PerspectiveCamera;
 
   private controls!: OrbitControls;
@@ -39,7 +38,7 @@ export class SceneComponent{
 
   private directionalLight!: THREE.DirectionalLight;
 
-  //? Helper Properties (Private Properties);
+
 
   private get canvas(): HTMLCanvasElement {
     return this.canvasRef!.nativeElement;
@@ -50,13 +49,7 @@ export class SceneComponent{
   private renderer!: THREE.WebGLRenderer;
 
   private scene!: THREE.Scene;
-
-  /**
-   *Animate the model
-   *
-   * @private
-   * @memberof ModelComponent
-   */
+  
   private animateModel() {
     let i = 0;
     if (this.model) {
@@ -71,12 +64,6 @@ export class SceneComponent{
       
     }
   
-  /**
-   *create controls
-   *
-   * @private
-   * @memberof ModelComponent
-   */
   private createControls = () => {
     const renderer = new CSS2DRenderer();
     this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true, alpha: true });
@@ -92,14 +79,7 @@ export class SceneComponent{
     this.controls.update();
   };
 
-  /**
-   * Create the scene
-   *
-   * @private
-   * @memberof CubeComponent
-   */
   private createScene() {
-    //* Scene
     this.scene = new THREE.Scene();
  this.scene.background = new THREE.Color(0x000000);
     this.scene.background.setScalar(0);
@@ -107,11 +87,11 @@ export class SceneComponent{
       this.model = gltf.scene.children[0];
       console.log(this.model);
       var box = new THREE.Box3().setFromObject(this.model);
-      box.getCenter(this.model.position); // this re-sets the mesh position
+      box.getCenter(this.model.position); 
       this.model.position.multiplyScalar(-1);
       this.scene.add(this.model);
     });
-    //*Camera
+ 
     let aspectRatio = this.getAspectRatio();
     this.camera = new THREE.PerspectiveCamera(
       this.fieldOfView,
@@ -119,7 +99,6 @@ export class SceneComponent{
       this.nearClippingPane,
       this.farClippingPane
     )
-    // Vous pouvez ajuster cette valeur selon vos besoins
 
     this.camera.position.x = 0;
     this.camera.position.y = 0;
@@ -144,33 +123,13 @@ export class SceneComponent{
     this.light4.position.set(-500, 300, 500);
     this.scene.add(this.light4);
   }
-  private vert = 0x00ff00; // Couleur verte
-
-  // ... (le reste de vos méthodes)
-
-  private changeModelColor() {
-    const material = new THREE.MeshStandardMaterial({ color: this.vert });
-
-    this.model.traverse((child: any) => {
-      if (child instanceof THREE.Mesh) {
-        child.material = material;
-      }
-    });
-  }
-
+  private vert = 0x00ff00;
   private getAspectRatio() {
     return this.canvas.clientWidth / this.canvas.clientHeight;
   }
 
-  /**
- * Start the rendering loop
- *
- * @private
- * @memberof CubeComponent
- */
+
   private startRenderingLoop() {
-    //* Renderer
-    // Use canvas element in template
     this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true });
     this.renderer.setPixelRatio(devicePixelRatio);
     this.renderer.setSize(this.canvas.clientWidth, this.canvas.clientHeight);
@@ -182,11 +141,6 @@ export class SceneComponent{
     }());
   }
 
-  constructor() { }
-
-  ngOnInit(): void {
-
-  }
 
   ngAfterViewInit() {
     this.createScene();
