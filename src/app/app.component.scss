@@ -58,12 +58,14 @@ body{
     transition: background-color 0.5s ease;
 
   }
+
   .flex-row:hover{
 padding: 0 !important;
   }
   .offcanvas{
     background: rgba(33, 37, 41, 0.8);
     a:hover{
+        
         background: rgba($color: #026352, $alpha: 0.3);
         border-radius: 3px;
         color: white;
@@ -72,7 +74,8 @@ padding: 0 !important;
     border: 2.5px solid #00e7a7;
     border-radius: 15px;
   }
-
+ 
+ 
 .navbar-toggler{
     outline: none !important;
     box-shadow: none !important;
@@ -81,6 +84,10 @@ padding: 0 !important;
   .active {
     color: #00e7a7!important;
     font-weight: bold;
+    text-underline-offset: 30px;
+    text-decoration: underline !important;
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: none;
   }
   .active:hover{
     color: white !important;

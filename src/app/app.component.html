@@ -2,18 +2,20 @@
 <body>
   <nav class="navbar navbar-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" routerLink="home">
-        <picture>
-          <source srcset="../assets/img/illustrations/logo-png.webp" type="image/webp">
-          <source srcset="../assets/img/illustrations/logo-png.png" type="image/png">
-          <img src="../assets/img/illustrations/logo-png.png" alt="Logo">
-        </picture>
-      </a>
       <ul class="navbar-nav flex-row  me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link underline" routerLink="home" routerLinkActive="active">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="home" routerLinkActive="active">Accueil</a></li>
         <li class="nav-item"><a class="nav-link" routerLink="features" routerLinkActive="active">Solutions Web</a></li>
         <li class="nav-item"><a class="nav-link" routerLink="integrations" routerLinkActive="active">Qui Nous Sommes</a></li>
       </ul>
+      <div class="flex-fill text-center">
+        <a class="navbar-brand" routerLink="home">
+          <picture>
+            <source srcset="../assets/img/illustrations/logo-png.webp" type="image/webp">
+            <source srcset="../assets/img/illustrations/logo-png.png" type="image/png">
+            <img src="../assets/img/illustrations/logo-png.png" alt="Logo">
+          </picture>
+        </a>
+        </div>
       <ul class="navbar-nav flex-row">
         <li class="nav-item"><a class="nav-link" routerLink="your-right-link1">Dark Mode Loading</a></li>
         <li class="nav-item"><a class="nav-link" routerLink="contacts" routerLinkActive="active">Contact</a></li>

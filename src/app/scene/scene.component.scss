@@ -1,9 +1,15 @@
 canvas{
   position: fixed;
-  height: 70px;
+  height: 66px;
   width: 100%;
 left: 0;
 top: 0;
-opacity: 0.3;
+opacity: 0;
 z-index: 10;
+transition: 0.5s ease-in-out;
+
 }
+.scrolled{
+  opacity: 0.3;
+}
+

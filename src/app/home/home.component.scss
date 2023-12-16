@@ -34,7 +34,6 @@ padding-left: 5px !important;
 
   .slide-up {
     opacity: 0;
-   // position: absolute;
     bottom: 0;
     transition: 2s ease-in-out;
     left: 50%;
@@ -93,6 +92,7 @@ background-position: center; /* Centre la position de l'image */
 
 @media(max-width:800px){
   .parallax2{
+    display: content;
     margin-bottom: 250px;
     height: 100vh;
   }
@@ -100,6 +100,9 @@ background-position: center; /* Centre la position de l'image */
     header {
       background-image: url('../../assets/img/illustrations/fondmobile-min.png');
     }
+  }
+  .slide-up{
+    opacity: 1;
   }
   
   /* Utilisation de PNG si WebP n'est pas supporté */

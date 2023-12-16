@@ -6,5 +6,10 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
- 
+  isScrolled = true;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 50;
+  }
 }

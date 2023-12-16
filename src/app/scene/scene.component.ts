@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader, GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import * as THREE from 'three';
@@ -10,9 +10,13 @@ import { CSS2DRenderer } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
   styleUrls: ['./scene.component.scss']
 })
 export class SceneComponent implements AfterViewInit{
-  @ViewChild('canvas', { static: true }) private canvasRef!: ElementRef;
+  isScrolled = false;
 
- 
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 50;
+  }
+  @ViewChild('canvas', { static: true }) private canvasRef!: ElementRef;
 
   @Input() public fieldOfView: number = 1;
 
