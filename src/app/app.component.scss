@@ -3,7 +3,7 @@
     background: #00e7a7 !important;
     color: white !important;
     border-radius: 999px;
-   // box-shadow: #026352 0 10px 20px -10px;
+    box-shadow: #026352 0 10px 20px -10px;
 }
 .icon-sun-tabler{
     background: #026352;
@@ -14,7 +14,7 @@
 
 a{
     font-weight: 500;
-   letter-spacing: 0.2px;
+    letter-spacing: 0.2px;
     color: white !important;
     font-size: 16px;
     text-shadow: 1px 1px 2px black;
@@ -99,10 +99,12 @@ padding: 0 !important;
   }
   .active:hover{
     color: white !important;
+    text-shadow: 1px 1px 2px black !important;
   }
   
   footer{
     a{color: #3f4a4d !important;
+        text-shadow: none !important;
     font-weight: normal !important;
 span{
     text-transform: lowercase !important;
