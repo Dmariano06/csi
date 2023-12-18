@@ -1,12 +1,3 @@
-#appweb{
-    background: linear-gradient(0deg, rgba(2, 99, 82, 0.05) 0%, rgba(84, 94, 161, 0.18) 100%);
-    p{
-        color:#505a5f;
-    }
-    h2{
-      color: #212529 !important;
-    }
-}
 .card{
   border: none !important;
 }
@@ -30,9 +21,8 @@ padding-left: 5px !important;
       width: 32px;
     }
   }
- 
 
-  .slide-up {
+.slide-up {
     opacity: 0;
     bottom: 0;
     transition: 2s ease-in-out;
@@ -44,27 +34,23 @@ padding-left: 5px !important;
   
 header{
   transition: filter 0.5s ease-in-out;
-
   h1,p{
-    padding-bottom: 20px;
+    padding-bottom:20px;
   color: white !important;
-  text-shadow: -1px -1px 3px #020202, 
-  2px 2px 4px #1b1b1b;
+  text-shadow: -1px -1px 3px #020202, 2px 2px 4px #1b1b1b;
   font-family: 'Bungee Inline', sans-serif;
   }
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Fixe l'image pendant le scroll */
-background-size: cover; /* L'image prendra 100% de l'espace, quitte à la crop */
-background-position: center; /* Centre la position de l'image */
+  background-attachment: fixed;
+  background-position: center; 
   object-fit: contain;
-  .parallax1{
+.parallax1{
   height: 100vw;
   }
-
 }
 .scroll-blur {
+height: auto;  
   width: 100%;
-  height: auto;
   transition: filter 0.5s ease-in-out;
 }
 @supports (background-image: url('../../assets/img/illustrations/fontheader1.png')) {
@@ -115,7 +101,7 @@ background-position: center; /* Centre la position de l'image */
 } 
 
 
-  @media (max-width: 1000px) {
+ @media (max-width: 1000px) {
     .parralax2{
       height: 50vh;
     }

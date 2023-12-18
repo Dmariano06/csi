@@ -23,16 +23,13 @@
             <div class="col-md-8 col-xl-6">
                 <h3 class="display-6 fw-bold pb-4 mb-4">Fonctionnalités qui rendent votre entreprise plus&nbsp;<span class="underline">productive</span></h3>
             </div>
-            <div class="col-md-8 col-xl-6 pt-4">
-                <p class="text-muted">Libero tincidunt magna, leo tempus aenean. Adipiscing vestibulum vehicula vel donec pulvinar aliquam, blandit lorem.</p>
-            </div>
         </div>
         <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3" >
-            <div class="col" *ngFor="let service of services">
-                <div class="card border-light border-1 d-flex justify-content-center p-4">
-                    <div class="card-body">
+            <div class="col" *ngFor="let service of services; let i = index;">
+                <div class="card  card1 border-light border-1 d-flex justify-content-center p-4">
+                    <div class="card-body" [@slideAnimation]="animationState">
                         <div>
-                            <div class="bs-icon-lg bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-4 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M264.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 149.8C37.4 145.8 32 137.3 32 128s5.4-17.9 13.9-21.8L264.5 5.2zM476.9 209.6l53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 277.8C37.4 273.8 32 265.3 32 256s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0l152-70.2zm-152 198.2l152-70.2 53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 405.8C37.4 401.8 32 393.3 32 384s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0z"/></svg></div>
+                            <div class="bs-icon-lg bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-4 bs-icon"><svg *ngIf="i===0"  xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M264.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 149.8C37.4 145.8 32 137.3 32 128s5.4-17.9 13.9-21.8L264.5 5.2zM476.9 209.6l53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 277.8C37.4 273.8 32 265.3 32 256s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0l152-70.2zm-152 198.2l152-70.2 53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 405.8C37.4 401.8 32 393.3 32 384s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0z"/></svg></div>
                             <h4 class="fw-bold">{{service.name}}</h4>
                             <p class="text-muted">{{service.name1}}</p><a class="fw-bold" href="#">&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -45,16 +42,18 @@
                 </div>
             </div>
             <div class="col d-flex justify-content-between flex-xl-column">
-                <div class="card border-light border-1 d-flex flex-grow-1 justify-content-center p-2 me-3 me-xl-0 mb-xl-4" *ngFor="let webapp of webapps">
+                <div class="card card1 border-light border-1 d-flex flex-grow-1 justify-content-center p-2 me-3 me-xl-0 mb-xl-4"[@slideAnimation]="animationState" *ngFor="let webapp of webapps">
+                    <h5 class="fw-bold">{{webapp.name}}</h5>
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h4 class="fw-bold mb-0"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"/></svg></h4><a class="fw-bold" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
+                        <a class="fw-bold" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <line x1="5" y1="12" x2="19" y2="12"></line>
                                     <line x1="15" y1="16" x2="19" y2="12"></line>
                                     <line x1="15" y1="8" x2="19" y2="12"></line>
                                 </svg></a>
-                              <p>  {{webapp.name1}} </p>
+
+                              <p class="text-muted">  {{webapp.name1}} </p>
                         </div>
                     </div>
                 </div>
@@ -63,44 +62,24 @@
     </div>
 </section>
 <section class="py-5">
-    <div class="container" *ngFor="let other of others">
-        <div class="row">
-            <div class="col-md-4 mb-5"><img class="rounded img-fluid" [@slideAnimation]="animationState" [src]="other.img" style="height: 300px; "></div>
-            <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
-                <div class="row gy-4 row-cols-1 row-cols-md-2 flex-grow-1">
-                    <div class="col">
-                        <div class="card border-light border-1 d-flex justify-content-center p-4">
-                            <div class="card-body">
-                                <div>
-                                    <h4 class="fw-bold">{{other.name}}</h4>
-                                    <p class="text-muted d-none d-xl-block">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p><a class="fw-bold" href="#">Learn more&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            <line x1="15" y1="16" x2="19" y2="12"></line>
-                                            <line x1="15" y1="8" x2="19" y2="12"></line>
-                                        </svg></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card border-light border-1 d-flex justify-content-center p-4">
-                            <div class="card-body">
-                                <div>
-                                    <h4 class="fw-bold">Title</h4>
-                                    <p class="text-muted d-none d-xl-block">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p><a class="fw-bold" href="#">Learn more&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            <line x1="15" y1="16" x2="19" y2="12"></line>
-                                            <line x1="15" y1="8" x2="19" y2="12"></line>
-                                        </svg></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container" *ngFor="let other of others; let i = index">
+      <div class="row">
+        <div class="col-md-4 mb-5">
+          <img class="rounded img-fluid" [src]="other.img" style="height: 300px;">
         </div>
-       
+        <div class="col"[@slideAnimation]="animationState">
+          <div class="card mb-4 card-shadow">
+            <div class="card-body">
+              <h5 class="card-title">{{other.name}}</h5><svg *ngIf="i === 0" xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zm64 32v64c0 17.7 14.3 32 32 32H416c17.7 0 32-14.3 32-32V160c0-17.7-14.3-32-32-32H96c-17.7 0-32 14.3-32 32zM80 320c-13.3 0-24 10.7-24 24s10.7 24 24 24h56c13.3 0 24-10.7 24-24s-10.7-24-24-24H80zm136 0c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H216z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" *ngIf="i===1" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"/></svg>
+              <svg *ngIf="i===2" xmlns="http://www.w3.org/2000/svg" height="16" width="20" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M49.7 32c-10.5 0-19.8 6.9-22.9 16.9L.9 133c-.6 2-.9 4.1-.9 6.1C0 150.7 9.3 160 20.9 160h94L140.5 32H49.7zM272 160V32H173.1L147.5 160H272zm32 0h58c15.1-18.1 32.1-35.7 50.5-52.1c1.5-1.4 3.2-2.6 4.8-3.8L402.9 32H304V160zm209.9-23.7c17.4-15.8 43.9-16.2 61.7-1.2c-.1-.7-.3-1.4-.5-2.1L549.2 48.9C546.1 38.9 536.8 32 526.3 32H435.5l12.8 64.2c9.6 1 19 4.9 26.6 11.8c11.7 10.6 23 21.6 33.9 33.1c1.7-1.6 3.3-3.2 5-4.8zM325.2 210.7c3.8-6.2 7.9-12.5 12.3-18.7H32l4 32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H44L64 448c0 17.7 14.3 32 32 32s32-14.3 32-32H337.6c-31-34.7-49.6-80.6-49.6-129.9c0-35.2 16.3-73.6 37.2-107.4zM480 480c88.4 0 160-71.6 160-160c0-31.8-15.5-84-74.4-142.4c-11.8-11.7-30.6-10.7-42.3 1L512 189.9l-46-46c-6-6.1-14.1-9.3-22-9.2c-5.9 .1-11.8 1.9-16.8 5.8C382.5 175.3 320 243.3 320 320c0 88.4 71.6 160 160 160zm64-111.8c0 35.3-28.7 64-64 64s-64-28.7-64-64c0-36.5 37-73 54.8-88.4c5.4-4.7 13.1-4.7 18.5 0C507 295.1 544 331.6 544 368.2z"/></svg>
+              <p class="card-text text-muted">{{other.name1}}</p>
+              <h6>{{other.subtitle}}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
+  
+<app-pricing></app-pricing>
