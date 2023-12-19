@@ -8,15 +8,38 @@ input,textarea,.btn, label{
     border-radius: 30px !important;
     padding: 10px;
     margin-bottom: 50px;
-        box-shadow: rgba(0, 231, 167, 0.4)0px 5px, rgba(0, 231, 167, 0.3)0px 10px, rgba(0, 231, 167, 0.2) 0px 15px, rgba(0, 231, 167, 0.1)0px 20px, rgba(0, 231, 167, 0.05) 0px 25px;
+        box-shadow: rgba(0, 231, 167, 0.2)0px 5px, rgba(0, 231, 167, 0.1)0px 10px;
      color: #1d2930 !important;
 }
 .bs-icon-circle{
-    background-color: #026352 !important;
+    background-color: rgba(0, 231, 167, 1) !important;
+    box-shadow: rgba(0, 231, 167, 0.1) 0px 34px 35px, rgba(0, 231, 167, 0.3) 0px -8px 15px, rgba(0, 231, 167, 0.12) 0px 4px 6px, rgba(0, 231, 167, 0.17) 0px 8px 9px, rgba(0, 231, 167, 0.09) 0px -3px 5px !important;
 }
 ::placeholder{
     margin: 5px !important;
 }
+.bs-icon.bs-icon-circle {
+    border-radius: 50%;
+  }
+  
+  .bs-icon.bs-icon-primary {
+    color: var(--bs-white);
+    background: var(--bs-primary);
+  }
+  .co
+  
+  .bs-icon-md {
+    --bs-icon-size: 1.5rem;
+  }
+  p{
+    font-weight: 500;
+  }
+  
+.bs-icon{
+    width: 52px;
+    height:52px;
+    font-size: 25px;
+}  
 .formulaire{
     position: relative;
     margin-top: 5%;
