@@ -1,0 +1,31 @@
+.card{
+    border-radius: 20px;
+    color: white !important;
+    padding: 3px;
+}
+.bg{
+    width: 468px;
+    height: 800px;
+}
+.bg, .bg-1, .bg-2{
+    background-color: #D9DFFF;
+    border-color:#D9DFFF;
+    margin-top: 150px;
+    margin-bottom: 100px;
+
+    width: 468px;
+}
+.container-fluid{
+    display: flex !important;
+}
+
+.bg-1{
+    height: 1000px;
+    background-color: #FFD9E6;
+    border-color: #FFD9E6;
+}
+.bg-2{
+    height: 1200px;
+    background-color: #FFEBD9;
+    border-color: #FFEBD9;
+}
