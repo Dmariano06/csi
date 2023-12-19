@@ -9,7 +9,7 @@ input,textarea,.btn, label{
     padding: 10px;
     margin-bottom: 50px;
         box-shadow: rgba(0, 231, 167, 0.4)0px 5px, rgba(0, 231, 167, 0.3)0px 10px, rgba(0, 231, 167, 0.2) 0px 15px, rgba(0, 231, 167, 0.1)0px 20px, rgba(0, 231, 167, 0.05) 0px 25px;
-     
+     color: #1d2930 !important;
 }
 .bs-icon-circle{
     background-color: #026352 !important;
@@ -22,8 +22,11 @@ input,textarea,.btn, label{
     margin-top: 5%;
     z-index: 10;
 }
+*{
+    color: white !important;
+}
 
 body{
-    background-color:  #5a7f94;
+    background-color:  #1d2930;
     overflow: hidden;
 }
