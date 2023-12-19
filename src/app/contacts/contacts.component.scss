@@ -2,10 +2,14 @@
     label{
         border-radius: 100px !important;
     }
+    margin-top: 150px;
 }
-input,textarea,.btn{
+input,textarea,.btn, label{
     border-radius: 30px !important;
     padding: 10px;
+    margin-bottom: 50px;
+        box-shadow: rgba(0, 231, 167, 0.4)0px 5px, rgba(0, 231, 167, 0.3)0px 10px, rgba(0, 231, 167, 0.2) 0px 15px, rgba(0, 231, 167, 0.1)0px 20px, rgba(0, 231, 167, 0.05) 0px 25px;
+     
 }
 .bs-icon-circle{
     background-color: #026352 !important;
@@ -13,6 +17,13 @@ input,textarea,.btn{
 ::placeholder{
     margin: 5px !important;
 }
-.container{
+.formulaire{
+    position: relative;
     margin-top: 5%;
+    z-index: 10;
+}
+
+body{
+    background-color:  #5a7f94;
+    overflow: hidden;
 }

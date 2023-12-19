@@ -54,8 +54,8 @@ export class ModelComponent implements OnInit {
   }
 
   private updateParticles() {
-    this.particles.rotation.x += 0.005;
-    this.particles.rotation.y += 0.005;
+    this.particles.rotation.x += 0.000005;
+    this.particles.rotation.y += 0.000005;
 
     const positions = this.particles.geometry.getAttribute('position') as THREE.BufferAttribute;
     const speeds = this.particles.geometry.getAttribute('speed') as THREE.BufferAttribute;
@@ -95,13 +95,13 @@ export class ModelComponent implements OnInit {
       vertexColors: true,
     });
 
-    const particlesCount = 1000;
+    const particlesCount = 500;
     const positions = new Float32Array(particlesCount * 3);
     const colors = new Float32Array(particlesCount * 3);
     const speeds = new Float32Array(particlesCount * 3);
 
     for (let i = 0; i < particlesCount; i++) {
-      const radius = 1.5;
+      const radius = 0.02; // Rayon de la sphère
       const theta = Math.random() * Math.PI * 2;
       const phi = Math.random() * Math.PI;
 
@@ -109,16 +109,15 @@ export class ModelComponent implements OnInit {
       const y = radius * Math.sin(phi) * Math.sin(theta);
       const z = radius * Math.cos(phi);
 
-      const color = this.assignColor(i);
       const speed = this.assignSpeed();
 
       positions[i * 3] = x;
       positions[i * 3 + 1] = y;
       positions[i * 3 + 2] = z;
 
-      colors[i * 3] = color.r;
-      colors[i * 3 + 1] = color.g;
-      colors[i * 3 + 2] = color.b;
+      colors[i * 3] = 0x00 / 255;
+      colors[i * 3 + 1] = 0xe7 / 255;
+      colors[i * 3 + 2] = 0xa7 / 255;
 
       speeds[i * 3] = speed.x;
       speeds[i * 3 + 1] = speed.y;
@@ -130,17 +129,6 @@ export class ModelComponent implements OnInit {
     particlesGeometry.setAttribute('speed', new THREE.BufferAttribute(speeds, 3));
 
     return new THREE.Points(particlesGeometry, particlesMaterial);
-  }
-
-  private assignColor(index: number): THREE.Color {
-    const colors = [
-      new THREE.Color(0x67 / 255, 0xe4 / 255, 0x6f / 255),
-      new THREE.Color(0x0b / 255, 0x80 / 255, 0x9c / 255),
-      new THREE.Color(0xd9 / 255, 0xf7 / 255, 0xfe / 255),
-      new THREE.Color(0xe1 / 255, 0xcc / 255, 0x06 / 255),
-    ];
-
-    return colors[index % colors.length];
   }
 
   private assignSpeed(): THREE.Vector3 {

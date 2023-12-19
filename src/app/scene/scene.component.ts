@@ -108,7 +108,7 @@ export class SceneComponent implements AfterViewInit{
     this.camera.position.y = 0;
     this.camera.position.z = 90;
   
-    this.ambientLight = new THREE.AmbientLight(0xFFFFF, 0.05);
+    this.ambientLight = new THREE.AmbientLight(0xFFFFF, 0.005);
     this.scene.add(this.ambientLight);
     this.directionalLight = new THREE.DirectionalLight(0x00e7a7, 8);
     this.directionalLight.position.set(0, 1, 0);

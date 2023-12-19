@@ -16,6 +16,7 @@ import { FaqComponent } from './faq/faq.component';
 import { ModelComponent } from './model/model.component';
 import { SceneComponent } from './scene/scene.component';
 import { ServicesComponent } from './services/services.component';
+import { BlackholeComponent } from './blackhole/blackhole.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ServicesComponent } from './services/services.component';
     FaqComponent,
     ModelComponent,
     SceneComponent,
-    ServicesComponent
+    ServicesComponent,
+    BlackholeComponent
   ],
   imports: [
     BrowserModule,
