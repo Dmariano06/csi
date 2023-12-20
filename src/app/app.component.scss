@@ -88,14 +88,20 @@ padding: 0 !important;
     opacity: 0;
 }
   .active {
-    color:#00e7a7 !important;
+    color:white !important;
     font-weight: bold;
     text-underline-offset: 30px;
     text-shadow: none !important;
   }
+
   .active:hover{
-    color: white !important;
+    color:#00e7a7;
     text-shadow: 1px 1px 2px black !important;
+  }
+  .button{
+    .active{
+        color: white !important;
+    }
   }
   
   footer{
