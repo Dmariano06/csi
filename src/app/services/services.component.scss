@@ -39,3 +39,11 @@ button{
 span{
   color: white;
 }
+@media(max-width:1200px){
+  .container-fluid {
+    display: grid !important;
+    .card, .bg²{
+width: 400px;
+    }
+  }
+}

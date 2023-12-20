@@ -11,10 +11,6 @@
 .navbar-toggler-icon{
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(2, 99, 82, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
-.navbar-brand{
-
-
-}
 a{
     font-weight: 500;
     letter-spacing: 0.2px;
@@ -35,23 +31,15 @@ a:hover{
     }
 
 }
-.navbar-nav{
-    img{
 
-    }
-}
 html{
     background: #d9f7fe;
 }
 body{
     background-color: #d9f7fe;
-    overflow-x: hidden;
-    
 }
 
-.navbar-toggler{
-    border-color: transparent;
-}
+
 
 .btn-close{
     box-shadow: rgba(0, 231, 167, 0.25) 0px 30px 60px -12px inset, rgba(0, 231, 167, 0.3) 0px 18px 36px -18px inset;
@@ -94,6 +82,7 @@ padding: 0 !important;
  
  
 .navbar-toggler{
+    border: none !important;
     outline: none !important;
     box-shadow: none !important;
     opacity: 0;
@@ -110,7 +99,11 @@ padding: 0 !important;
   }
   
   footer{
-    a{color: #3f4a4d !important;
+    background-color: #1d2930;
+    h3{
+        color: #00e7a7 !important;
+    }
+    a,p{color: white !important;
         text-shadow: none !important;
     font-weight: normal !important;
 span{
