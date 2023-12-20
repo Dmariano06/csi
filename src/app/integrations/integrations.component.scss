@@ -16,22 +16,22 @@
     display: flex;
     padding-top: 150px;
   }
-  @supports (background-image: url('../../assets/img/illustrations/services3.webp')) {
+  @supports (background-image: url('../../assets/img/illustrations/services2.webp')) {
     .parallax1 {
       background-size: cover;
-      background-image: url('../../assets/img/illustrations/services3.webp');
+      background-image: url('../../assets/img/illustrations/services2.webp');
     }
   }
   
-  @supports not (background-image: url('../../assets/img/illustrations/services2.png')) {
+  @supports not (background-image: url('../../assets/img/illustrations/services2.webp')) {
     .parallax1 {
       background-image: url('../../assets/img/illustrations/services2.png');
     }
   }
-  @supports (background-image: url('../../assets/img/illustrations/services2.webp')) {
+  @supports (background-image: url('../../assets/img/illustrations/services.webp')) {
     .parallax2 {
       background-size: cover;
-      background-image: url('../../assets/img/illustrations/services2.webp');
+      background-image: url('../../assets/img/illustrations/services.webp');
     }
   }
   
@@ -74,7 +74,6 @@
         width: 400px;
     }
     color: white !important;
-    width: 400px;
     background: transparent;
 }
 .card{
@@ -101,5 +100,8 @@
     }
     .state{
         margin-left: 0px;
+    }
+    .state{
+        width: 300px !important;
     }
 }
