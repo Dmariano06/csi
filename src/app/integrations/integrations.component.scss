@@ -5,39 +5,58 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: white !important;
-  }
-  .parallax1 {
     img{
-        position: absolute;
-        right: 300px;
-        top: 300px;
+        position: relative;
+        margin: auto;
         border-radius: 13px;
     }
-    padding-top: 130px;
-    background-image: url("../../assets/img/illustrations/services2.png");
+    overflow: hidden;
   }
-  .parallax2 {
-    img{
-        position: absolute;
-        top: 130vh;
-        right: 300px;
-        border-radius: 13px;
-    }
+  .test{
+    display: flex;
     padding-top: 150px;
-    background-image: url("../../assets/img/illustrations/services1.png");
   }
-  .parallax3{
-    img{
-        position: absolute;
-        right: 500px;
-        top: 230vh;
-        border-radius: 13px;
+  @supports (background-image: url('../../assets/img/illustrations/services3.webp')) {
+    .parallax1 {
+      background-size: cover;
+      background-image: url('../../assets/img/illustrations/services3.webp');
     }
-    padding-top: 150px;
-    background-image: url("../../assets/img/illustrations/services.png");
+  }
+  
+  @supports not (background-image: url('../../assets/img/illustrations/services2.png')) {
+    .parallax1 {
+      background-image: url('../../assets/img/illustrations/services2.png');
+    }
+  }
+  @supports (background-image: url('../../assets/img/illustrations/services2.webp')) {
+    .parallax2 {
+      background-size: cover;
+      background-image: url('../../assets/img/illustrations/services2.webp');
+    }
+  }
+  
+  @supports not (background-image: url('../../assets/img/illustrations/services.webp')) {
+    .parallax2 {
+      background-image: url('../../assets/img/illustrations/services.png');
+    }
+  }
+  @supports (background-image: url('../../assets/img/illustrations/services1.webp')) {
+    .parallax3 {
+      background-size: cover;
+      background-image: url('../../assets/img/illustrations/services1.webp');
+    }
+  }
+  
+  @supports not (background-image: url('../../assets/img/illustrations/services1.webp')) {
+    .parallax3 {
+      background-image: url('../../assets/img/illustrations/services1.png');
+    }
   }
   .h2{
     margin-top: 50px;
+  }
+  .title,h5{
+    margin-left: 150px;
   }
   p{
     font-weight: 500;
@@ -45,7 +64,7 @@
   .container-fluid{
     display:flex;
   }
-  span,h1,h2,h3{
+  span,h1,h2,h3,h4,h5{
     padding-bottom: 10px;
     color: #00e7a7 !important;
   }
@@ -66,13 +85,19 @@
 
 }
 .state{
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 150px;
     width: 400px;
 }
-@media(max-width:1600px){
+@media(max-width:1350px){
     img{
-        display: none;
+        width: 400px;
+        height: 200px;
+    }
+}
+@media(max-width:800px) {
+    .test{
+        display: grid;
     }
     .state{
         margin-left: 0px;

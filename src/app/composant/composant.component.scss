@@ -8,11 +8,6 @@
       color: #212529 !important;
     }
 }
-@media (min-width: 1000px){
-.processus{
-  padding-top: 250px;
-}
-}
 *{
   a{
     text-decoration: none;
@@ -50,14 +45,8 @@ padding-left: 5px !important;
 } 
 
 
-  #techno{
-    margin-top: 30%;
-  }
  
   @media (max-width: 800px) {
-    #techno{
-      margin-top: 0;
-    }
     img{
       height: 350px !important;
       width: 350px !important;
