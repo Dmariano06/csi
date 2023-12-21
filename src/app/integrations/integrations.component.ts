@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { ImageloaderService } from '../imageloader.service';
 
 
@@ -7,7 +7,7 @@ import { ImageloaderService } from '../imageloader.service';
   templateUrl: './integrations.component.html',
   styleUrl: './integrations.component.scss'
 })
-export class IntegrationsComponent {
+export class IntegrationsComponent implements OnInit {
   constructor(private el: ElementRef, private imagePreloaderService: ImageloaderService) {}
 
   scrollParallax(event: WheelEvent, section: number): void {

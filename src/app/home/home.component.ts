@@ -1,11 +1,13 @@
-import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
+import { ImageloaderService } from '../imageloader.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent{
+export class HomeComponent implements OnInit{
+
   headers = [
     {text: "Explorez le potentiel du", text1:"digital"}
   ]
@@ -18,7 +20,11 @@ export class HomeComponent{
 scrollOffset = 0;
 lastScrollTop = 0;
 
-constructor(private renderer: Renderer2, private el: ElementRef) {}
+constructor(private renderer: Renderer2, private el: ElementRef, private imagePreloaderService: ImageloaderService) {}
+
+ngOnInit() {
+  this.imagePreloaderService.preloadImage('assets/img/illustrations/fontheader1.webp');
+}
 
 @HostListener('window:scroll', [])
 onWindowScroll() {
@@ -26,6 +32,7 @@ onWindowScroll() {
   const blurValue = Math.min(scrollPosition / 10, 20);
   this.renderer.setStyle(this.el.nativeElement.querySelector('.scroll-blur'), 'filter', `blur(${blurValue}px)`);
 }
+
 
 }
 
