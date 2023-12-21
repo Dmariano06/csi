@@ -1,6 +1,7 @@
 .parallax {
     height: 100vh;
     background-attachment: fixed;
+    animation: fadeIn forwards 0.5s;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,7 +33,7 @@ left: 50%;
     background-color: transparent;
   }
   .scrollTop{
-    left: 51% !important;
+    left: 55% !important;
     transform: rotate(180deg);
   }
 
