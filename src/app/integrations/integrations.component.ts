@@ -45,7 +45,8 @@ export class IntegrationsComponent implements OnInit {
       .catch((error) => {
         console.error('Erreur lors du préchargement de l\'image :', error);
       });
-      this.imagePreloaderService.preloadImage('assets/img/illustrations/services2.png');
+      this.imagePreloaderService.preloadImage('assets/img/illustrations/services2.webp');
+      this.imagePreloaderService.preloadImage('assets/img/illustrations/template1.png');
       this.imagePreloaderService.preloadImage('assets/img/illustrations/services1.png');
       this.imagePreloaderService.preloadImage('assets/img/illustrations/services5.png');
   }
