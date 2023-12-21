@@ -9,7 +9,7 @@ input,textarea,.btn, label{
     padding: 10px;
     margin-bottom: 50px;
         box-shadow: rgba(0, 231, 167, 0.2)0px 5px, rgba(0, 231, 167, 0.1)0px 10px;
-     color: #1d2930 !important;
+   //  color: #1d2930 !important;
 }
 .bs-icon-circle{
     background-color: rgba(0, 231, 167, 1) !important;
@@ -17,6 +17,11 @@ input,textarea,.btn, label{
 }
 ::placeholder{
     margin: 5px !important;
+}
+#name-1,#email-1,#telephone{
+    border: none;
+    background-color: rgba(0, 231, 167, 0.1);
+    width: 80% !important;
 }
 .bs-icon.bs-icon-circle {
     border-radius: 50%;
@@ -39,17 +44,40 @@ input,textarea,.btn, label{
     width: 52px;
     height:52px;
     font-size: 25px;
-}  
+} 
+
+
 .formulaire{
     position: relative;
     margin-top: 5%;
     z-index: 10;
 }
-*{
+.form-select{
+    background-color: rgba(0, 231, 167, 0.3);
+    border: none;
     color: white !important;
+    border-radius: 13px;
+   // color: #1d2930 !important;
+}
+option{
+    border-radius: 13px;
 }
 
+::placeholder{
+    padding: 2px;
+    color: rgba(0, 231, 167, 1);
+}
+
+input{
+    color: white !important;
+}
 body{
+    color: white;
     background-color:  #1d2930;
     overflow: hidden;
+}
+@media (max-width:800px) {
+    .form-control,.form-select{
+        width: 80%;
+    }
 }

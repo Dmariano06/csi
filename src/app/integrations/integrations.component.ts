@@ -33,7 +33,7 @@ export class IntegrationsComponent implements OnInit {
     this.document.documentElement.scrollTop += window.innerHeight;
   }
   scrollTop() {
-    this.document.documentElement.scrollTop -= (window.innerHeight * 2);
+    this.document.documentElement.scrollTop -= window.innerHeight;
   }
 
   ngOnInit() {
