@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
+import { ImageloaderService } from '../imageloader.service';
 
 @Component({
   selector: 'app-services',
@@ -14,11 +15,23 @@ uls=[{name:"Porte d'Entrée Digitale"},];
   {name:"CraftedWebSite", subtitle:"Applications Web - Puissance et Adaptabilité",name1title:"Conception Web & Contenu", name1:"Porte d'entrée Digitale ", name2title:"Référencement & Visibilité",name2:"Des fonctionnalités sur mesure", name3title:"Évolutivité Potentielle", name3:"Des solutions conçues pour s'adapter et évoluer", nom3:"Nombre de pages sur demande (4 comprises)", nom4:"Optimisation intégrale des contenus ( média, développement, fonctionnalités...)", name6:"Un site entièrement personnalisable"},
    {name:"CommerceDigitalXcellence",subtitle:"E-commerce - Vendez en Ligne avec Style", name1title:"Solutions de Paiement Sécurisées",name1:"Assurez la confiance de vos clients avec des transactions sécurisées.", name2title:"Solutions de Paiement Sécurisées", name2:"Instaurez la confiance avec des solutions de paiement sûres et conformes aux normes de sécurité.",name3title:"Optimisation de l'Expérience", name3:"Des processus d'achat fluides et intuitifs pour maximiser les conversions visiteurs."},
   ]*/
+  constructor(private imagePreloaderService: ImageloaderService) { }
+
+  ngOnInit() {
+    // Remplacez 'path/to/image.jpg' par le chemin réel de votre image
+    this.imagePreloaderService.preloadImage('path/to/image.jpg')
+      .then(() => {
+        console.log('L\'image a été préchargée avec succès.');
+      })
+      .catch((error) => {
+        console.error('Erreur lors du préchargement de l\'image :', error);
+      });
+  }
   services = [
     {
       title: 'ShowCaseHub',
       subtitle: 'Site Vitrine - Impact Visuel, Coût Abordable',
-      price: '$499',
+      price: '$399',
       bestValue: false,
       bgClass: 'bg',
       designTitle: 'Conception Web & Contenu',
@@ -45,7 +58,7 @@ uls=[{name:"Porte d'Entrée Digitale"},];
     {
       title: 'CraftedWebSite',
       subtitle: 'Applications Web - Puissance et Adaptabilité',
-      price: '$499',
+      price: '$1 499',
       bestValue: false,
       bgClass: '1',
       designTitle: 'Design Features',
@@ -58,10 +71,10 @@ uls=[{name:"Porte d'Entrée Digitale"},];
       ],
       seoTitle: 'SEO Features',
       seoFeatures: [
-        'On-page SEO',
-        'Keyword Research',
-        'Link Building',
-        'Analytics Setup'
+        'Référencement naturel SEO',
+        'Fiche Google My Business',
+        'Indice de perofrmance Google',
+        'Référencement local'
       ],
       supportTitle: 'Support Features',
       supportFeatures: [
@@ -72,9 +85,9 @@ uls=[{name:"Porte d'Entrée Digitale"},];
       ]
     },
     {
-      title: 'Web Design',
-      subtitle: 'Modern and responsive web design',
-      price: '$499',
+      title: 'CommercialDigital',
+      subtitle: 'E-commerce - Vendez en Ligne avec Style',
+      price: '$1 499',
       bestValue: false,
       bgClass: '2',
       designTitle: 'Design Features',
@@ -86,10 +99,10 @@ uls=[{name:"Porte d'Entrée Digitale"},];
       ],
       seoTitle: 'SEO Features',
       seoFeatures: [
-        'On-page SEO',
-        'Keyword Research',
-        'Link Building',
-        'Analytics Setup'
+        'Référencement naturel SEO',
+        'Fiche Google My Business',
+        'Indice de perofrmance Google',
+        'Référencement local'
       ],
       supportTitle: 'Support Features',
       supportFeatures: [
@@ -100,4 +113,5 @@ uls=[{name:"Porte d'Entrée Digitale"},];
       ]
     }
   ];
+
 }
