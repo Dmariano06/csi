@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
   styleUrl: './contacts.component.scss'
 })
 export class ContactsComponent {
-  entity = { name: '', email: '', message: '' };
+  entity = { name: '', email: '', message: '' ,phone:''};
   @ViewChild('formRef') formRef: NgForm | undefined;
 
   constructor(private http: HttpClient) {}
@@ -22,6 +22,7 @@ export class ContactsComponent {
             name: '',
             email: '',
             message: '',
+            phone:''
           };
         },
         (error) => {

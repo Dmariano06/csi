@@ -1,5 +1,6 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit } from '@angular/core';
 import { ImageloaderService } from '../imageloader.service';
+import { DOCUMENT } from '@angular/common';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { ImageloaderService } from '../imageloader.service';
   styleUrl: './integrations.component.scss'
 })
 export class IntegrationsComponent implements OnInit {
-  constructor(private el: ElementRef, private imagePreloaderService: ImageloaderService) {}
+  constructor(private el: ElementRef, private imagePreloaderService: ImageloaderService, @Inject(DOCUMENT) private document: Document) {}
 
   scrollParallax(event: WheelEvent, section: number): void {
     event.preventDefault(); // Empêche le défilement par défaut
@@ -26,6 +27,14 @@ export class IntegrationsComponent implements OnInit {
     }
   }
 
+
+
+  scrollDown() {
+    this.document.documentElement.scrollTop += window.innerHeight;
+  }
+  scrollTop() {
+    this.document.documentElement.scrollTop -= (window.innerHeight * 2);
+  }
 
   ngOnInit() {
     // Remplacez 'path/to/image.jpg' par le chemin réel de votre image

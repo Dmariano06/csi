@@ -36,9 +36,24 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .icon-sun-tabler{
   background: #026352;
 }
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards !important; /* Durée de l'animation et conservation de l'état final */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 
 .button {
+  box-shadow: rgba(0, 231, 167, 0.1) 0px 34px 35px, rgba(0, 231, 167, 0.3) 0px -8px 15px, rgba(0, 231, 167, 0.12) 0px 4px 6px, rgba(0, 231, 167, 0.17) 0px 8px 9px, rgba(0, 231, 167, 0.09) 0px -3px 5px !important;
   border-radius: 999px;
   background-color: #00e7a7;
   box-shadow: #026352 0 5px 5px 0px;

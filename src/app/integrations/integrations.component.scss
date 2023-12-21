@@ -12,9 +12,33 @@
     }
     overflow: hidden;
   }
+  
   .test{
     display: flex;
     padding-top: 150px;
+  }
+  #scroll{
+    height: 50px;
+    width: 50px;
+    color: #00e7a7;
+    font-weight: bold;
+    border: #00e7a7 2px solid;
+    font-size: 20px;
+position: relative;
+box-shadow: rgba(0, 231, 167, 0.1) 0px 34px 35px, rgba(0, 231, 167, 0.3) 0px -8px 15px, rgba(0, 231, 167, 0.12) 0px 4px 6px, rgba(0, 231, 167, 0.17) 0px 8px 9px, rgba(0, 231, 167, 0.09) 0px -3px 5px !important;
+margin: auto;
+left: 50%;
+    border-radius: 100%;
+    background-color: transparent;
+  }
+  .scrollTop{
+    left: 51% !important;
+    transform: rotate(180deg);
+  }
+
+  #scroll:hover{
+    background-color: rgba(6, 245, 177,0.4);
+    color: white !important;
   }
   @supports (background-image: url('../../assets/img/illustrations/services2.webp')) {
     .parallax1 {
@@ -88,7 +112,19 @@
     margin-left: 150px;
     width: 400px;
 }
-
+.top{
+  position: absolute;
+  right: 0;
+}
+.down {
+position: absolute;
+left: 0;
+bottom: 50%;
+margin: auto;
+}
+.downtop{
+  display: flex;
+}
 
 
 @media(max-width:1350px){
@@ -107,4 +143,5 @@
     .state{
         width: 300px !important;
     }
+    
 }
