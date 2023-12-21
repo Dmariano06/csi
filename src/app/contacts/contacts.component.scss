@@ -16,7 +16,7 @@ input,textarea,.btn, label{
     box-shadow: rgba(0, 231, 167, 0.1) 0px 34px 35px, rgba(0, 231, 167, 0.3) 0px -8px 15px, rgba(0, 231, 167, 0.12) 0px 4px 6px, rgba(0, 231, 167, 0.17) 0px 8px 9px, rgba(0, 231, 167, 0.09) 0px -3px 5px !important;
 }
 ::placeholder{
-    margin: 5px !important;
+    margin: 8px !important;
 }
 #name-1,#email-1,#telephone{
     border: none;
@@ -59,6 +59,19 @@ input,textarea,.btn, label{
     border-radius: 13px;
    // color: #1d2930 !important;
 }
+textarea{
+    color: white !important;
+    background-color: rgba(0, 231, 167, 0.2) !important;
+    border: none;
+    position: relative;
+    width: 500px;
+    right: 65px;
+}
+.textarea{
+    ::placeholder{
+        color: white !important;
+    }
+}
 option{
     border-radius: 13px;
 }
@@ -79,5 +92,8 @@ body{
 @media (max-width:800px) {
     .form-control,.form-select{
         width: 80%;
+    }
+    textarea{
+        position: unset;
     }
 }

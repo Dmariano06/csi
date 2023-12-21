@@ -1,12 +1,12 @@
 .card{
-  border-radius: 20px;
+  border-radius: 25px;
   padding: 3px;
 }
 .bg{
   width: 468px;
   height: 750px;
   margin-bottom: 25px !important;
-  background: linear-gradient(to left, rgba(76, 0, 232,0.5), rgb(76, 0, 232));
+  background: linear-gradient(to left, rgba(76, 0, 232,0.6), rgb(76, 0, 232));
   border:none;
 }
 .bg, .bg-1, .bg-2{
@@ -19,12 +19,12 @@
 .bg-1{
   margin-top: 15px !important;
   height: 850px;
-  background: linear-gradient(to left, rgba(232, 23, 72, 0.5), #E81748);
+  background: linear-gradient(to left, rgba(232, 23, 72, 0.6), #E81748);
   border:none;
 }
 .bg-2{
   height: 880px;
-  background: linear-gradient(to left, rgba(52, 105, 90,0.5), rgb(52, 105, 90));
+  background: linear-gradient(to left, rgba(52, 105, 90,0.6), rgb(52, 105, 90));
   border:none;
   margin-top: 30px;
 }
