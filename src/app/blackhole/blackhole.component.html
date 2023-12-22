@@ -2,7 +2,7 @@
     <div class="container">
     <button class="button" (click)="prev()">prev</button> 
       <button class="button" (click)="next()">next</button>
-    <div style="position:relative">
+    <div style="position:relative; left: 35%;">
         <div class="carousel" >
         <img #cell *ngFor="let image of images" class="carousel__cell" id="cell"  [src]="image.src" alt=""></div>
     </div>

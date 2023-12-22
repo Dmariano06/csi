@@ -1,8 +1,53 @@
-header{
-    width: 100%;
-    background-color: #1d2930;
-    height: 80vh;
+.cover-container {
     display: flex;
-    padding-top: 150px;
-}
+    width: 100vw;
+  }
 
+  .half-width {
+    flex: 1;
+    overflow: hidden;
+    position: relative; /* Ajout de position relative pour positionner le titre par rapport à ce conteneur */
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .cover-title {
+    position: absolute; 
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  .presentation {
+    padding: 150px 0 100px 0;
+    background-color: #1d2930;
+    color: white;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centrer le texte verticalement */ /* 100% de la hauteur de la vue pour centrer verticalement */
+  }
+
+  h1 {
+    font-size: 2em; /* Taille de la police du titre */
+    margin-bottom: 10px; /* Espacement en bas du titre */
+  }
+
+  .text-center {
+    max-width: 600px; /* Largeur maximale du paragraphe pour une meilleure lisibilité */
+    margin: 0 auto; /* Centrer le paragraphe horizontalement */
+  }
+  .cover-little{
+    height: 300px;
+    color: white;
+    .col{
+        width: 500px;
+    }
+    background-image: url('../../assets/img/illustrations/passioncode.png');
+  }

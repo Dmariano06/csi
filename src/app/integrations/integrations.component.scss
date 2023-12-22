@@ -42,7 +42,12 @@ left: 50%;
     background-color: transparent;
   }
   .scrollTop{
+    top: 50px;
     transform: rotate(180deg);
+  }
+  .material-symbols-outlined{
+    position: relative;
+    top:8%;
   }
 
   #scroll:hover{
@@ -121,19 +126,7 @@ left: 50%;
     margin-left: 150px;
     width: 400px;
 }
-.top{
-  position: absolute;
-  right: 0;
-}
-.down {
-position: absolute;
-left: 0;
-bottom: 50%;
-margin: auto;
-}
-.downtop{
-  display: flex;
-}
+
 
 
 @media(max-width:1350px){

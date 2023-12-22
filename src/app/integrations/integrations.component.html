@@ -26,10 +26,15 @@
     </ul>
   </div>
   </div>
-  <button (click)="scrollDown()" id="scroll">V</button>
+  <button (click)="scrollDown()" id="scroll"><span class="material-symbols-outlined">
+arrow_downward
+</span></button>
 </div>
 
 <div class="parallax parallax2">
+  <button (click)="scrollTop()" class="scrollTop" id="scroll" style="top: 46px;"><span class="material-symbols-outlined">
+    arrow_downward
+    </span></button>
     <div class="test">
         <div>
     <h1 class="title">ShowCaseHub</h1>
@@ -53,8 +58,9 @@
     <p>Explorez la transformation de votre simple site vitrine vers une expérience web avancée, sans limites. Découvrez des fonctionnalités améliorées et une interactivité accrue</p>
   </div>
   </div>
-  <button (click)="scrollDown()" id="scroll">V</button>
-  <button (click)="scrollTop()" class="scrollTop" id="scroll">V</button>
+  <button (click)="scrollDown()" id="scroll"><span class="material-symbols-outlined">
+    arrow_downward
+    </span></button>
 </div>
 <div class="parallax parallax3"  (wheel)="scrollParallax($event, 3)">
     <div class="test">
@@ -80,5 +86,8 @@
     <p>Explorez la transformation de votre simple site vitrine vers une expérience web avancée, sans limites. Découvrez des fonctionnalités améliorées et une interactivité accrue</p>
   </div>
     </div>
-    <button (click)="scrollTop()" class="scrollTop" id="scroll" style="top: 46px;">V</button>
+    <button (click)="scrollTop()" class="scrollTop" id="scroll" style="top: 46px;"><span class="material-symbols-outlined">
+      arrow_downward
+      </span></button>
+
   </div>

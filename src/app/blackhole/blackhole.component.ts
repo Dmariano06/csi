@@ -15,7 +15,7 @@ export class BlackholeComponent{
   timer = 600;
   timing = "600ms";
   animates = [0, 2, 7]
-  images = [{src:"assets/img/illustrations/template.png"},{src:"assets/img/illustrations/template1.png"},{src:"assets/img/illustrations/therapy.png"},{src:"assets/img/illustrations/template.png"},{src:"assets/img/illustrations/template1.png"},{src:"assets/img/illustrations/therapy.png"},{src:"assets/img/illustrations/template.png"},{src:"assets/img/illustrations/template1.png"},{src:"assets/img/illustrations/therapy.png"}];
+  images = [{src:"assets/img/illustrations/template.png"},{src:"assets/img/illustrations/template1.png"},{src:"assets/img/illustrations/therapy.png"},{src:"assets/img/illustrations/portfolio.png"},{src:"assets/img/illustrations/template3.png"},{src:"assets/img/illustrations/therapy.png"},{src:"assets/img/illustrations/template.png"},{src:"assets/img/illustrations/template4.png"},{src:"assets/img/illustrations/template5.png"}];
   
 
   cellWidth!: number;
