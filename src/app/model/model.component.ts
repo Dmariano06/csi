@@ -17,7 +17,7 @@ export class ModelComponent implements OnInit {
 
   constructor() {
     this.scene = new THREE.Scene();
-    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1);
     this.renderer = new THREE.WebGLRenderer({ alpha: true });
     this.particles = this.createParticles();
   }
@@ -38,7 +38,7 @@ export class ModelComponent implements OnInit {
   }
 
   private setupCamera() {
-    this.camera.position.z = 5;
+    this.camera.position.z = 1;
   }
 
   private animate() {
@@ -79,7 +79,7 @@ export class ModelComponent implements OnInit {
     positions.array[index + 2] = this.wrapCoordinate(positions.array[index + 2], range);
   }
 
-  private wrapCoordinate(coord: number, range: number): number {
+   private wrapCoordinate(coord: number, range: number): number {
     if (coord > range) {
       return -range;
     } else if (coord < -range) {

@@ -1,1 +1,18 @@
-<canvas id="myCanvas" width="800px" height="600px" #canvas></canvas>
+
+    <div class="container">
+ <!--   <button class="button" (click)="prev()">prev</button> 
+      <button class="button" (click)="next()">next</button>-->
+    <div style="position:relative">
+        <div class="carousel" >
+        <img #cell *ngFor="let image of images" class="carousel__cell" id="cell"  [src]="image.src" alt=""></div>
+    </div>
+
+    
+    <div style="position:relative;margin-top:150px; display: none;">
+      <div class="carousel" >
+        <div #element *ngFor="let image of images" class="carousel__cell"> <img [src]="image.src" alt="">
+          </div>
+    </div>
+    </div>
+    </div>
+    

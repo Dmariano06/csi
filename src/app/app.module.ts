@@ -10,10 +10,11 @@ import { PricingComponent } from './pricing/pricing.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ComposantComponent } from './composant/composant.component';
 import { FaqComponent } from './faq/faq.component';
 import { ModelComponent } from './model/model.component';
+
 import { SceneComponent } from './scene/scene.component';
 import { ServicesComponent } from './services/services.component';
 import { BlackholeComponent } from './blackhole/blackhole.component';
@@ -31,7 +32,7 @@ import { BlackholeComponent } from './blackhole/blackhole.component';
     ModelComponent,
     SceneComponent,
     ServicesComponent,
-    BlackholeComponent
+    BlackholeComponent,
   ],
   imports: [
     BrowserModule,

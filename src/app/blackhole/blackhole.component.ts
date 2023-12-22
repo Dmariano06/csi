@@ -1,146 +1,107 @@
-import { AfterViewInit, Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { GLTFLoader, GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import * as THREE from 'three';
-import { CSS2DRenderer } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
+import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+
+import { AnimationBuilder, animate, style } from '@angular/animations';
 
 @Component({
   selector: 'app-blackhole',
   templateUrl: './blackhole.component.html',
   styleUrl: './blackhole.component.scss'
 })
-export class BlackholeComponent implements AfterViewInit {
-  @ViewChild('canvas', { static: true }) private canvasRef!: ElementRef;
-
-  @Input() public fieldOfView: number = 1;
-
-  @Input('nearClipping') public nearClippingPane: number = 1;
-
-  @Input('farClipping') public farClippingPane: number = 1000;
-
-  private camera!: THREE.PerspectiveCamera;
-
-  private controls!: OrbitControls;
-
-  private ambientLight!: THREE.AmbientLight;
-
-  private light1!: THREE.PointLight;
-
-  private light2!: THREE.PointLight;
-
-  private light3!: THREE.PointLight;
-
-  private light4!: THREE.PointLight;
-
-  private model: any;
-
-  private directionalLight!: THREE.DirectionalLight;
-
-
-
-  private get canvas(): HTMLCanvasElement {
-    return this.canvasRef!.nativeElement;
-  }
-
-  private loaderGLTF = new GLTFLoader();
-
-  private renderer!: THREE.WebGLRenderer;
-
-  private scene!: THREE.Scene;
+export class BlackholeComponent{
+  @ViewChildren("cell")
+  items!: QueryList<ElementRef>;
+  @ViewChildren("element")
+  itemsView!: QueryList<ElementRef>;
+  timer = 600;
+  timing = "600ms";
+  animates = [0, 2, 7]
+  images = [{src:"assets/img/illustrations/template.png"},{src:"assets/img/illustrations/template1.png"},{src:"assets/img/illustrations/therapy.png"},{src:"assets/img/illustrations/template.png"},{src:"assets/img/illustrations/template1.png"},{src:"assets/img/illustrations/therapy.png"},{src:"assets/img/illustrations/template.png"},{src:"assets/img/illustrations/template1.png"},{src:"assets/img/illustrations/therapy.png"}];
   
-  private animateModel() {
-    let i = 0;
-    if (this.model) {
-     
-      this.model.rotation.x += 0.003;
-      this.model.rotation.z += 0.003;
-      this.model.rotation.y += 0.003;
-      
+
+  cellWidth!: number;
+  radius: number = 150;
+  minScale: number = 0.5;
+
+  get cellCount() {
+    return this.items.length;
+  }
+  selectedIndex = 0;
+
+  movements = [
+    { pos: 0, right: [1, 2], left: [8, 7] },
+    { pos: 2, right: [3, 4, 5, 6, 7], left: [1, 0] },
+    { pos: 7, right: [8, 0], left: [6, 5, 4, 3, 2] }
+  ];
+
+  constructor(private builder: AnimationBuilder) {}
+
+  animateViews(direction: string) {
+    this.animates.forEach((x: number, index: number) => {
+      const mov = this.movements.find(m => m.pos === x);
+  
+      if (mov) {
+        const animations = (mov as any)[direction].map((m: number) => {
+          const angle = (m * 2 * Math.PI) / 9;
+          const scale = (1 + this.minScale) / 2 + (1 - this.minScale) / 2 * Math.cos(angle);
+          const applystyle = {
+            left: -this.cellWidth / 2 + this.radius * Math.sin(angle) + "px",
+            transform: "scale(" + scale + ")",
+            opacity:'1',
+            position: "absolute",
+            "z-index": Math.floor(100 * scale)
+          };
+          return animate(
+            this.timer / (mov as any)[direction].length + "ms",
+            style(applystyle)
+          );
+        });
+  
+        const myAnimation = this.builder.build(animations);
+        const player = myAnimation.create(this.items.toArray()[index].nativeElement);
+        player.onDone(() => (this.animates[index] = (mov as any)[direction][(mov as any)[direction].length - 1]));
+        player.play();
       }
-    }
-  
-  private createControls = () => {
-    const renderer = new CSS2DRenderer();
-    this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true, alpha: true });
-    renderer.domElement.style.position = 'absolute';
-    renderer.domElement.style.top = '0px';
-    document.body.appendChild(renderer.domElement);
-    this.renderer.setClearColor('red', 1);
-    this.controls = new OrbitControls(this.camera, renderer.domElement);
-    this.controls.enableRotate = false;
-    this.controls.enablePan = false;
-    this.controls.enableZoom = true;
-
-    this.controls.update();
-  };
-
-  private createScene() {
-    this.scene = new THREE.Scene();
- this.scene.background = new THREE.Color(0x000000);
-    this.scene.background.setScalar(0);
-    this.loaderGLTF.load('assets/img/illustrations/blackhole/scene.gltf', (gltf: GLTF) => {
-      this.model = gltf.scene.children[0];
-      console.log(this.model);
-      var box = new THREE.Box3().setFromObject(this.model);
-      box.getCenter(this.model.position); 
-      this.model.position.multiplyScalar(-1);
-      this.scene.add(this.model);
     });
- 
-    let aspectRatio = this.getAspectRatio();
-    this.camera = new THREE.PerspectiveCamera(
-      this.fieldOfView,
-      aspectRatio,
-      this.nearClippingPane,
-      this.farClippingPane
-    )
-
-    this.camera.position.x = 0;
-    this.camera.position.y = 0;
-    this.camera.position.z = 300;
+  }
   
-    this.ambientLight = new THREE.AmbientLight(0xFFFFF, 0.005);
-    this.scene.add(this.ambientLight);
-    this.directionalLight = new THREE.DirectionalLight(0x00e7a7, 8);
-    this.directionalLight.position.set(0, 1, 0);
-    this.directionalLight.castShadow = true;
-    this.scene.add(this.directionalLight);
-    this.light1 = new THREE.PointLight(0x00e7a7, 10);
-    this.light1.position.set(0, 200, 400);
-    this.scene.add(this.light1);
-    this.light2 = new THREE.PointLight(0x00e7a7, 10);
-    this.light2.position.set(500, 100, 0);
-    this.scene.add(this.light2);
-    this.light3 = new THREE.PointLight(0x00e7a7, 10);
-    this.light3.position.set(0, 100, -500);
-    this.scene.add(this.light3);
-    this.light4 = new THREE.PointLight(0x00e7a7, 10);
-    this.light4.position.set(-500, 300, 500);
-    this.scene.add(this.light4);
-  }
-  private vert = 0x00ff00;
-  private getAspectRatio() {
-    return this.canvas.clientWidth / this.canvas.clientHeight;
+  animateCarousel() {
+    this.items.forEach((item: ElementRef, i: number) => {
+      const myAnimation = this.builder.build([
+        animate(this.timing, style(this.getStyle(i)))
+      ]);
+      const player = myAnimation.create(item.nativeElement);
+      player.play();
+    });
   }
 
-
-  private startRenderingLoop() {
-    this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true });
-    this.renderer.setPixelRatio(devicePixelRatio);
-    this.renderer.setSize(this.canvas.clientWidth, this.canvas.clientHeight);
-    let component: BlackholeComponent = this;
-    (function render() {
-      component.renderer.render(component.scene, component.camera);
-      component.animateModel();
-      requestAnimationFrame(render);
-    }());
+  getStyle(index: number): { [key: string]: string | number } {
+    if (!this.cellCount) return {}; // Default empty style
+    const angle = ((index - this.selectedIndex) * 2 * Math.PI) / this.cellCount;
+    const scale = (75 + 25 * Math.cos(angle)) / 100;
+  
+    return {
+      left: `${-75 + 150 * Math.sin(angle)}px`,
+      transform: `scale(${scale})`,
+      position: "absolute",
+      "z-index": Math.floor(100 * scale)
+    };
   }
 
+  prev() {
+    this.selectedIndex--;
+    this.animateCarousel();
+    this.animateViews("right");
+  }
+
+  next() {
+    this.selectedIndex++;
+    this.animateCarousel();
+    this.animateViews("left");
+  }
 
   ngAfterViewInit() {
-    this.createScene();
-    this.startRenderingLoop();
-    this.createControls();
+    this.cellWidth = this.itemsView.first.nativeElement.offsetWidth;
+    this.animateCarousel();
+    this.animateViews("left");
   }
-  }
-  
+}

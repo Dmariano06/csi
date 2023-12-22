@@ -1,73 +1,8 @@
-.btn{
-    z-index: 10000;
-}
-.m-3{
-        height: 48px;
-        width: 48px;
-}
-#appweb-small{
-    margin-bottom: 8px !important;
-}
-.character{
-    position: absolute;
-   right: 5%;
-   object-fit: contains;
-}
-.isTextTransparent{
-    display: none;
-}
-.animation-state{
-    transition: 1.5s;
-    z-index: 0;
-
-}
-section{
-    overflow-x: hidden;
+header{
+    width: 100%;
+    background-color: #1d2930;
+    height: 80vh;
+    display: flex;
+    padding-top: 150px;
 }
 
-.card{
-    background: transparent !important;
-    border: none;
-    letter-spacing: 0.5px;
-}
-.card{
-    background: linear-gradient(0deg, rgba(2, 99, 82, 0.05) 0%, rgba(84, 94, 161, 0.18) 100%) !important;
-}
-.card1{
-    background: transparent !important;
-}
-h5{
-    letter-spacing: 1px;
-}
-svg{
-    fill: #00e7a7 !important;
-}
-.card-shadow{
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
-h6{
-    font-weight: bold;
-    color: #00e7a7;
-
-}
-
-@keyframes slideIn {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  .slide-in {
-    animation: slideIn 0.5s ease-out;
-  }
-  @media(max-width:1000px){
-    .character{
-        height: 100px;
-        width: 125px;
-    }
-}
