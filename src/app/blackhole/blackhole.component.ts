@@ -75,7 +75,7 @@ export class BlackholeComponent{
   }
 
   getStyle(index: number): { [key: string]: string | number } {
-    if (!this.cellCount) return {}; // Default empty style
+    if (!this.cellCount) return {};
     const angle = ((index - this.selectedIndex) * 2 * Math.PI) / this.cellCount;
     const scale = (75 + 25 * Math.cos(angle)) / 100;
   

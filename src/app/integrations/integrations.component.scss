@@ -30,9 +30,8 @@
   #scroll{
     height: 50px;
     width: 50px;
-    color: #00e7a7;
+    border: #00e7a7 3px solid;
     font-weight: bold;
-    border: #00e7a7 2px solid;
     font-size: 20px;
 position: relative;
 box-shadow: rgba(0, 231, 167, 0.1) 0px 34px 35px, rgba(0, 231, 167, 0.3) 0px -8px 15px, rgba(0, 231, 167, 0.12) 0px 4px 6px, rgba(0, 231, 167, 0.17) 0px 8px 9px, rgba(0, 231, 167, 0.09) 0px -3px 5px !important;
@@ -41,6 +40,9 @@ left: 50%;
     border-radius: 100%;
     background-color: transparent;
   }
+  button{
+    color: white;
+  }
   .scrollTop{
     top: 50px;
     transform: rotate(180deg);
@@ -48,6 +50,8 @@ left: 50%;
   .material-symbols-outlined{
     position: relative;
     top:8%;
+    border-radius: 100%;
+    border: #00e7a7 3px solid;
   }
 
   #scroll:hover{

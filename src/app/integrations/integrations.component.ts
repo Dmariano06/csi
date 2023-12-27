@@ -12,7 +12,7 @@ export class IntegrationsComponent implements OnInit {
   constructor(private el: ElementRef, private imagePreloaderService: ImageloaderService, @Inject(DOCUMENT) private document: Document) {}
 
   scrollParallax(event: WheelEvent, section: number): void {
-    event.preventDefault(); // Empêche le défilement par défaut
+    event.preventDefault(); 
 
     const deltaY = event.deltaY;
     const nextSection = section + (deltaY > 0 ? 1 : -1);
@@ -37,7 +37,6 @@ export class IntegrationsComponent implements OnInit {
   }
 
   ngOnInit() {
-    // Remplacez 'path/to/image.jpg' par le chemin réel de votre image
     this.imagePreloaderService.preloadImage('assets/img/illustrations/template.png')
       .then(() => {
         console.log('L\'image a été préchargée avec succès.');

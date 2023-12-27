@@ -89,6 +89,48 @@ body{
     background-color:  #1d2930;
     overflow: hidden;
 }
+.floating-form {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    position: absolute;
+    pointer-events: none;
+    transition: transform 0.3s ease-out, font-size 0.3s ease-out, color 0.3s ease-out;
+    font-size: 16px;
+    color: #999;
+    transform-origin: left bottom;
+    transform: translateY(20px);
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-out;
+  }
+  
+  input:focus {
+    border-color: #007bff;
+  }
+  
+  label.floating {
+    transform: translateY(0) scale(0.8);
+    font-size: 12px;
+    color: #007bff;
+  }
 @media (max-width:800px) {
     .form-control,.form-select{
         width: 80%;

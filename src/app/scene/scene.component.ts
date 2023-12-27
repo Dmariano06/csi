@@ -14,7 +14,7 @@ export class SceneComponent implements AfterViewInit{
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.isScrolled = window.scrollY > 50;
+    this.isScrolled = window.scrollY > 0;
   }
   @ViewChild('canvas', { static: true }) private canvasRef!: ElementRef;
 
