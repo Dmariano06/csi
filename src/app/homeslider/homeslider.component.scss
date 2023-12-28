@@ -48,6 +48,7 @@ span,h2,h3,h4{
     width: 400px;
   }
 margin: 50px;
+margin-top: 150px;
   padding-top: 50px;
   text-align: justify;
   color: white;
@@ -78,6 +79,9 @@ button{
 }
 @media(max-width:800px) {
 
+  .page-content{
+    margin-top: 0;
+  }
   .test{
     p{
       width: 300px;
