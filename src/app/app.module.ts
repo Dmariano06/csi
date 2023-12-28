@@ -18,11 +18,14 @@ import { ModelComponent } from './model/model.component';
 import { SceneComponent } from './scene/scene.component';
 import { ServicesComponent } from './services/services.component';
 import { BlackholeComponent } from './blackhole/blackhole.component';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
+import { HomesliderComponent } from './homeslider/homeslider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactsComponent,
+    HomesliderComponent,
     FeaturesComponent,
     IntegrationsComponent,
     PricingComponent,
@@ -39,7 +42,8 @@ import { BlackholeComponent } from './blackhole/blackhole.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxPageScrollModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
