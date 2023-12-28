@@ -32,4 +32,5 @@ export class ContactsComponent {
       window.alert('Votre message a été envoyé avec succès ! Vous allez recevoir un mail de confirmation dans quelques instants. (Regardez bien vos spams) Nous recontacterons sous 24h pour la confirmation du rendez-vous');
       window.location.reload();
     }
+    
     }

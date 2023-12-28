@@ -15,18 +15,7 @@ uls=[{name:"Porte d'Entrée Digitale"},];
   {name:"CraftedWebSite", subtitle:"Applications Web - Puissance et Adaptabilité",name1title:"Conception Web & Contenu", name1:"Porte d'entrée Digitale ", name2title:"Référencement & Visibilité",name2:"Des fonctionnalités sur mesure", name3title:"Évolutivité Potentielle", name3:"Des solutions conçues pour s'adapter et évoluer", nom3:"Nombre de pages sur demande (4 comprises)", nom4:"Optimisation intégrale des contenus ( média, développement, fonctionnalités...)", name6:"Un site entièrement personnalisable"},
    {name:"CommerceDigitalXcellence",subtitle:"E-commerce - Vendez en Ligne avec Style", name1title:"Solutions de Paiement Sécurisées",name1:"Assurez la confiance de vos clients avec des transactions sécurisées.", name2title:"Solutions de Paiement Sécurisées", name2:"Instaurez la confiance avec des solutions de paiement sûres et conformes aux normes de sécurité.",name3title:"Optimisation de l'Expérience", name3:"Des processus d'achat fluides et intuitifs pour maximiser les conversions visiteurs."},
   ]*/
-  constructor(private imagePreloaderService: ImageloaderService) { }
 
-  ngOnInit() {
-    // Remplacez 'path/to/image.jpg' par le chemin réel de votre image
-    this.imagePreloaderService.preloadImage('path/to/image.jpg')
-      .then(() => {
-        console.log('L\'image a été préchargée avec succès.');
-      })
-      .catch((error) => {
-        console.error('Erreur lors du préchargement de l\'image :', error);
-      });
-  }
   services = [
     {
       title: 'ShowCaseHub',

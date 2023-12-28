@@ -33,11 +33,44 @@ padding-left: 5px !important;
     transform: translateY(-200%);
     animation: slideUp 2s forwards; 
   } 
+  .card-container{
+    display: flex;
+    bottom: 0;
+    position: absolute;
+  }
+  .rectangle {
+    text-align: justify;
+    position: relative;
+  bottom: 0;
+  
+  width: 100%;
+    flex: 1;
+    max-height: 300px;
+    h2{
+      color: white;
+    }
+    background: rgba(0,34,37,0.9) ;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+h3 {
+    color: #555;
+}
+
+p {
+    margin-bottom: 0;
+}
 
   h1{
     font-size:38px;
   }
 header{
+  background-color: #1b1b1b;
   animation: fadeIn  forwards .5s;
   height: 100vh !important;
   transition: filter 0.5s ease-in-out;
@@ -45,12 +78,12 @@ header{
     padding-bottom:20px;
   color: white !important;
   text-shadow: -1px -1px 3px #020202, 2px 2px 4px #1b1b1b;
-  font-family: 'Bungee Inline', sans-serif;
   }
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; 
   object-fit: contain;
+  display:flex;
 .parallax1{
   height: 100vw;
   }
@@ -64,7 +97,7 @@ height: auto;
 @supports (background-image: url('../../assets/img/illustrations/fontheader1.webp')) {
   header {
     background-size: cover;
-    background-image: url('../../assets/img/illustrations/fontheader1.webp');
+    background-image: url('../../assets/img/illustrations/header.png');
   }
 }
 
@@ -84,7 +117,27 @@ height: auto;
  height: 50vh;
 }
 
-@media(max-width:800px){
+@media(max-width:1000px){
+  .card-container{
+    margin: auto;
+  }
+  .rectangle{
+    border-radius: 3px;
+    margin: 3px;
+    width: 100px;
+    height: 100px;
+    bottom: 50px;
+    p{
+      display: none;
+    }
+    h2{
+      text-align: center;
+      font-size:11px !important;
+    }
+    .button{
+      display: none;
+    }
+  }
   .parallax2{
     display: content;
     margin-bottom: 350px;
@@ -92,7 +145,7 @@ height: auto;
   }
   @supports (background-image: url('../../assets/img/illustrations/fondmobile-min.webp')) {
     header {
-      background-image: url('../../assets/img/illustrations/fondmobile-min.webp');
+      background-image: url('../../assets/img/illustrations/fond-tel.png');
     }
   }
   .slide-up{
@@ -109,6 +162,17 @@ height: auto;
 
 
  @media (max-width: 1000px) {
+  .bs-icon-lg{
+    color: #00e7a7 !important;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    border-radius: 8px;
+    svg{
+      height: 28px;
+      width: 28px;
+    }
+  }
     .parralax2{
       height: 50vh;
     }
