@@ -1,7 +1,6 @@
 import { Component, ElementRef, Inject, OnInit } from '@angular/core';
 import { ImageloaderService } from '../imageloader.service';
 import { DOCUMENT } from '@angular/common';
-import { PageScrollService } from 'ngx-page-scroll-core';
 
 
 @Component({
@@ -11,7 +10,7 @@ import { PageScrollService } from 'ngx-page-scroll-core';
 })
 export class IntegrationsComponent implements OnInit {
   activeSection = 1;
-  constructor(private el: ElementRef, private imagePreloaderService: ImageloaderService, @Inject(DOCUMENT) private document: Document, private pageScrollService: PageScrollService) {}
+  constructor(private el: ElementRef, private imagePreloaderService: ImageloaderService, @Inject(DOCUMENT) private document: Document) {}
 
   scrollParallax(event: WheelEvent, section: number): void {
     event.preventDefault(); 
@@ -27,14 +26,6 @@ export class IntegrationsComponent implements OnInit {
         nextElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
-  }
-
-  fullPageScroll(e: HTMLElement, i:any) {
-    this.pageScrollService.scroll({
-      scrollTarget: e,
-      document: this.document,
-    });
-    this.activeSection = i;
   }
 
 

@@ -18,7 +18,6 @@ import { ModelComponent } from './model/model.component';
 import { SceneComponent } from './scene/scene.component';
 import { ServicesComponent } from './services/services.component';
 import { BlackholeComponent } from './blackhole/blackhole.component';
-import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { HomesliderComponent } from './homeslider/homeslider.component';
 
 @NgModule({
@@ -42,8 +41,7 @@ import { HomesliderComponent } from './homeslider/homeslider.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule,
-    NgxPageScrollModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
