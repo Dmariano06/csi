@@ -8,6 +8,38 @@ import { FooterService } from '../footer.service';
 })
 export class HomesliderComponent {
 
+  sections = [
+    {
+      title: 'CraftedWebSite',
+      subtitle: 'Applications Web - Puissance et Adaptabilité',
+      content: [
+        { heading: 'Consultation Personnalisée', description: 'Nous entamons chaque projet par une consultation approfondie pour garantir une solution parfaitement adaptée' },
+        { heading: 'Tests et Assurance Qualité', description: 'Chaque projet subit des tests rigoureux pour assurer la qualité, la compatibilité et la sécurité' },
+        { heading: 'Développement Backend avec Spring Boot', description: 'Spring Boot assure la stabilité et la performance du côté serveur. Nous mettons en œuvre des fonctionnalités avancées tout en garantissant la sécurité et l\'évolutivité' },
+      ],
+      imageUrl: '../../assets/img/illustrations/template1.png',
+    },
+    {
+      title: 'ShowCaseHub',
+      subtitle: 'Site Vitrine - Impact Visuel, Coût Abordable',
+      content: [
+        { heading: 'Design Élégant', description: 'Des designs épurés et élégants qui captent l\'essence de votre entreprise' },
+        { heading: 'Rapidité de Mise en Place', description: 'Obtenez votre présence en ligne rapidement sans compromettre la qualité' },
+        { heading: 'Adapté aux Petites Entreprises', description: 'Parfait pour les petites entreprises cherchant une solution abordable et efficace' },
+      ],
+      imageUrl: '../../assets/img/illustrations/template.png',
+    },
+    {
+      title: 'CommerceDigitalXcellence',
+      subtitle: 'E-commerce - Vendez en Ligne avec Style',
+      content: [
+        { heading: 'Conception Intuitive', description: 'Interface utilisateur conviviale pour une expérience d\'achat sans tracas' },
+        { heading: 'Performance Maximale', description: 'Utilisation de technologies modernes pour une navigation rapide et une gestion simplifiée des produits' },
+        { heading: 'Sécurité Renforcée', description: 'Protégez vos clients avec des solutions e-commerce sécurisées' },
+      ],
+      imageUrl: '../../assets/img/illustrations/template7.png',
+    },
+  ];
   constructor(private footerService: FooterService) {}
 
   ngOnInit(): void {

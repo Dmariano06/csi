@@ -1,36 +1,19 @@
 <div class="parent-container overflow-hidden">
-  <div #page *ngFor="let page of [0,1,2]" [class]="'vh-100 p-3 position-relative bg-' + (page + 1)">
-    <h3 class="text-white">Page {{page + 1}}</h3>
+  <div #page *ngFor="let page of [0, 1, 2];" [class]="'vh-100 p-3 position-relative bg-' + (page + 1)">
     <div class="page-content">
-      <div class="parallax parallax1">
-        <div class="test fade-in" >
-            <div>
-        <h1 class="title">CraftedWebSite</h1>
-        <h5 class=" fw-bold">Applications Web - Puissance et Adaptabilité</h5>
-      <div class="state">
-        <h2>Consultation Personnalisée</h2>
-        <p>Nous entamons chaque projet par une consultation approfondie pour garantir une solution parfaitement adaptée</p>
+      <div class="parallax parallax{{ page + 1 }}">
+        <div class="test">
+          <div>
+            <h1 class="title">{{ sections[page]?.title }}</h1>
+            <h5 class="fw-bold">{{ sections[page]?.subtitle }}</h5>
+            <div *ngFor="let content of sections[page]?.content" class="state">
+              <h2>{{ content.heading }}</h2>
+              <p>{{ content.description }}</p>
+            </div>
+          </div>
+          <img [src]="sections[page]?.imageUrl" alt="">
+        </div>
       </div>
-      <div class="state">
-        <h3>Tests et Assurance Qualité :</h3>
-        <p>Chaque projet subit des tests rigoureux pour assurer la qualité, la compatibilité et la sécurité</p>
-      </div>
-      <div class="state">
-        <h4>Développement Backend avec Spring Boot</h4>
-        <p>Spring Boot assure la stabilité et la performance du côté serveur. Nous mettons en œuvre des fonctionnalités avancées tout en garantissant la sécurité et l'évolutivité</p>
-      </div>
-      </div>
-      <img width="800px" height="400px" src="../../assets/img/illustrations/template1.png" alt="">
-      <div class="col"  style="margin: 50px;">
-        <ul>
-          <li><h4>Développement Frontend avec Angular</h4>Utilisant la puissance d'Angular, nous transformons les conceptions en interfaces interactives, réactives et esthétiques.</li>
-          <li>Conception réactive pour une expérience uniforme sur tous les appareils et tailles d'écrans.</li>
-          <li><h4>Développement Backend avec Spring Boot</h4>Spring Boot assure la stabilité et la performance du côté serveur</li>
-          <li>Nous mettons en œuvre des fonctionnalités avancées tout en garantissant la sécurité et l'évolutivité</li>
-        </ul>
-      </div>
-      </div>
-    </div>
     </div>
   </div>
 
