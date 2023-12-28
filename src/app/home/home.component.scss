@@ -123,12 +123,13 @@ height: auto;
 
 @media(max-width:1000px){
   .card-container{
-    margin: auto;
+    text-align: center;
   }
   .rectangle{
+  
     border-radius: 3px;
-    margin: 3px;
     width: 90px;
+    padding: 3px;
     height: 90px;
     bottom: 150px;
     p{
@@ -141,6 +142,18 @@ height: auto;
     .button{
       display: none;
     }
+      display: inline-block !important; /* Pour qu'elles soient alignées horizontalement */
+    margin: 5px 10px; /* Ajoute un peu d'espace entre les divs */
+    
+  }
+  .card-container {
+    justify-content: center; /* Centre les rectangles horizontalement */
+    align-items: center; /* Les aligne au bas du conteneur */
+    flex-direction: column; /* Affiche les rectangles en colonne */
+  }
+
+  .rectangle {
+    max-height: none; /* Annule la hauteur maximale pour occuper toute la hauteur disponible */
   }
   .parallax2{
     display: content;
