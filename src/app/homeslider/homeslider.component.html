@@ -1,1 +1,41 @@
-<p>homeslider works!</p>
+<div class="parent-container overflow-hidden">
+  <div #page *ngFor="let page of [0,1,2]" [class]="'vh-100 p-3 position-relative bg-' + (page + 1)">
+    <h3 class="text-white">Page {{page + 1}}</h3>
+    <div class="page-content">
+      <div class="parallax parallax1">
+        <div class="test fade-in" >
+            <div>
+        <h1 class="title">CraftedWebSite</h1>
+        <h5 class=" fw-bold">Applications Web - Puissance et Adaptabilité</h5>
+      <div class="state">
+        <h2>Consultation Personnalisée</h2>
+        <p>Nous entamons chaque projet par une consultation approfondie pour garantir une solution parfaitement adaptée</p>
+      </div>
+      <div class="state">
+        <h3>Tests et Assurance Qualité :</h3>
+        <p>Chaque projet subit des tests rigoureux pour assurer la qualité, la compatibilité et la sécurité</p>
+      </div>
+      <div class="state">
+        <h4>Développement Backend avec Spring Boot</h4>
+        <p>Spring Boot assure la stabilité et la performance du côté serveur. Nous mettons en œuvre des fonctionnalités avancées tout en garantissant la sécurité et l'évolutivité</p>
+      </div>
+      </div>
+      <img width="800px" height="400px" src="../../assets/img/illustrations/template1.png" alt="">
+      <div class="col"  style="margin: 50px;">
+        <ul>
+          <li><h4>Développement Frontend avec Angular</h4>Utilisant la puissance d'Angular, nous transformons les conceptions en interfaces interactives, réactives et esthétiques.</li>
+          <li>Conception réactive pour une expérience uniforme sur tous les appareils et tailles d'écrans.</li>
+          <li><h4>Développement Backend avec Spring Boot</h4>Spring Boot assure la stabilité et la performance du côté serveur</li>
+          <li>Nous mettons en œuvre des fonctionnalités avancées tout en garantissant la sécurité et l'évolutivité</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="nav">
+    <button #prev class="btn btn-sm btn-light me-1" (click)="clickPrev()">prev</button>
+    <button #next class="btn btn-sm btn-light" (click)="clickNext()">next</button>
+  </div>
+</div>

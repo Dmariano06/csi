@@ -5,12 +5,14 @@ import { HomeComponent } from './home/home.component';
 import { IntegrationsComponent } from './integrations/integrations.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { FeaturesComponent } from './features/features.component';
+import { HomesliderComponent } from './homeslider/homeslider.component';
 
 const routes: Routes = [
     {path: "home", component: HomeComponent},
     {path: "integrations", component: IntegrationsComponent},
     {path: "features", component: FeaturesComponent},
     {path: "pricing", component: PricingComponent},
+    {path: "slider", component: HomesliderComponent},
     {path: "contacts", component:  ContactsComponent},
     {path: '', redirectTo:"home", pathMatch: 'full'}
 ];
