@@ -52,12 +52,22 @@ input,textarea,.btn, label{
     margin-top: 5%;
     z-index: 10;
 }
+option{
+  background-color:#364f5e;
+  cursor: pointer;
+}
 .form-select{
-    background-color: rgba(0, 231, 167, 0.3);
+  cursor: pointer;
+  background-color:#364f5e;
     border: none;
     color: white !important;
     border-radius: 13px;
+    transition: 0.5s ease-in-out;
    // color: #1d2930 !important;
+}
+.form-select:hover{
+  background-color: #1d2930;
+  transition: 0.5s ease-in-out;
 }
 textarea{
     color: white !important;

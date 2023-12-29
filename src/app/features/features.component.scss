@@ -20,14 +20,16 @@
 
   .cover-title {
     margin: auto  ;
-    background-color: rgba(19, 97, 84,0.5);
+    background-color: rgba(15, 30, 44, 0.3);
     position: absolute; 
     top: 30%;
+    font-size: 1.5em;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
     h1{
+      font-weight: bold;
       margin: auto;
       padding: 5px;
     }

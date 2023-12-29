@@ -19,17 +19,86 @@ uls=[{name:"Porte d'Entrée Digitale"},];
   services = [
     {
       title: 'ShowCaseHub',
-      subtitle: 'Site Vitrine - Impact Visuel, Coût Abordable',
+      subtitle: 'Site Vitrine',
       price: '$399',
       bestValue: false,
       bgClass: 'bg',
       designTitle: 'Conception Web & Contenu',
       designFeatures: [
-        "Porte d'entrée Digital",
+        'Landing Page',
         'UI/UX Design',
-        'Responsive et polyvalent',
+        'Responsive sur tout les supports',
+        'Optimisation des performances'
       ],
-      seoTitle: 'SEO Features',
+      seoTitle: 'Référencement SEO',
+      seoFeatures: [
+        'Référencement naturel SEO',
+        'Fiche Google My Business',
+        'Indice de performance Google',
+        'Référencement local'
+      ],
+      supportTitle: 'Accompagnement & Suivi',
+      supportFeatures: [
+        '24/7 Support',
+        'Bug Fixes',
+        'Hébergement inclus',
+        'Mise à Jour Sécurité',
+        'Mise à Jour du Contenu'
+      ]
+    },
+    {
+      title: 'CraftedWebSite',
+      subtitle: 'Applications Web',
+      price: '$1 499',
+      bestValue: false,
+      bgClass: '1',
+      designTitle: 'Conception Web & Contenu',
+      designFeatures: [
+        'Nombre de page sur demande',
+        'UI/UX Design',
+        'Responsive sur tout les supports',
+        'Optimisation de performance',
+        'Un site entièrement personnalisable (sur mesure)'
+      ],
+      seoTitle: 'Référencement SEO',
+      seoFeatures: [
+        'Référencement naturel SEO',
+        'Fiche Google My Business',
+        'Indice de perofrmance Google',
+        'Référencement local'
+      ],
+      supportTitle: 'Accompagnement & Suivi',
+      supportFeatures: [
+        '24/7 Support',
+        'Bug Fixes',
+        'Hébergement inclus',
+        'Mise à Jour Sécurité',
+        'Mise à Jour du Contenu'
+      ],
+      securityTitle: 'Sécurité en Ligne',
+      securityFeatures: [
+        '24/7 Support',
+        'Protocoles de Communication Sécurisés',
+        'Infrastructure Robuste',
+        "Contrôles d'Accès"
+      ]
+    },
+    {
+      title: 'CommercialDigital',
+      subtitle: 'E-commerce',
+      price: '$1 499',
+      bestValue: false,
+      bgClass: '2',
+      designTitle: 'Conception Web & Contenu',
+      designFeatures: [
+        'Responsive Design',
+        'UI/UX Design',
+        'Responsive sur tout les supports',
+        'Optimisation de performance',
+        'Custom Graphics',
+        'Animations'
+      ],
+      seoTitle: 'Référencement SEO',
       seoFeatures: [
         'Référencement naturel SEO',
         'Fiche Google My Business',
@@ -42,63 +111,13 @@ uls=[{name:"Porte d'Entrée Digitale"},];
         'Bug Fixes',
         'Security Updates',
         'Content Updates'
-      ]
-    },
-    {
-      title: 'CraftedWebSite',
-      subtitle: 'Applications Web - Puissance et Adaptabilité',
-      price: '$1 499',
-      bestValue: false,
-      bgClass: '1',
-      designTitle: 'Design Features',
-      designFeatures: [
-        "Porte d'entrée Digitale",
-        'UI/UX Design',
-        'Responsive et polyvalent',
-        'Un site entièrement personnalisable (sur mesure)',
-        'Nombre de pages sur demande'
       ],
-      seoTitle: 'SEO Features',
-      seoFeatures: [
-        'Référencement naturel SEO',
-        'Fiche Google My Business',
-        'Indice de perofrmance Google',
-        'Référencement local'
-      ],
-      supportTitle: 'Support Features',
-      supportFeatures: [
+      securityTitle: 'Sécurité en Ligne',
+      securityFeatures: [
         '24/7 Support',
-        'Bug Fixes',
-        'Security Updates',
-        'Content Updates'
-      ]
-    },
-    {
-      title: 'CommercialDigital',
-      subtitle: 'E-commerce - Vendez en Ligne avec Style',
-      price: '$1 499',
-      bestValue: false,
-      bgClass: '2',
-      designTitle: 'Design Features',
-      designFeatures: [
-        'Responsive Design',
-        'UI/UX Design',
-        'Custom Graphics',
-        'Animations'
-      ],
-      seoTitle: 'SEO Features',
-      seoFeatures: [
-        'Référencement naturel SEO',
-        'Fiche Google My Business',
-        'Indice de perofrmance Google',
-        'Référencement local'
-      ],
-      supportTitle: 'Support Features',
-      supportFeatures: [
-        '24/7 Support',
-        'Bug Fixes',
-        'Security Updates',
-        'Content Updates'
+        'Protocoles de Communication Sécurisés',
+        'Infrastructure Robuste',
+        "Contrôles d'Accès"
       ]
     }
   ];

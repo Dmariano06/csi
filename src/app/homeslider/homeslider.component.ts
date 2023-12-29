@@ -15,7 +15,7 @@ export class HomesliderComponent {
       content: [
         { heading: 'Consultation Personnalisée', description: 'Nous entamons chaque projet par une consultation approfondie pour garantir une solution parfaitement adaptée' },
         { heading: 'Tests et Assurance Qualité', description: 'Chaque projet subit des tests rigoureux pour assurer la qualité, la compatibilité et la sécurité' },
-        { heading: 'Développement Backend avec Spring Boot', description: 'Spring Boot assure la stabilité et la performance du côté serveur. Nous mettons en œuvre des fonctionnalités avancées tout en garantissant la sécurité et l\'évolutivité' },
+        { heading: 'Développement Frontend avec Angular', description: "Utilisant la puissance d'Angular, nous transformons les conceptions en interfaces interactives, réactives et esthétiques. Une conception réactive pour une expérience uniforme sur tous les appareils et tailles d'écrans." },
       ],
       imageUrl: '../../assets/img/illustrations/template1.png',
     },
@@ -37,7 +37,7 @@ export class HomesliderComponent {
         { heading: 'Performance Maximale', description: 'Utilisation de technologies modernes pour une navigation rapide et une gestion simplifiée des produits' },
         { heading: 'Sécurité Renforcée', description: 'Protégez vos clients avec des solutions e-commerce sécurisées' },
       ],
-      imageUrl: '../../assets/img/illustrations/template7.png',
+      imageUrl: '../../assets/img/illustrations/template7.jpg',
     },
   ];
   constructor(private footerService: FooterService) {}
@@ -55,7 +55,7 @@ export class HomesliderComponent {
   next!: ElementRef;
 
 idlePeriod = 100;
-animationDuration = 1050;
+animationDuration = 1500;
 lastAnimation = 0;
 index = 0;
 
@@ -87,7 +87,7 @@ clickPrev() {
     if (i === this.index) {
       this.togglePageContent(i, 'show');
 
-      const pageElement = page?.nativeElement;
+      const pageElement = page.nativeElement;
       if (pageElement) {
         pageElement.scrollIntoView({ behavior: 'smooth' });
       }
@@ -105,7 +105,7 @@ clickNext() {
     if (i === this.index) {
       this.togglePageContent(i, 'show');
 
-      const pageElement = page?.nativeElement;
+      const pageElement = page.nativeElement;
       if (pageElement) {
         pageElement.scrollIntoView({ behavior: 'smooth' });
       }

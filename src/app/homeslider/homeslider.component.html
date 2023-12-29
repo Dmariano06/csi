@@ -4,14 +4,14 @@
       <div class="parallax parallax{{ page + 1 }}">
         <div class="test">
           <div>
-            <h1 class="title">{{ sections[page]?.title }}</h1>
-            <h5 class="fw-bold">{{ sections[page]?.subtitle }}</h5>
-            <div *ngFor="let content of sections[page]?.content" class="state">
-              <h2>{{ content.heading }}</h2>
+            <h1 class="title">{{ sections[page].title }}</h1>
+            <h5 class="fw-bold">{{ sections[page].subtitle }}</h5>
+            <div *ngFor="let content of sections[page].content" class="state">
+              <h3>{{ content.heading }}</h3>
               <p>{{ content.description }}</p>
             </div>
           </div>
-          <img [src]="sections[page]?.imageUrl" alt="">
+          <img [src]="sections[page].imageUrl" alt="">
         </div>
       </div>
     </div>

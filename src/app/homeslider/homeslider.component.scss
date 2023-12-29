@@ -35,16 +35,18 @@
 .bg-9 {
   background: #ff5722;
 }
-.nav {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
+li{
 }
-span,h2,h3,h4{
+p,li{
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+span,h3{
   color: #00e7a7 !important;
 }
 .page-content {
   p{
+    font-weight: 500;
     width: 400px;
   }
 margin: 50px;

@@ -12,10 +12,10 @@ export class HomeComponent implements OnInit{
     {text: "Explorez le potentiel du", text1:"digital"}
   ]
   presentations = [
-    {text:"Explorez notre application web révolutionnaire, alliant simplicité d'utilisation et fonctionnalités avancées.", title:"Application Web"},
-    {text:"Nos sites sur mesure sont conçu avec expertise pour répondre à vos besoins spécifiques.", title:"Site Statique"},
-    {text: "Découvrez notre site e-commerce innovant, offrant une gamme exceptionnelle de produits/services.", title:"Site E-commerce"},
-    {text: "Découvrez notre site e-commerce innovant, offrant une gamme exceptionnelle de produits/services.", title:"Application FullStack"}
+    {text:"Decouvrez nos sites sur mesure, alliant simplicité d'utilisation et fonctionnalités avancées.", title:"Application Web"},
+    {text:"Nos sites web statiques sont conçu avec expertise pour répondre à vos besoins spécifiques.", title:"Site Vitrine"},
+    {text: "Choisissez une plateforme e-commerce novatrice, offrant une gamme exceptionnelle de gestion de produits.", title:"Site E-commerce"},
+ //   {text: "Découvrez notre site e-commerce innovant, offrant une gamme exceptionnelle de produits/services.", title:"Application FullStack"}
   ];
 
 scrollOffset = 0;
