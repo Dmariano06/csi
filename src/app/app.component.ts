@@ -20,4 +20,11 @@ export class AppComponent {
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
+  isScrolled = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    console.log(this.isScrolled);
+    this.isScrolled = window.scrollY > 0;
+  }
 }

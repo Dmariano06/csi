@@ -1,7 +1,7 @@
 <div class="body">
 <app-scene></app-scene>
 <body>
-  <nav class="navbar navbar-dark fixed-top">
+  <nav class="navbar navbar-dark fixed-top" [ngClass]="{'scrolled': isScrolled}">
     <div class="container-fluid">
       <ul class="navbar-nav flex-row  me-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link" routerLink="home" routerLinkActive="active">Accueil</a></li>
@@ -11,8 +11,8 @@
       <div class="brand flex-fill text-center">
         <a class="navbar-brand" routerLink="home">
           <picture>
-            <source srcset="../assets/img/illustrations/logo-png.png" type="image/png">
-            <img src="../assets/img/illustrations/logo-png.png" alt="Logo">
+            <source srcset="../assets/img/illustrations/logo.png" type="image/png">
+            <img src="../assets/img/illustrations/logo.png" alt="Logo">
           </picture>
         </a>
         </div>
