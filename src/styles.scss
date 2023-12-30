@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&family=Bungee+Spice&family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@400;700&display=swap');
 body{
-    background-color: #d9f7fe;
+  color: white !important;
+    background-color: #0e1f30;
+    .Text-muted{
+      color: white !important;
+    }
 }
 #appweb{
     background: linear-gradient(0deg, rgba(2, 99, 82, 0.05) 0%, rgba(84, 94, 161, 0.18) 100%);
