@@ -19,6 +19,7 @@ import { SceneComponent } from './scene/scene.component';
 import { ServicesComponent } from './services/services.component';
 import { BlackholeComponent } from './blackhole/blackhole.component';
 import { HomesliderComponent } from './homeslider/homeslider.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +35,14 @@ import { HomesliderComponent } from './homeslider/homeslider.component';
     ModelComponent,
     SceneComponent,
     ServicesComponent,
-    BlackholeComponent,
+    BlackholeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FooterComponent,
     FormsModule
   ],
   providers: [],

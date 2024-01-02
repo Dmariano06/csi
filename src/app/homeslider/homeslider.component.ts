@@ -8,16 +8,45 @@ import { FooterService } from '../footer.service';
 })
 export class HomesliderComponent {
 
+  rights = [
+    {
+      title:' Sécurité Renforcé',
+      text:'Angular intègre des fonctionnalités de sécurité robustes, offrant un contrôle total. Protégez vos données sensibles et assurez-vous une application sécurisée avec les standards de sécurité Angular',
+    },
+    {
+      title:'Intégration Simplifiée du Backend',
+      text:"L'intégration transparente d'Angular avec un backend assure une cohérence totale. La synergie entre les parties frontend et backend offre une expérience utilisateur homogène et performante"
+    },
+    {
+      title:' Évolutivité Continue',
+      text:'Adaptation Agile: Votre application Angular grandit avec votre entreprise. Des mises à jour régulières garantissent une adaptation constante, alignée sur les évolutions rapides des besoins de votre entreprise.',
+      image:'assets/img/illustrations/template8.png'
+    }
+  ]
+  headers = [
+    {text: "Explorez le potentiel du", text1:"digital"}
+  ]
+  faqs = [
+    {question:"Comment puis-je contacter le support technique en cas de problème avec le site ou l'application ?", answer:"Vous pouvez contacter notre support technique 24h/24 et 7j/7 via notre formulaire de contact en ligne ou en envoyant un e-mail à "},
+    {question:"Quelle est la différence entre un site internet et une application web, et comment choisir la meilleure option pour mes besoins ?", answer:"Un site internet est idéal pour une présence en ligne statique, tandis qu'une application web offre une interactivité avancée. Le choix dépend de vos objectifs spécifiques. Nous pouvons vous guider pour prendre la meilleure décision en fonction de vos besoins."},
+    {question:"Quel est le délai de création pour un site web ou une application personnalisée ?", answer:"Les délais de création varient en fonction de la complexité du projet. Cependant, nous travaillons efficacement pour respecter des échéanciers raisonnables. Une fois que nous aurons discuté de vos besoins spécifiques, nous pourrons vous fournir une estimation plus précise du délai de livraison."}
+  ]
+
+  developpements = [
+    {title:"Réception du projet", text:"À cette étape cruciale, nous écoutons attentivement les exigences du client, établissant ainsi une base solide pour le succès à venir."},
+    {title:"Design", text:"Nous donnons vie à la vision digitale tout en intégrant pleinement l'identité que le client souhaite transmettre à ses utilisateurs."},
+  ]
+
   sections = [
     {
       title: 'CraftedWebSite',
       subtitle: 'Applications Web - Puissance et Adaptabilité',
       content: [
-        { heading: 'Consultation Personnalisée', description: 'Nous entamons chaque projet par une consultation approfondie pour garantir une solution parfaitement adaptée' },
-        { heading: 'Tests et Assurance Qualité', description: 'Chaque projet subit des tests rigoureux pour assurer la qualité, la compatibilité et la sécurité' },
-        { heading: 'Développement Frontend avec Angular', description: "Utilisant la puissance d'Angular, nous transformons les conceptions en interfaces interactives, réactives et esthétiques. Une conception réactive pour une expérience uniforme sur tous les appareils et tailles d'écrans." },
+        { heading: 'Application Web Angular', description: "Utilisant la puissance d'Angular, nous transformons les conceptions en interfaces interactives, réactives et esthétiques. Conception réactive pour une expérience uniforme sur tous les appareils et tailles d'écrans" },
+        { heading: ' Personnalisation Totale', description: "Une application web réalisé avec Angular offre une flexibilité sans égale, permettant une personnalisation complète. Qu'il s'agisse de fonctionnalités spécifiques ou d'un design unique, l'adaptabilité d'Angular répond précisément à vos exigences" },
+        { heading: 'Performance Angular', description: "Excellence dans la création d'expériences dynamiques. Le système de routing fluide permet une navigation instantanée, offrant une expérience utilisateur sans heurts. Cette approche dynamique, associée à une gestion efficace de l'état, garantit des performances optimales, surpassant la simplicité des sites vitrines classiques." }
       ],
-      imageUrl: '../../assets/img/illustrations/template1.png',
+      imageUrl: '../../assets/img/illustrations/template8.png',
     },
     {
       title: 'ShowCaseHub',

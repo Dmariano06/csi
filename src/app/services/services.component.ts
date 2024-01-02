@@ -55,10 +55,10 @@ uls=[{name:"Porte d'Entrée Digitale"},];
       designTitle: 'Conception Web & Contenu',
       designFeatures: [
         'Nombre de page sur demande',
+        'Un site entièrement personnalisable (sur mesure)',
         'UI/UX Design',
         'Responsive sur tout les supports',
-        'Optimisation de performance',
-        'Un site entièrement personnalisable (sur mesure)'
+        'Optimisation de performance'
       ],
       seoTitle: 'Référencement SEO',
       seoFeatures: [
