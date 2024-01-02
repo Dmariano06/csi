@@ -7,33 +7,21 @@
   background-image: url('../../assets/img/illustrations/services2.png');
   background-repeat: no-repeat;
   background-size: cover;
+  h3{
+    color: #2ec4f4 !important;
+  }
 }
 .bg-3 {
   background-image: url('../../assets/img/illustrations/services5.png');
   background-repeat: no-repeat;
   background-size: cover;
+  h3{
+    color: #cf3ab5 !important;
+  }
   img{
     width:400px !important;
     height: 700px !important;
   }
-}
-.bg-4 {
-  background: #03a9f4;
-}
-.bg-5 {
-  background: #009688;
-}
-.bg-6 {
-  background: #8bc34a;
-}
-.bg-7 {
-  background: #ffeb3b;
-}
-.bg-8 {
-  background: #ff9800;
-}
-.bg-9 {
-  background: #ff5722;
 }
 li{
 }

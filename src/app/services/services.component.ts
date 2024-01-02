@@ -64,7 +64,7 @@ uls=[{name:"Porte d'Entrée Digitale"},];
       seoFeatures: [
         'Référencement naturel SEO',
         'Fiche Google My Business',
-        'Indice de perofrmance Google',
+        'Indice de performance Google',
         'Référencement local'
       ],
       supportTitle: 'Accompagnement & Suivi',
@@ -78,43 +78,46 @@ uls=[{name:"Porte d'Entrée Digitale"},];
       securityTitle: 'Sécurité en Ligne',
       securityFeatures: [
         '24/7 Support',
+        "Assistance Technique en Cas d'Urgence",
         'Protocoles de Communication Sécurisés',
         'Infrastructure Robuste',
         "Contrôles d'Accès"
       ]
     },
     {
-      title: 'CommercialDigital',
-      subtitle: 'E-commerce',
+      title: 'CommerceDigital',
+      subtitle: 'Applications Web',
       price: '$1 499',
       bestValue: false,
       bgClass: '2',
       designTitle: 'Conception Web & Contenu',
       designFeatures: [
-        'Responsive Design',
+        'Personnalisation du nombre de produits',
+        'Adaptation à votre gamme',
         'UI/UX Design',
         'Responsive sur tout les supports',
         'Optimisation de performance',
-        'Custom Graphics',
-        'Animations'
       ],
       seoTitle: 'Référencement SEO',
       seoFeatures: [
         'Référencement naturel SEO',
         'Fiche Google My Business',
-        'Indice de perofrmance Google',
+        'Indice de performance Google',
         'Référencement local'
       ],
       supportTitle: 'Accompagnement & Suivi',
       supportFeatures: [
         '24/7 Support',
         'Bug Fixes',
-        'Security Updates',
-        'Content Updates'
+        'Hébergement inclus',
+        'Mise à Jour Sécurité',
+        'Mise à Jour du Contenu',
+        "Maintenance continue de votre catalogue"
       ],
       securityTitle: 'Sécurité en Ligne',
       securityFeatures: [
         '24/7 Support',
+        "Assistance Technique en Cas d'Urgence",
         'Protocoles de Communication Sécurisés',
         'Infrastructure Robuste',
         "Contrôles d'Accès"

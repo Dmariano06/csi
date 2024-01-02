@@ -94,6 +94,7 @@ left: 50%;
       background-image: url('../../assets/img/illustrations/services1.png');
     }
   }
+
   .h2{
     margin-top: 50px;
   }
@@ -106,9 +107,14 @@ left: 50%;
   .container-fluid{
     display:flex;
   }
-  span,h2,h3,h4{
+  span, h4{
     padding-bottom: 10px;
-    color: #00e7a7 !important;
+    color: #00e7a7;
+  }
+  .parallax2{
+    h4,h2{
+      color: #2ec4f4 !important;
+    }
   }
 .card-body{
     width: 400px !important;
