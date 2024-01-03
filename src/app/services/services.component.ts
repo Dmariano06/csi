@@ -86,7 +86,7 @@ uls=[{name:"Porte d'Entrée Digitale"},];
     },
     {
       title: 'CommerceDigital',
-      subtitle: 'Applications Web',
+      subtitle: 'E-commerce',
       price: '$1 499',
       bestValue: false,
       bgClass: '2',

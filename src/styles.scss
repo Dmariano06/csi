@@ -38,7 +38,7 @@ body { margin: 0; font-family: 'Lato', sans-serif; }
 }
 .fade-in {
   opacity: 0;
-  animation: fadeIn 1.5s forwards !important; /* Durée de l'animation et conservation de l'état final */
+  animation: fadeIn 1.5s forwards ; /* Durée de l'animation et conservation de l'état final */
 }
 
 @keyframes fadeIn {

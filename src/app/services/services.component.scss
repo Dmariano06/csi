@@ -4,34 +4,30 @@
   margin: 20px;
 }
 .bg{
-  width: 468px;
-  height: 750px;
+  height: 90%;
+  width: 480px;
   margin-bottom: 25px !important;
   background: linear-gradient(to left, rgba(76, 0, 232,0.6), rgb(76, 0, 232));
   border:none;
   position: relative;
   top: 100px;
 }
-.bg, .bg-1, .bg-2{
-  width: 468px;
-}
+
 .container-fluid{
   display: flex !important;
 }
-
 p{
-  margin-bottom: 25px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .bg-1{
-  height: 950px;
   background: linear-gradient(to left, rgba(232, 23, 72, 0.6), #E81748);
   border:none;
   position: relative;
   top: 50px;
 }
 .bg-2{
-  height: 950px;
   background: linear-gradient(to left, rgba(52, 105, 90,0.6), rgb(52, 105, 90));
   border:none;
   position: relative;
@@ -40,11 +36,15 @@ p{
 svg{
   fill: #00e7a7;
 }
-button{
-  width: 60% !important;
-}
+
 span{
   color: white;
+}
+h1{
+  font-weight: bold;
+  span{
+  color: #00e7a7 !important;
+  }
 }
 h3{
   text-decoration-color: white !important;
@@ -52,9 +52,10 @@ h3{
 }
 @media(max-width:1200px){
   .container-fluid {
-    display: grid !important;
-    .card, .bg{
+    display: block !important;
+    .card, .bg, .bg-1, .bg-2{
 width: 400px;
+margin-bottom: 80px !important;
     }
   }
 }

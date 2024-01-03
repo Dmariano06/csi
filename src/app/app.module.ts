@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { FeaturesComponent } from './features/features.component';
 import { IntegrationsComponent } from './integrations/integrations.component';
-import { PricingComponent } from './pricing/pricing.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -28,7 +27,6 @@ import { FooterComponent } from './footer/footer.component';
     HomesliderComponent,
     FeaturesComponent,
     IntegrationsComponent,
-    PricingComponent,
     HomeComponent,
     ComposantComponent,
     FaqComponent,

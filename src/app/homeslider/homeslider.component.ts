@@ -8,21 +8,7 @@ import { FooterService } from '../footer.service';
 })
 export class HomesliderComponent {
 
-  rights = [
-    {
-      title:' Sécurité Renforcé',
-      text:'Angular intègre des fonctionnalités de sécurité robustes, offrant un contrôle total. Protégez vos données sensibles et assurez-vous une application sécurisée avec les standards de sécurité Angular',
-    },
-    {
-      title:'Intégration Simplifiée du Backend',
-      text:"L'intégration transparente d'Angular avec un backend assure une cohérence totale. La synergie entre les parties frontend et backend offre une expérience utilisateur homogène et performante"
-    },
-    {
-      title:' Évolutivité Continue',
-      text:'Adaptation Agile: Votre application Angular grandit avec votre entreprise. Des mises à jour régulières garantissent une adaptation constante, alignée sur les évolutions rapides des besoins de votre entreprise.',
-      image:'assets/img/illustrations/template8.png'
-    }
-  ]
+
   headers = [
     {text: "Explorez le potentiel du", text1:"digital"}
   ]
@@ -32,15 +18,24 @@ export class HomesliderComponent {
     {question:"Quel est le délai de création pour un site web ou une application personnalisée ?", answer:"Les délais de création varient en fonction de la complexité du projet. Cependant, nous travaillons efficacement pour respecter des échéanciers raisonnables. Une fois que nous aurons discuté de vos besoins spécifiques, nous pourrons vous fournir une estimation plus précise du délai de livraison."}
   ]
 
-  developpements = [
-    {title:"Réception du projet", text:"À cette étape cruciale, nous écoutons attentivement les exigences du client, établissant ainsi une base solide pour le succès à venir."},
-    {title:"Design", text:"Nous donnons vie à la vision digitale tout en intégrant pleinement l'identité que le client souhaite transmettre à ses utilisateurs."},
-  ]
-
   sections = [
     {
       title: 'CraftedWebSite',
       subtitle: 'Applications Web - Puissance et Adaptabilité',
+      right:[
+        {
+          title:' Sécurité Renforcé',
+          text:'Angular intègre des fonctionnalités de sécurité robustes, offrant un contrôle total. Protégez vos données sensibles et assurez-vous une application sécurisée avec les standards de sécurité Angular',
+        },
+        {
+          title:'Intégration Simplifiée du Backend',
+          text:"L'intégration transparente d'Angular avec un backend assure une cohérence totale. La synergie entre les parties frontend et backend offre une expérience utilisateur homogène et performante"
+        },
+        {
+          title:' Évolutivité Continue',
+          text:'Adaptation Agile: Votre application Angular grandit avec votre entreprise. Des mises à jour régulières garantissent une adaptation constante, alignée sur les évolutions rapides des besoins de votre entreprise.',
+        }
+      ],
       content: [
         { heading: 'Application Web Angular', description: "Utilisant la puissance d'Angular, nous transformons les conceptions en interfaces interactives, réactives et esthétiques. Conception réactive pour une expérience uniforme sur tous les appareils et tailles d'écrans" },
         { heading: ' Personnalisation Totale', description: "Une application web réalisé avec Angular offre une flexibilité sans égale, permettant une personnalisation complète. Qu'il s'agisse de fonctionnalités spécifiques ou d'un design unique, l'adaptabilité d'Angular répond précisément à vos exigences" },
@@ -52,22 +47,37 @@ export class HomesliderComponent {
       title: 'ShowCaseHub',
       subtitle: 'Site Vitrine - Impact Visuel, Coût Abordable',
       content: [
-        { heading: 'Design Élégant', description: 'Des designs épurés et élégants qui captent l\'essence de votre entreprise' },
-        { heading: 'Rapidité de Mise en Place', description: 'Obtenez votre présence en ligne rapidement sans compromettre la qualité' },
-        { heading: 'Adapté aux Petites Entreprises', description: 'Parfait pour les petites entreprises cherchant une solution abordable et efficace' },
+        { heading: 'Visuel Rapide et Efficace', description: 'Choisissez un template rapidement déployable, offrant une flexibilité de design pour répondre à des besoins spécifiques. Assurez-vous que la conception est à la fois esthétique et fonctionnelle.' },
+        { heading: 'Rapidité de Mise en Place', description: "Assurez-vous de la facilité et de la rapidité avec lesquelles votre site vitrine peut être mis en place. La simplicité d'accès à votre plateforme est un atout supplémentaire, rendant votre solution attractive et conviviale pour tous." },
+        { heading: 'Adapté aux Petites Entreprises', description: 'Soulignez que le site vitrine est parfaitement adapté aux petites entreprises. Son coût abordable, sa gestion facile et son impact visuel en font une solution idéale pour les entreprises de petite envergure.' },
       ],
       imageUrl: '../../assets/img/illustrations/template.png',
     },
     {
       title: 'CommerceDigitalXcellence',
       subtitle: 'E-commerce - Vendez en Ligne avec Style',
-      content: [
-        { heading: 'Conception Intuitive', description: 'Interface utilisateur conviviale pour une expérience d\'achat sans tracas' },
-        { heading: 'Performance Maximale', description: 'Utilisation de technologies modernes pour une navigation rapide et une gestion simplifiée des produits' },
-        { heading: 'Sécurité Renforcée', description: 'Protégez vos clients avec des solutions e-commerce sécurisées' },
+      right:[
+        {
+          title:' Sécurité Renforcé',
+          text:'Angular intègre des fonctionnalités de sécurité robustes, offrant un contrôle total. Protégez vos données sensibles et assurez-vous une application sécurisée avec les standards de sécurité Angular',
+        },
+        {
+          title:"Simplicité d'Utilisation et Accessibilité",
+          text:"L'intégration transparente d'Angular avec un backend assure une cohérence totale. La synergie entre les parties frontend et backend offre une expérience utilisateur homogène et performante"
+        },
+        {
+          title:"Possibilité d'Expansion Fonctionnelle",
+          text:"Explorez les possibilités d'expansion fonctionnelle de votre application e-commerce. Intégrez des fonctionnalités évolutives pour permettre une croissance continue de l'entreprise."
+        }
       ],
-      imageUrl: '../../assets/img/illustrations/template7.jpg',
+      content: [
+        { heading: "Sélection d'un Modèle E-commerce Performant", description: "Choisissez un modèle d'application e-commerce qui offre une performance optimale et une mise en place rapide. Priorisez la convivialité et l'efficacité du design pour une expérience utilisateur exceptionnelle." },
+        { heading: "Adapté à Toutes les Tailles d'Entreprises", description: "Soulignez l'adaptabilité de l'application e-commerce à toutes les tailles d'entreprises, des petites et moyennes aux plus grandes. Proposez une solution abordable, facile à gérer et personnalisable" },
+        { heading: 'Optimisation des Performances E-commerce', description: "Mettez l'accent sur l'optimisation des performances de votre application e-commerce. Un chargement rapide des pages, une navigation fluide et des transactions sécurisées sont essentiels pour fidéliser la clientèle" }
+      ],
+      imageUrl: '../../assets/img/illustrations/template7.png',
     },
+    
   ];
   constructor(private footerService: FooterService) {}
 

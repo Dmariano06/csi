@@ -2,12 +2,19 @@
   background-image: url('../../assets/img/illustrations/services1.png');
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 .bg-2 {
   background-image: url('../../assets/img/illustrations/services2.png');
   background-repeat: no-repeat;
   background-size: cover;
-  h3{
+  img{
+    margin-left:20% !important;
+      width:900px !important;
+      height:350px !important;
+    border-radius: 13px;
+  }
+  h4{
     color: #2ec4f4 !important;
   }
 }
@@ -15,12 +22,12 @@
   background-image: url('../../assets/img/illustrations/services5.png');
   background-repeat: no-repeat;
   background-size: cover;
-  h3{
+  h4{
     color: #cf3ab5 !important;
   }
   img{
-    width:300px !important;
-    height:700px !important;
+    border-radius: 13px;
+    margin-left: 16%;
   }
 }
 .title{
@@ -45,9 +52,10 @@ span,h4,h6{
     width:500px;
   }
   img{
-    height: 400px;
-    width:600px;
-    margin-left: 8%;
+    margin-left:8%;
+      width:800px !important;
+      height:400px !important;
+    border-radius: 13px;
   }
   padding-top: 50px;
   text-align: justify;
