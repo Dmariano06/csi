@@ -61,5 +61,13 @@ export class IntegrationsComponent {
       ],
       imageUrl: 'assets/img/illustrations/template5.png',
     },
+    {
+           content: [
+        { heading: "Sécurité Renforcé", description: "Angular intègre des fonctionnalités de sécurité robustes, offrant un contrôle total. Protégez vos données sensibles et assurez-vous une application sécurisée avec les standards de sécurité Angular" },
+        { heading: "Simplicité d'Utilisation et Accessibilité", description: "Soulignez l'adaptabilité de l'application e-commerce à toutes les tailles d'entreprises, des petites et moyennes aux plus grandes. Proposez une solution abordable, facile à gérer et personnalisable" },
+        { heading: "Possibilité d'Expansion Fonctionnelle", description: "Explorez les possibilités d'expansion fonctionnelle de votre application e-commerce. Intégrez des fonctionnalités évolutives pour permettre une croissance continue de l'entreprise." }
+      ],
+      imageUrl: 'assets/img/illustrations/template5.png',
+    },
   ];
 }
