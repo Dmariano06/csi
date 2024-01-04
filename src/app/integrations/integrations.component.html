@@ -1,6 +1,6 @@
 <div class="parent-container overflow-hidden">
   <div #page *ngFor="let page of [0, 1, 2, 3, 4]; let j = index;" [class]="'vh-100 p-3 position-relative bg-' + (page + 1)">
-    <img [src]="sections[page].imageUrl" alt="" *ngIf="j === 1 ">
+    <img [src]="sections[page].imageUrl" alt="" *ngIf="j === 1 || j === 4 ">
     <h1 class="title text-center">{{ sections[page].title }}</h1>
     <h6 class="fw-bold text-center">{{ sections[page].subtitle }}</h6>
     <div class="page-content">
@@ -45,7 +45,7 @@
           </div>
         </div>       
       </div>    
-      <img [src]="sections[page].imageUrl" alt="" *ngIf="j === 2 || j === 3">
+      <img [src]="sections[page].imageUrl" alt="" *ngIf="j === 2">
     </div>
     
   </div>

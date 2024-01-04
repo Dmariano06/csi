@@ -10,6 +10,11 @@
 border-radius: 13px;
 }
 }
+.bg-4{
+  img{
+    display: none;
+  }
+}
 .bg-4,.bg-5{
   background-image: url('../../assets/img/illustrations/services1.png');
   background-attachment: fixed;
@@ -20,7 +25,7 @@ border-radius: 13px;
     width: 320px;
   }
   img{
-    top:10px;
+    bottom: 60px;
       position: relative;
         width:300px;
         height:180px;
