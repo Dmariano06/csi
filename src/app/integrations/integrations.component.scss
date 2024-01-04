@@ -1,21 +1,16 @@
 .bg-3 {
- background-image: url('../../assets/img/illustrations/services1.png');
+ background-image: url('../../assets/img/illustrations/services2.png');
  background-attachment: fixed;
  background-size: cover; 
  background-position: center;
  background-repeat: no-repeat;
  img{
-  width:250px;
+  width:230px;
   height:130px;
 border-radius: 13px;
 }
 }
 
-img{
-    width:300px;
-    height:180px;
-  border-radius: 13px;
-}
 
 .bg-1{
 img{
@@ -24,6 +19,13 @@ img{
 }
 
 .bg-1,.bg-2 {
+  img{
+    top: -200px;
+      position: absolute;
+        width:300px;
+        height:180px;
+      border-radius: 13px;
+    }
   p{
     text-shadow: 2px 2px 1px black;
   }
