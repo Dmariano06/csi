@@ -115,3 +115,8 @@
     background-color:transparent;
     height: 600px;
   }
+  @media(max-width: 800px) {
+    .slider{
+      height:300px !important;
+    }
+  }
