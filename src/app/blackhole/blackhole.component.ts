@@ -17,7 +17,8 @@ export class BlackholeComponent{
 
   getCellTransform(index: number): string {
     const rotationY = index * 60;
-    return `rotateY(${rotationY}deg) translateZ(354px)`;
+    const translateZ = window.innerWidth < 600 ? 354 : 654;
+    return `rotateY(${rotationY}deg) translateZ(${translateZ}px)`;
   }
 
   getImageUrl(index: number): string {
