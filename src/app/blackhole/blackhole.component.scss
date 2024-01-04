@@ -1,19 +1,46 @@
-body {
-    font-family: Lato;
-  }
+.carousel-container {
+ perspective:1000px;
+}
 
-  .container{
-    height: 600px;
-  }
-  * { box-sizing: border-box; }
-  
- 
+.carousel {
+  padding-top:120px;
+  margin: auto;
+  width: 30%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.cell {
+
+  perspective: unset;
+  width: 140%;
+  height: 300px;
+  position: absolute;
+}
+button{
+  background:transparent;
+  border: none;
+  margin: auto;
+  font-weight: bold;
+  color:#00e7a7;
+  font-size: 20px;
+  display: none;
+
+}
+.back{
+  left: 52.5%;
+}
+
+.cell img {
+  opacity: 1;
+  height: 400px;
+  width: 700px;
+  object-fit: contain;
+  transition: opacity 0.3s ease-in-out;
+}
+.cell:hover{
   img{
-    width: 604px;
-    height: 365px;
     opacity: 1;
+    transition: opacity 0.3s ease-in-out;
   }
-  
-
-  
-  
+}

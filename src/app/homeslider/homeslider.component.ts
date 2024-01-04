@@ -41,7 +41,7 @@ export class HomesliderComponent {
         { heading: ' Personnalisation Totale', description: "Une application web réalisé avec Angular offre une flexibilité sans égale, permettant une personnalisation complète. Qu'il s'agisse de fonctionnalités spécifiques ou d'un design unique, l'adaptabilité d'Angular répond précisément à vos exigences" },
         { heading: 'Performance Angular', description: "Excellence dans la création d'expériences dynamiques. Le système de routing fluide permet une navigation instantanée, offrant une expérience utilisateur sans heurts. Cette approche dynamique, associée à une gestion efficace de l'état, garantit des performances optimales, surpassant la simplicité des sites vitrines classiques." }
       ],
-      imageUrl: '../../assets/img/illustrations/template8.png',
+      imageUrl: '../../assets/img/illustrations/template3.png',
     },
     {
       title: 'ShowCaseHub',
@@ -75,7 +75,7 @@ export class HomesliderComponent {
         { heading: "Adapté à Toutes les Tailles d'Entreprises", description: "Soulignez l'adaptabilité de l'application e-commerce à toutes les tailles d'entreprises, des petites et moyennes aux plus grandes. Proposez une solution abordable, facile à gérer et personnalisable" },
         { heading: 'Optimisation des Performances E-commerce', description: "Mettez l'accent sur l'optimisation des performances de votre application e-commerce. Un chargement rapide des pages, une navigation fluide et des transactions sécurisées sont essentiels pour fidéliser la clientèle" }
       ],
-      imageUrl: '../../assets/img/illustrations/template7.png',
+      imageUrl: '../../assets/img/illustrations/template5.png',
     },
     
   ];
@@ -94,7 +94,7 @@ export class HomesliderComponent {
   next!: ElementRef;
 
 idlePeriod = 100;
-animationDuration = 1500;
+animationDuration = 800;
 lastAnimation = 0;
 index = 0;
 

@@ -42,7 +42,9 @@
               <p>{{ content.description }}</p>
             </div>
           </div>
+
           <img [src]="sections[page].imageUrl" alt="">
+          
           <div class="right">
             <div *ngFor="let right of sections[page].right; let i = index;" class="state">
               <h4>{{ right.title }}<svg xmlns="http://www.w3.org/2000/svg" *ngIf="i === 0 && j === 0 || j === 2 && i === 0" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-shield-lock" viewBox="0 0 16 16">
@@ -64,7 +66,8 @@
             </div>
           </div>
         </div>       
-      </div>
+      </div>    
+       
     </div>
   </div>
 
@@ -72,4 +75,5 @@
     <button #prev class="btn btn-sm btn-light me-1" (click)="clickPrev()">prev</button>
     <button #next class="btn btn-sm btn-light" (click)="clickNext()">next</button>
   </div>
+  
 </div>

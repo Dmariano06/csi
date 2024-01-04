@@ -1,4 +1,4 @@
-.bg-1 {
+.bg-3 {
   background-image: url('../../assets/img/illustrations/services1.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,17 +8,34 @@
   background-image: url('../../assets/img/illustrations/services2.png');
   background-repeat: no-repeat;
   background-size: cover;
+  .down{
+    svg{
+      color:#2ec4f4  !important;
+    }
+    svg:hover{
+      background-color:rgba(46, 196, 244, 0.8) ;
+    }
+  }
   img{
     margin-left:20% !important;
       width:900px !important;
-      height:350px !important;
+      height: 400px !important;
     border-radius: 13px;
   }
   h4{
     color: #2ec4f4 !important;
   }
 }
-.bg-3 {
+
+.bg-1 {
+  .down{
+    svg{
+      color:#cf3ab5 !important;
+    }
+    svg:hover{
+      background-color:rgba(207, 58, 181,0.8);
+    }
+  }
   background-image: url('../../assets/img/illustrations/services5.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,8 +70,8 @@ span,h4,h6{
   }
   img{
     margin-left:8%;
-      width:800px !important;
-      height:400px !important;
+      width:600px;
+      height:350px;
     border-radius: 13px;
   }
   padding-top: 50px;
@@ -77,13 +94,29 @@ span,h4,h6{
 button{
   display: none;
 }
-.test{
-  display: flex;
 svg{
   margin: 4px;
   color: white !important;
 }
-
+.test{
+  display: flex;
+}
+.down{
+  display: grid;
+  margin: 4px;
+  color: white !important;
+  svg{
+    font-weight: bold;
+    cursor: pointer;
+    color: #00e7a7 !important;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+  }
+  svg:hover{
+    background-color: rgba(11, 122, 91, 0.8);
+    color: white;
+  }
 }
 section{
 border-radius: 18px !important;

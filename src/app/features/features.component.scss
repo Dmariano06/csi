@@ -39,7 +39,8 @@
     background-color: #1d2930;
     color: #494c4e;
     text-align: center;
-    h1{  font-weight: bold;}
+    h1{  font-weight: bold;
+    text-transform: uppercase;}
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,32 +48,69 @@
   }
 
   .second{
+    padding: 100px 0 100px 0;
     background-color: white !important;
     h1{
-      text-decoration: underline 1px white;
-      text-decoration-thickness: 2px;
-      padding-bottom: 25px;
+      padding-bottom: 20px;
+      margin: 20px;
+      position: relative;
+    }
+    h1:after{
+      content: "";
+      position: absolute;
+      left: 50%; /* Déplace le point de départ à 50% de la largeur de l'élément parent */
+      transform: translateX(-50%); /* Recentre l'élément ::after */
+      bottom: -2px; /* Ajustez la distance entre le texte et le soulignement ici */
+      width: 20%;
+      height: 5px; /* Épaisseur du soulignement */
+      background-color: #494c4e;
+    }
+    p{
+      margin: 20px;
+      width: 600px;
     }
   }
 
   h1 {
-    font-size: 2em; /* Taille de la police du titre */
-    margin-bottom: 10px; /* Espacement en bas du titre */
+    font-size: 2em;
+    margin-bottom: 10px;
   }
 
   .text-center {
-    max-width: 600px; /* Largeur maximale du paragraphe pour une meilleure lisibilité */
-    margin: 0 auto; /* Centrer le paragraphe horizontalement */
+    max-width: 600px; 
+    margin: 0 auto; 
   }
   .cover-little{
     h1{
         padding-top: 25px;
       
     }
-    height: 400px;
     color: white;
     .col{
         width: 500px;
     }
     background-image: url('../../assets/img/illustrations/passioncode.png');
+    margin-bottom: 0;
+    background-size: cover;
+  }
+  .end{
+    background-color:rgba(15, 30, 44, 0.3);
+    color: white;
+    padding: 25px;
+    p{
+      padding: 10px;
+    }
+    h1{
+      font-weight: bolder;
+      color: whitesmoke;
+    }
+    button{
+      margin: auto;
+      margin-top: 20px;
+    }
+  }
+  .slider{
+    
+    background-color:transparent;
+    height: 600px;
   }
