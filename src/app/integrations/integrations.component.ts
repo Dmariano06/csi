@@ -1,6 +1,5 @@
-import { Component, ElementRef, Inject, OnInit } from '@angular/core';
-import { ImageloaderService } from '../imageloader.service';
-import { DOCUMENT } from '@angular/common';
+import { Component } from '@angular/core';
+
 
 
 @Component({
@@ -9,14 +8,6 @@ import { DOCUMENT } from '@angular/common';
   styleUrl: './integrations.component.scss'
 })
 export class IntegrationsComponent {
-  headers = [
-    {text: "Explorez le potentiel du", text1:"digital"}
-  ]
-  faqs = [
-    {question:"Comment puis-je contacter le support technique en cas de problème avec le site ou l'application ?", answer:"Vous pouvez contacter notre support technique 24h/24 et 7j/7 via notre formulaire de contact en ligne ou en envoyant un e-mail à "},
-    {question:"Quelle est la différence entre un site internet et une application web, et comment choisir la meilleure option pour mes besoins ?", answer:"Un site internet est idéal pour une présence en ligne statique, tandis qu'une application web offre une interactivité avancée. Le choix dépend de vos objectifs spécifiques. Nous pouvons vous guider pour prendre la meilleure décision en fonction de vos besoins."},
-    {question:"Quel est le délai de création pour un site web ou une application personnalisée ?", answer:"Les délais de création varient en fonction de la complexité du projet. Cependant, nous travaillons efficacement pour respecter des échéanciers raisonnables. Une fois que nous aurons discuté de vos besoins spécifiques, nous pourrons vous fournir une estimation plus précise du délai de livraison."}
-  ]
 
   sections = [
     {
@@ -27,7 +18,6 @@ export class IntegrationsComponent {
         { heading: ' Personnalisation Totale', description: "Une application web réalisé avec Angular offre une flexibilité sans égale, permettant une personnalisation complète. Qu'il s'agisse de fonctionnalités spécifiques ou d'un design unique, l'adaptabilité d'Angular répond précisément à vos exigences" },
         { heading: 'Performance Angular', description: "Excellence dans la création d'expériences dynamiques. Le système de routing fluide permet une navigation instantanée, offrant une expérience utilisateur sans heurts. Cette approche dynamique, associée à une gestion efficace de l'état, garantit des performances optimales, surpassant la simplicité des sites vitrines classiques." }
       ],
-
     },
     {
       content: [
@@ -45,7 +35,7 @@ export class IntegrationsComponent {
         { heading: 'Rapidité de Mise en Place', description: "Assurez-vous de la facilité et de la rapidité avec lesquelles votre site vitrine peut être mis en place. La simplicité d'accès à votre plateforme est un atout supplémentaire, rendant votre solution attractive et conviviale pour tous." },
         { heading: 'Adapté aux Petites Entreprises', description: 'Soulignez que le site vitrine est parfaitement adapté aux petites entreprises. Son coût abordable, sa gestion facile et son impact visuel en font une solution idéale pour les entreprises de petite envergure.' },
       ],
-      imageUrl: 'assets/img/illustrations/template.png',
+    imageUrl: 'assets/img/illustrations/template.png',
     },
     {
       title: 'CommerceDigitalXcellence',
@@ -71,6 +61,5 @@ export class IntegrationsComponent {
       ],
       imageUrl: 'assets/img/illustrations/template5.png',
     },
-    
   ];
 }
