@@ -31,11 +31,11 @@ export class IntegrationsComponent {
     },
     {
       content: [
-        { heading: 'Sécurité Renforcé', description: "Angular intègre des fonctionnalités de sécurité robustes, offrant un contrôle total. Protégez vos données sensibles et assurez-vous une application sécurisée avec les standards de sécurité Angular" },
-        { heading: 'Intégration Simplifiée du Backend', description: "L'intégration transparente d'Angular avec un backend assure une cohérence totale. La synergie entre les parties frontend et backend offre une expérience utilisateur homogène et performante" },
-        { heading: 'Évolutivité Continue', description: "Adaptation Agile: Votre application Angular grandit avec votre entreprise. Des mises à jour régulières garantissent une adaptation constante, alignée sur les évolutions rapides des besoins de votre entreprise" }
+        {heading:'Sécurité Renforcé', description: "Angular intègre des fonctionnalités de sécurité robustes, offrant un contrôle total. Protégez vos données sensibles et assurez-vous une application sécurisée avec les standards de sécurité Angular" },
+        {heading:'Intégration Simplifiée du Backend', description: "L'intégration transparente d'Angular avec un backend assure une cohérence totale. La synergie entre les parties frontend et backend offre une expérience utilisateur homogène et performante" },
+        {heading:'Évolutivité Continue', description: "Adaptation Agile: Votre application Angular grandit avec votre entreprise. Des mises à jour régulières garantissent une adaptation constante." }
       ],
-      imageUrl: '../../assets/img/illustrations/template3.png',
+      imageUrl: 'assets/img/illustrations/template3.png',
     },
     {
       title: 'ShowCaseHub',
@@ -45,7 +45,7 @@ export class IntegrationsComponent {
         { heading: 'Rapidité de Mise en Place', description: "Assurez-vous de la facilité et de la rapidité avec lesquelles votre site vitrine peut être mis en place. La simplicité d'accès à votre plateforme est un atout supplémentaire, rendant votre solution attractive et conviviale pour tous." },
         { heading: 'Adapté aux Petites Entreprises', description: 'Soulignez que le site vitrine est parfaitement adapté aux petites entreprises. Son coût abordable, sa gestion facile et son impact visuel en font une solution idéale pour les entreprises de petite envergure.' },
       ],
-      imageUrl: '../../assets/img/illustrations/template.png',
+      imageUrl: 'assets/img/illustrations/template.png',
     },
     {
       title: 'CommerceDigitalXcellence',
@@ -69,7 +69,7 @@ export class IntegrationsComponent {
         { heading: "Adapté à Toutes les Tailles d'Entreprises", description: "Soulignez l'adaptabilité de l'application e-commerce à toutes les tailles d'entreprises, des petites et moyennes aux plus grandes. Proposez une solution abordable, facile à gérer et personnalisable" },
         { heading: 'Optimisation des Performances E-commerce', description: "Mettez l'accent sur l'optimisation des performances de votre application e-commerce. Un chargement rapide des pages, une navigation fluide et des transactions sécurisées sont essentiels pour fidéliser la clientèle" }
       ],
-      imageUrl: '../../assets/img/illustrations/template5.png',
+      imageUrl: 'assets/img/illustrations/template5.png',
     },
     
   ];
