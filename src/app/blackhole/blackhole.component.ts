@@ -17,7 +17,7 @@ export class BlackholeComponent{
 
   getCellTransform(index: number): string {
     const rotationY = index * 60;
-    return `rotateY(${rotationY}deg) translateZ(804px)`;
+    return `rotateY(${rotationY}deg) translateZ(654px)`;
   }
 
   getImageUrl(index: number): string {
@@ -27,18 +27,19 @@ export class BlackholeComponent{
   startAutomaticRotation() {
     setInterval(() => {
       this.currentRotation += 60;
-      this.carouselTransform = `translateZ(-804px) rotateY(${this.currentRotation}deg)`;
+      this.activeCellIndex = (this.activeCellIndex + 1) % this.cells.length;
+      this.carouselTransform = `translateZ(-954px) rotateY(${this.currentRotation}deg)`;
     }, 3000);
   }
   nextCell() {
     this.activeCellIndex = (this.activeCellIndex + 1) % this.cells.length;
     this.currentRotation += 60;
-    this.carouselTransform = `translateZ(-804px) rotateY(${this.currentRotation}deg)`;
+    this.carouselTransform = ` rotateY(${this.currentRotation}deg)`;
   }
 
   prevCell() {
     this.activeCellIndex = (this.activeCellIndex - 1 + this.cells.length) % this.cells.length;
     this.currentRotation -= 60;
-    this.carouselTransform = `translateZ(-804px) rotateY(${this.currentRotation}deg)`;
+    this.carouselTransform = `translateZ(-954px) rotateY(${this.currentRotation}deg)`;
   }
 }

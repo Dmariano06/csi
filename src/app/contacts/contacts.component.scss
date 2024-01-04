@@ -5,7 +5,7 @@
     margin-top: 150px;
 }
 input,textarea,.btn, label{
-    border-radius: 30px !important;
+ //   border-radius: 30px !important;
     padding: 10px;
     margin-bottom: 50px;
         box-shadow: rgba(0, 231, 167, 0.2)0px 5px, rgba(0, 231, 167, 0.1)0px 10px;
@@ -21,7 +21,7 @@ input,textarea,.btn, label{
 #name-1,#email-1,#telephone{
     border: none;
     background-color: rgba(0, 231, 167, 0.1);
-    width: 80% !important;
+    width: 100% !important;
 }
 .bs-icon.bs-icon-circle {
     border-radius: 50%;
@@ -61,7 +61,7 @@ option{
   background-color:#364f5e;
     border: none;
     color: white !important;
-    border-radius: 13px;
+  //  border-radius: 13px;
     transition: 0.5s ease-in-out;
    // color: #1d2930 !important;
 }
@@ -75,7 +75,9 @@ textarea{
     border: none;
     position: relative;
     width: 500px;
-    right: 65px;
+}
+.larger{
+  width: 500px !important;
 }
 .textarea{
     ::placeholder{
