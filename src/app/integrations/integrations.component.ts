@@ -30,8 +30,6 @@ export class IntegrationsComponent {
 
     },
     {
-      title: 'CraftedWebSite',
-      subtitle: 'Applications Web - Puissance et Adaptabilité',
       content: [
         { heading: 'Sécurité Renforcé', description: "Angular intègre des fonctionnalités de sécurité robustes, offrant un contrôle total. Protégez vos données sensibles et assurez-vous une application sécurisée avec les standards de sécurité Angular" },
         { heading: 'Intégration Simplifiée du Backend', description: "L'intégration transparente d'Angular avec un backend assure une cohérence totale. La synergie entre les parties frontend et backend offre une expérience utilisateur homogène et performante" },
