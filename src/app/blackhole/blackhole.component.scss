@@ -3,7 +3,7 @@
 }
 
 .carousel {
-  padding-top:7%;
+  padding-top:120px;
   margin: auto;
   width: 30%;
   transform-style: preserve-3d;
@@ -36,8 +36,8 @@ button{
 
 .cell img {
   opacity: 1;
-  width:50vw;
-  height:30vw;
+  width:30vw;
+    height:20vw;
   object-fit: contain;
   transition: opacity 0.3s ease-in-out;
 }
@@ -47,17 +47,13 @@ button{
     transition: opacity 0.3s ease-in-out;
   }
 }
+
 @media(max-width:600px) {
   .carousel{
     padding-top: 120px;
   }
-}
-@media(max-width:800px) {
-
-
- .cell img{
-   
+  .cell img{
+    width:50vw !important;
+    height:30vw !important;
   }
-
-
 }
