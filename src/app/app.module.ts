@@ -19,6 +19,11 @@ import { ServicesComponent } from './services/services.component';
 import { BlackholeComponent } from './blackhole/blackhole.component';
 import { HomesliderComponent } from './homeslider/homeslider.component';
 import { FooterComponent } from './footer/footer.component';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: 'assets/illustrations/img/services.webp', component: HomesliderComponent }
+];
 
 @NgModule({
   declarations: [
@@ -41,7 +46,8 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     HttpClientModule,
     FooterComponent,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   providers: [],
   bootstrap: [AppComponent]
