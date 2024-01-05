@@ -152,6 +152,10 @@ a:hover{
     }
     .brand{
         flex: none !important;
+        img{
+           left: 0;
+           margin-left: 5px;
+        }
     }
     .flex-row{
         display: none;
