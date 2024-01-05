@@ -1,5 +1,6 @@
 import { Component, ElementRef, HostListener, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { FooterService } from '../footer.service';
+import { ImageloaderService } from '../imageloader.service';
 
 @Component({
   selector: 'app-homeslider',
@@ -79,11 +80,17 @@ export class HomesliderComponent {
     },
     
   ];
-  constructor(private footerService: FooterService) {}
+  constructor(private footerService: FooterService, private imagePreloaderService: ImageloaderService) {}
 
   ngOnInit(): void {
  
     this.footerService.toggleFooter(true);
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/template5.png');
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/template4.png');
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/template3.png');
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/services.png');
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/services2.png');
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/services5.png');
   }
  
   @ViewChildren('page')
@@ -152,22 +159,4 @@ clickNext() {
   });
 }
 
-@HostListener('wheel', ['$event'])
-onMouseWheel(event: WheelEvent) {
-  const delta = event.deltaY;
-  const timeNow = new Date().getTime();
-
-  if (timeNow - this.lastAnimation < this.idlePeriod + this.animationDuration) {
-    event.preventDefault();
-    return;
-  }
-
-  if (delta > 0 && this.next) {
-    this.next.nativeElement.click();
-  } else if (delta < 0 && this.prev) {
-    this.prev.nativeElement.click();
-  }
-
-  this.lastAnimation = timeNow;
-}
 }

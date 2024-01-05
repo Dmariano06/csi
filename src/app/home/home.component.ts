@@ -23,7 +23,7 @@ lastScrollTop = 0;
 constructor(private renderer: Renderer2, private el: ElementRef, private imagePreloaderService: ImageloaderService) {}
 
 ngOnInit() {
-  this.imagePreloaderService.preloadImage('assets/img/illustrations/fontheader1.webp');
+  this.imagePreloaderService.preloadImage('assets/img/illustrations/header.png');
 }
 
 @HostListener('window:scroll', [])
