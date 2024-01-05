@@ -42,7 +42,7 @@ export class HomesliderComponent {
         { heading: ' Personnalisation Totale', description: "Une application web réalisé avec Angular offre une flexibilité sans égale, permettant une personnalisation complète. Qu'il s'agisse de fonctionnalités spécifiques ou d'un design unique, l'adaptabilité d'Angular répond précisément à vos exigences" },
         { heading: 'Performance Angular', description: "Excellence dans la création d'expériences dynamiques. Le système de routing fluide permet une navigation instantanée, offrant une expérience utilisateur sans heurts. Cette approche dynamique, associée à une gestion efficace de l'état, garantit des performances optimales, surpassant la simplicité des sites vitrines classiques." }
       ],
-      imageUrl: '../../assets/img/illustrations/template3.png',
+      imageUrl: '../../assets/img/illustrations/template3.webp',
     },
     {
       title: 'ShowCaseHub',
@@ -52,7 +52,7 @@ export class HomesliderComponent {
         { heading: 'Rapidité de Mise en Place', description: "Assurez-vous de la facilité et de la rapidité avec lesquelles votre site vitrine peut être mis en place. La simplicité d'accès à votre plateforme est un atout supplémentaire, rendant votre solution attractive et conviviale pour tous." },
         { heading: 'Adapté aux Petites Entreprises', description: 'Soulignez que le site vitrine est parfaitement adapté aux petites entreprises. Son coût abordable, sa gestion facile et son impact visuel en font une solution idéale pour les entreprises de petite envergure.' },
       ],
-      imageUrl: '../../assets/img/illustrations/template4.png',
+      imageUrl: '../../assets/img/illustrations/template4.webp',
     },
     {
       title: 'CommerceDigitalXcellence',
@@ -76,22 +76,12 @@ export class HomesliderComponent {
         { heading: "Adapté à Toutes les Tailles d'Entreprises", description: "Soulignez l'adaptabilité de l'application e-commerce à toutes les tailles d'entreprises, des petites et moyennes aux plus grandes. Proposez une solution abordable, facile à gérer et personnalisable" },
         { heading: 'Optimisation des Performances E-commerce', description: "Mettez l'accent sur l'optimisation des performances de votre application e-commerce. Un chargement rapide des pages, une navigation fluide et des transactions sécurisées sont essentiels pour fidéliser la clientèle" }
       ],
-      imageUrl: '../../assets/img/illustrations/template5.png',
+      imageUrl: '../../assets/img/illustrations/template5.webp',
     },
     
   ];
   constructor(private footerService: FooterService, private imagePreloaderService: ImageloaderService) {}
 
-  ngOnInit(): void {
- 
-    this.footerService.toggleFooter(true);
-    this.imagePreloaderService.preloadImage('assets/img/illustrations/template5.png');
-    this.imagePreloaderService.preloadImage('assets/img/illustrations/template4.png');
-    this.imagePreloaderService.preloadImage('assets/img/illustrations/template3.png');
-    this.imagePreloaderService.preloadImage('assets/img/illustrations/services.png');
-    this.imagePreloaderService.preloadImage('assets/img/illustrations/services2.png');
-    this.imagePreloaderService.preloadImage('assets/img/illustrations/services5.png');
-  }
  
   @ViewChildren('page')
   pages!: QueryList<ElementRef>;
@@ -158,5 +148,33 @@ clickNext() {
     }
   });
 }
+ngOnInit(): void {
+ 
+  this.footerService.toggleFooter(true);
+  this.imagePreloaderService.preloadImage('assets/img/illustrations/template5.png');
+  this.imagePreloaderService.preloadImage('assets/img/illustrations/template4.png');
+  this.imagePreloaderService.preloadImage('assets/img/illustrations/template3.png');
+  this.imagePreloaderService.preloadImage('assets/img/illustrations/services.png');
+  this.imagePreloaderService.preloadImage('assets/img/illustrations/services2.png');
+  this.imagePreloaderService.preloadImage('assets/img/illustrations/services5.png');
+}
 
+@HostListener('wheel', ['$event'])
+onMouseWheel(event: WheelEvent) {
+  const delta = event.deltaY;
+  const timeNow = new Date().getTime();
+
+  if (timeNow - this.lastAnimation < this.idlePeriod + this.animationDuration) {
+    event.preventDefault();
+    return;
+  }
+
+  if (delta > 0 && this.next) {
+    this.next.nativeElement.click();
+  } else if (delta < 0 && this.prev) {
+    this.prev.nativeElement.click();
+  }
+
+  this.lastAnimation = timeNow;
+}
 }
