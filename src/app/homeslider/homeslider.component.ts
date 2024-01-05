@@ -51,7 +51,7 @@ export class HomesliderComponent {
         { heading: 'Rapidité de Mise en Place', description: "Assurez-vous de la facilité et de la rapidité avec lesquelles votre site vitrine peut être mis en place. La simplicité d'accès à votre plateforme est un atout supplémentaire, rendant votre solution attractive et conviviale pour tous." },
         { heading: 'Adapté aux Petites Entreprises', description: 'Soulignez que le site vitrine est parfaitement adapté aux petites entreprises. Son coût abordable, sa gestion facile et son impact visuel en font une solution idéale pour les entreprises de petite envergure.' },
       ],
-      imageUrl: '../../assets/img/illustrations/template.png',
+      imageUrl: '../../assets/img/illustrations/template4.png',
     },
     {
       title: 'CommerceDigitalXcellence',

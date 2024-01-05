@@ -17,10 +17,9 @@ export class BlackholeComponent{
 
   getCellTransform(index: number): string {
     const rotationY = index * 60;
-    const translateZ = window.innerWidth < 600 ? 354 : 954;
+    const translateZ = window.innerWidth < 600 ? 404 : 804;
     return `rotateY(${rotationY}deg) translateZ(${translateZ}px)`;
   }
-
   getImageUrl(index: number): string {
     return `assets/img/illustrations/template${index}.png`;
   }
@@ -29,7 +28,7 @@ export class BlackholeComponent{
     setInterval(() => {
       this.currentRotation += 60;
       this.activeCellIndex = (this.activeCellIndex + 1) % this.cells.length;
-      this.carouselTransform = `translateZ(-904px) rotateY(${this.currentRotation}deg)`;
+      this.carouselTransform = `translateZ(-804px) rotateY(${this.currentRotation}deg)`;
     }, 3000);
   }
   nextCell() {

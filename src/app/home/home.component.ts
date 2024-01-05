@@ -29,7 +29,7 @@ ngOnInit() {
 @HostListener('window:scroll', [])
 onWindowScroll() {
   const scrollPosition = window.scrollY;
-  const blurValue = Math.min(scrollPosition / 10, 20);
+  const blurValue = Math.min(scrollPosition / 50, 20);
   this.renderer.setStyle(this.el.nativeElement.querySelector('.scroll-blur'), 'filter', `blur(${blurValue}px)`);
 }
 

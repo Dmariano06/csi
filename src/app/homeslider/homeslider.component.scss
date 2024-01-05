@@ -2,12 +2,24 @@
   background-image: url('../../assets/img/illustrations/services1.png');
   background-repeat: no-repeat;
   background-size: cover;
-  
+  img:hover{
+    transform: scale(1.1);
+    transition: transform ease-in-out 0.3s;
+    border: #00e7a7 1.5px solid;
+  }
+}
+img{
+  transition: all ease-in-out 0.3s;
 }
 .bg-2 {
   background-image: url('../../assets/img/illustrations/services2.png');
   background-repeat: no-repeat;
   background-size: cover;
+  img:hover{
+    transform: scale(1.1);
+    transition: transform ease-in-out 0.3s;
+    border: #2ec4f4 1.5px solid;
+  }
   .down{
     svg{
       color:#2ec4f4  !important;
@@ -25,7 +37,13 @@
   }
 }
 
+
 .bg-1 {
+  img:hover{
+    transform: scale(1.1);
+    transition: transform ease-in-out 0.3s;
+    border: #cf3ab5 1.5px solid;
+  }
   .down{
     svg{
       color:#cf3ab5 !important;
@@ -42,7 +60,7 @@
   }
   img{
     border-radius: 13px;
-    margin-left: 16%;
+  
   }
 }
 .title{
