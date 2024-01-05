@@ -40,6 +40,7 @@ img{
 
 
 .bg-1 {
+  animation: fadeIn  forwards 1s;
   img:hover{
     transform: scale(1.1);
     transition: transform ease-in-out 0.3s;

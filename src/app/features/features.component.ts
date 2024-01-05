@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { ImageloaderService } from '../imageloader.service';
 
 
 
@@ -8,5 +9,12 @@ import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@
   styleUrl: './features.component.scss',
 })
 export class FeaturesComponent  {
+  
+  constructor( private imagePreloaderService: ImageloaderService) {}
+
+  ngOnInit(): void {
  
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/coder.png');
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/coder1.png');
+  }
 }

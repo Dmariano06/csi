@@ -1,6 +1,7 @@
 .cover-container {
     display: flex;
     width: 100vw;
+    animation: fadeIn  forwards .5s;
   }
 
   .half-width {
