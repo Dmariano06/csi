@@ -1,6 +1,7 @@
 import { Component, ElementRef, HostListener, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { FooterService } from '../footer.service';
 import { ImageloaderService } from '../imageloader.service';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-homeslider',
@@ -80,7 +81,7 @@ export class HomesliderComponent {
     },
     
   ];
-  constructor(private footerService: FooterService, private imagePreloaderService: ImageloaderService) {}
+  constructor(private footerService: FooterService, private imagePreloaderService: ImageloaderService, private router: Router) {}
 
  
   @ViewChildren('page')
@@ -149,7 +150,12 @@ clickNext() {
   });
 }
 ngOnInit(): void {
- 
+  this.router.events.subscribe((event) => {
+    if (event instanceof NavigationEnd) {
+      window.scrollTo(0, 0);
+    }
+  });
+  
   this.footerService.toggleFooter(true);
   this.imagePreloaderService.preloadImage('assets/img/illustrations/template5.png');
   this.imagePreloaderService.preloadImage('assets/img/illustrations/template4.png');
@@ -158,7 +164,9 @@ ngOnInit(): void {
   this.imagePreloaderService.preloadImage('assets/img/illustrations/services2.png');
   this.imagePreloaderService.preloadImage('assets/img/illustrations/services5.png');
 }
-
+scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 @HostListener('wheel', ['$event'])
 onMouseWheel(event: WheelEvent) {
   const delta = event.deltaY;

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader, GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import * as THREE from 'three';
@@ -9,7 +9,19 @@ import { CSS2DRenderer } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
   templateUrl: './scene.component.html',
   styleUrls: ['./scene.component.scss']
 })
-export class SceneComponent implements AfterViewInit{
+export class SceneComponent implements AfterViewInit,OnInit{
+
+  ngOnInit() {
+    this.checkBrowser();
+  }
+  
+  constructor( private renderer1: Renderer2,private el: ElementRef) { }
+  checkBrowser() {
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    if (isSafari) {
+      this.renderer1.setStyle(this.el.nativeElement.querySelector('.votre-modele-3d'), 'height', '10px');
+    }
+  }
   isScrolled = false;
 
   @HostListener('window:scroll', [])

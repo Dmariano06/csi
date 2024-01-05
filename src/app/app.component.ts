@@ -1,7 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { FooterService } from './footer.service';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +20,14 @@ export class AppComponent {
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
+  ngOnInit() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        // La route a changé, rediriger vers le haut de la page
+        window.scrollTo(0, 0);
+      }
+    });
+  }
   navigateTo(route: string) {
     this.router.navigate([route]);
     this.scrollToTop();
