@@ -35,16 +35,22 @@ button{
 }
 
 .cell img {
-  opacity: 1;
-  width:30vw;
-    height:20vw;
-  object-fit: contain;
-  transition: opacity 0.3s ease-in-out;
+ // width:30vw;
+   // height:20vw;
+   width: (600 / 2048) * 100vw;
+   height: (220 / 1219) * 100vw;
+    opacity: 0.9;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
 }
 .cell:hover{
   img{
+    filter: brightness(150%);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 231, 167);
+      //   filter: hue-rotate(180deg);
     opacity: 1;
-    transition: opacity 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 }
 

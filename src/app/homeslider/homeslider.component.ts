@@ -76,7 +76,7 @@ export class HomesliderComponent {
         { heading: "Adapté à Toutes les Tailles d'Entreprises", description: "Soulignez l'adaptabilité de l'application e-commerce à toutes les tailles d'entreprises, des petites et moyennes aux plus grandes. Proposez une solution abordable, facile à gérer et personnalisable" },
         { heading: 'Optimisation des Performances E-commerce', description: "Mettez l'accent sur l'optimisation des performances de votre application e-commerce. Un chargement rapide des pages, une navigation fluide et des transactions sécurisées sont essentiels pour fidéliser la clientèle" }
       ],
-      imageUrl: '../../assets/img/illustrations/template5.webp',
+      imageUrl: '../../assets/img/illustrations/template5.png',
     },
     
   ];

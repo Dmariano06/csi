@@ -14,7 +14,7 @@ export class FeaturesComponent  {
 
   ngOnInit(): void {
  
-    this.imagePreloaderService.preloadImage('assets/img/illustrations/coder.png');
-    this.imagePreloaderService.preloadImage('assets/img/illustrations/coder1.png');
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/coder.webp');
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/coder1.webp');
   }
 }

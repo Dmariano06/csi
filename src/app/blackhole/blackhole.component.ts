@@ -23,6 +23,7 @@ export class BlackholeComponent{
   getImageUrl(index: number): string {
     return `assets/img/illustrations/template${index}.png`;
   }
+  
 
   startAutomaticRotation() {
     setInterval(() => {

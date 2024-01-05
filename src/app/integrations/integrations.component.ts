@@ -25,7 +25,7 @@ export class IntegrationsComponent {
         {heading:'Intégration Simplifiée du Backend', description: "L'intégration transparente d'Angular avec un backend assure une cohérence totale. La synergie entre les parties frontend et backend offre une expérience utilisateur homogène et performante" },
         {heading:'Évolutivité Continue', description: "Adaptation Agile: Votre application Angular grandit avec votre entreprise. Des mises à jour régulières garantissent une adaptation constante." }
       ],
-      imageUrl: 'assets/img/illustrations/template3.png',
+      imageUrl: 'assets/img/illustrations/template3.webp',
     },
     {
       title: 'ShowCaseHub',

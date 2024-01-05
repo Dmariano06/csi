@@ -9,7 +9,7 @@ import { HomesliderComponent } from './homeslider/homeslider.component';
 const routes: Routes = [
     {path: "home", component: HomeComponent},
     {path: "integrations", component: IntegrationsComponent},
-    {path: "features", component: FeaturesComponent},
+    {path: "about", component: FeaturesComponent},
     {path: "solutions-web", component: HomesliderComponent},
     {path: "contacts", component:  ContactsComponent},
     {path: '', redirectTo:"home", pathMatch: 'full'}
