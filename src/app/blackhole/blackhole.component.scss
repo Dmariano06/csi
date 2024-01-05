@@ -36,8 +36,8 @@ button{
 
 .cell img {
   opacity: 1;
-  height: 350px;
-  width: 650px;
+  width:50vw;
+  height:30vw;
   object-fit: contain;
   transition: opacity 0.3s ease-in-out;
 }
@@ -56,8 +56,7 @@ button{
 
 
  .cell img{
-    width:50vw;
-    height:30vw;
+   
   }
 
 
