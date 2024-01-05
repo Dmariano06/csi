@@ -59,9 +59,11 @@ margin-bottom: 80px !important;
     }
   }
 }
-@media(max-width:800px) {
+@media(max-width:400px) {
   .card{
     margin-left: 0;
+    width:100% !important;
+    margin: auto;
   }
 }
 @media(min-width:800px) and (max-width:1200px){

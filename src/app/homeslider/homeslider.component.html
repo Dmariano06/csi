@@ -42,8 +42,11 @@
               <p>{{ content.description }}</p>
             </div>
           </div>
-
-          <img [src]="sections[page].imageUrl" alt="">
+          <picture>
+            <source [srcset]="sections[page].imageUrl" type="image/webp">
+            <img src="image.png" alt="Description de l'image">
+        </picture>
+    
           
           <div class="right">
             <div *ngFor="let right of sections[page].right; let i = index;" class="state">

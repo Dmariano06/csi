@@ -24,12 +24,13 @@ constructor(private renderer: Renderer2, private el: ElementRef, private imagePr
 
 ngOnInit() {
   this.imagePreloaderService.preloadImage('assets/img/illustrations/header.png');
+  this.imagePreloaderService.preloadImage('assets/img/illustrations/header.webp');
 }
 
 @HostListener('window:scroll', [])
 onWindowScroll() {
   const scrollPosition = window.scrollY;
-  const blurValue = Math.min(scrollPosition / 50, 20);
+  const blurValue = Math.min(scrollPosition / 20, 30);
   this.renderer.setStyle(this.el.nativeElement.querySelector('.scroll-blur'), 'filter', `blur(${blurValue}px)`);
 }
 

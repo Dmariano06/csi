@@ -87,7 +87,7 @@ span,h4,h6{
     width:500px;
   }
   img{
-    margin-left:8%;
+    margin-left:100px;
     width:33vw;
     height:20vw;
     border-radius: 13px;
@@ -97,7 +97,7 @@ span,h4,h6{
 
   height: 100vh;
   
-  position: absolute;
+  position:relative;
   opacity: 0;
   transition: all 0.5s 0.3s;
 }
@@ -139,6 +139,7 @@ section{
 border-radius: 18px !important;
 }
 .right{
+  padding-left: 3%;
   h4{
     text-align: right;
   }

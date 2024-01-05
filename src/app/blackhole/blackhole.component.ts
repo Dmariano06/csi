@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, HostListener, QueryList, ViewChildren } from '@angular/core';
+import { ImageloaderService } from '../imageloader.service';
 
 @Component({
   selector: 'app-blackhole',
@@ -6,12 +7,23 @@ import { AfterViewInit, Component, ElementRef, HostListener, QueryList, ViewChil
   styleUrl: './blackhole.component.scss'
 })
 export class BlackholeComponent{
+  constructor( private imagePreloaderService: ImageloaderService) {}
+
   cells = [1, 2, 3, 4,5 ,6];
   currentRotation = 0;
   activeCellIndex = 0;
   carouselTransform = 'translateZ(-804px) rotateY(0deg)';
 
   ngOnInit() {
+
+      this.imagePreloaderService.preloadImage('assets/img/illustrations/template5.png');
+      this.imagePreloaderService.preloadImage('assets/img/illustrations/template4.png');
+      this.imagePreloaderService.preloadImage('assets/img/illustrations/template3.png');
+      this.imagePreloaderService.preloadImage('assets/img/illustrations/template2.png');
+      this.imagePreloaderService.preloadImage('assets/img/illustrations/template1.png');
+      this.imagePreloaderService.preloadImage('assets/img/illustrations/template0.png');
+      this.imagePreloaderService.preloadImage('assets/img/illustrations/passioncode.png');
+    
     this.startAutomaticRotation();
   }
 
