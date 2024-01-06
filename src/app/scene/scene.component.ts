@@ -20,6 +20,7 @@ export class SceneComponent implements AfterViewInit,OnInit{
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     if (isSafari) {
       this.renderer1.setStyle(this.el.nativeElement.querySelector('.barnav'), 'height', '60px');
+      this.renderer1.setStyle(this.el.nativeElement.querySelector('.barnav'), 'width', '100%');
     }
   }
   isScrolled = false;
