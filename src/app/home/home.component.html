@@ -1,7 +1,7 @@
 <body>
 <div class="parallax parallax1">
 <header class="pt-5" class="scroll-blur">
-    <div class="card-container">
+    <div class="card-container" routerLink="/solutions-web">
     <div class="rectangle" *ngFor="let presentation of presentations; let i = index;">
         <h2>{{presentation.title}}</h2>
         <div *ngIf="i === 0" class="bs-icon-lg bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-4 bs-icon" style="background: transparent;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-world" style="color: #00e7a7;">
