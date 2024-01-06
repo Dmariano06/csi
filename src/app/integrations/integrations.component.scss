@@ -46,7 +46,7 @@ img{
   img{
     bottom: 50px;
       position: relative;
-      top: 10px;
+      top: 5px;
       width:50vw;
   height:30vw;
       border-radius: 13px;
@@ -62,9 +62,7 @@ img{
   }
   
   background-attachment: fixed;
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+
   .down{
     svg{
       color:#cf3ab5 !important;
