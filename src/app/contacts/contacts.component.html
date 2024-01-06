@@ -25,10 +25,9 @@
                           <input id="email-1" class="form-control larger" type="email" name="email" [(ngModel)]="entity.email" placeholder="Email" required />
                         </div>
                         <h4>Par quel type de site seriez-vous intéressé ?</h4>
-                        <div class="mb-3">
-                          <select class="form-select larger" aria-label="Type de site" type="text" [(ngModel)]="entity.site" name="site" required>
+                        <div class="mb-3" class="form-group">
+                          <select class="form-control" aria-label="Type de site" type="text" [(ngModel)]="entity.site" name="site" required>
                             <option value="" disabled selected>Choisissez un type de site</option>
-                            <option value="Application Web Full Stack">Application Web Full Stack</option>
                             <option value="CraftedWebSite - Applications Web">CraftedWebSite - Applications Web</option>
                             <option value="ShowCaseHub - Site Vitrine">ShowCaseHub - Site Vitrine</option>
                             <option value="CommercialDigital - E-commerce">CommercialDigital - E-commerce</option>
@@ -77,6 +76,6 @@
             </div>
         </div>
     </div>
-
+<app-faq></app-faq>
     <app-footer></app-footer>
 </body>
