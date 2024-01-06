@@ -1,5 +1,6 @@
 import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { ImageloaderService } from '../imageloader.service';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -20,9 +21,16 @@ export class HomeComponent implements OnInit{
 scrollOffset = 0;
 lastScrollTop = 0;
 
-constructor(private renderer: Renderer2, private el: ElementRef, private imagePreloaderService: ImageloaderService) {}
-
+constructor(private renderer: Renderer2, private el: ElementRef, private imagePreloaderService: ImageloaderService, private router: Router) {}
+scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 ngOnInit() {
+  this.router.events.subscribe((event) => {
+    if (event instanceof NavigationEnd) {
+      this.scrollToTop();
+    }
+  });
   this.imagePreloaderService.preloadImage('assets/img/illustrations/header.png');
   this.imagePreloaderService.preloadImage('assets/img/illustrations/header.webp');
 }

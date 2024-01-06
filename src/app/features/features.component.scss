@@ -3,12 +3,10 @@
     width: 100vw;
     animation: fadeIn  forwards .5s;
   }
-
   .half-width {
     flex: 1;
     overflow: hidden;
-    position: relative; /* Ajout de position relative pour positionner le titre par rapport à ce conteneur */
-  }
+    position: relative;}
   .text-tests{
     width: 500px;
     text-align: justify;
@@ -18,7 +16,9 @@
     height: auto;
     display: block;
   }
-
+  .collab{
+    padding-top: 50px;
+  }
   .cover-title {
     margin: auto  ;
     background-color: rgba(15, 30, 44, 0.3);

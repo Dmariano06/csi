@@ -1,3 +1,4 @@
+
 .bg-3 {
   background-image: url('../../assets/img/illustrations/services1.webp');
   background-repeat: no-repeat;
@@ -6,6 +7,8 @@
     transform: scale(1.1);
     transition: transform ease-in-out 0.3s;
     border: #00e7a7 2px solid;
+    box-shadow: 0 10px 10px -5px #00e7a7;
+    filter: brightness(105%) !important;
   }
 }
 img{
@@ -13,6 +16,7 @@ img{
   transition: all ease-in-out 0.3s;
 }
 .bg-2 {
+
   background-image: url('../../assets/img/illustrations/services2.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,6 +24,7 @@ img{
     transform: scale(1.1);
     transition: transform ease-in-out 0.3s;
     border: #2ec4f4 2px solid;
+    box-shadow: 0 10px 10px -5px #2ec4f4;
   }
   .down{
     svg{
@@ -45,6 +50,7 @@ img{
     transform: scale(1.1);
     transition: transform ease-in-out 0.3s;
     border: #cf3ab5 2px solid;
+    box-shadow: 0 10px 10px -5px #cf3ab5;
   }
   .down{
     svg{
@@ -91,6 +97,9 @@ span,h4,h6{
     width:33vw;
     height:20vw;
     border-radius: 13px;
+  }
+  img:hover{
+    filter: brightness(150%);
   }
   text-align: justify;
   color: white;

@@ -47,6 +47,7 @@ const routes: Routes = [
     HttpClientModule,
     FooterComponent,
     FormsModule,
+    RouterModule.forRoot(routes,{ scrollPositionRestoration: 'enabled' }),
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   providers: [],

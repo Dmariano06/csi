@@ -17,21 +17,30 @@ export class AppComponent {
       this.hideFooter = hide;
     });
   }
-  scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-  ngOnInit() {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        // La route a changé, rediriger vers le haut de la page
-        window.scrollTo(0, 0);
-      }
-    });
-  }
-  navigateTo(route: string) {
-    this.router.navigate([route]);
-    this.scrollToTop();
-  }
+ scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+ngOnInit() {
+  this.router.events.subscribe((event) => {
+    if (event instanceof NavigationEnd) {
+      this.scrollToTop();
+    }
+  });
+}
+
+onactivate(event: any) {
+
+
+window.scroll(0,0);
+
+   
+}
+
+navigateTo(route: string) {
+  this.scrollToTop();
+  this.router.navigate([route]);
+}
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();

@@ -6,7 +6,7 @@ import { NavigationEnd, Router } from '@angular/router';
   templateUrl: './composant.component.html',
   styleUrl: './composant.component.scss'
 })
-export class ComposantComponent implements OnInit {
+export class ComposantComponent{
 constructor(private router: Router) {}
   headers = [
     {text: "Explorez le potentiel du", text1:"digital"}
@@ -37,20 +37,7 @@ scrollOffset = 0;
 onScroll(event: Event): void {
   this.scrollOffset = window.scrollY;
 }
-ngOnInit() {
-  this.router.events.subscribe((event) => {
-    if (event instanceof NavigationEnd) {
-      window.scrollTo(0, 0);
-    }
-  });
-}
-scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-navigateTo(route: string) {
-  this.router.navigate([route]);
-  this.scrollToTop();
-}
+
 }
 
 

@@ -12,6 +12,13 @@ import { NavigationEnd, Router } from '@angular/router';
 export class FeaturesComponent  {
 
   constructor( private imagePreloaderService: ImageloaderService,private router: Router) {}
+  navigateTo(route: string) {
+    this.router.navigate([route]);
+  this.scrollToTop();
+}
+scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
@@ -22,4 +29,5 @@ export class FeaturesComponent  {
     this.imagePreloaderService.preloadImage('assets/img/illustrations/coder.webp');
     this.imagePreloaderService.preloadImage('assets/img/illustrations/coder1.webp');
   }
+  
 }
