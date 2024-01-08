@@ -54,11 +54,11 @@ uls=[{name:"Porte d'Entrée Digitale"},];
       bgClass: '1',
       designTitle: 'Conception Web & Contenu',
       designFeatures: [
-        'Nombre de page sur demande',
+        'Nombre de pages sur demande',
         'Un site entièrement personnalisable (sur mesure)',
         'UI/UX Design',
         'Responsive sur tout les supports',
-        'Optimisation de performance'
+        'Optimisation des performances'
       ],
       seoTitle: 'Référencement SEO',
       seoFeatures: [
@@ -96,7 +96,7 @@ uls=[{name:"Porte d'Entrée Digitale"},];
         'Adaptation à votre gamme',
         'UI/UX Design',
         'Responsive sur tout les supports',
-        'Optimisation de performance',
+        'Optimisation des performances',
       ],
       seoTitle: 'Référencement SEO',
       seoFeatures: [
@@ -117,12 +117,21 @@ uls=[{name:"Porte d'Entrée Digitale"},];
       securityTitle: 'Sécurité en Ligne',
       securityFeatures: [
         '24/7 Support',
-        "Assistance Technique en Cas d'Urgence",
+        "Assistance Technique en Cas d'Urgences",
         'Protocoles de Communication Sécurisés',
         'Infrastructure Robuste',
         "Contrôles d'Accès"
       ]
     }
   ];
+  getRouterLink(index: number): string {
+    if (index === 0) {
+      return '/craftedwebsite';
+    } else if (index === 1) {
+      return '/showcasehub';
+    } else {
+      return '/commerce-digital';
+    }
+  }
 
 }

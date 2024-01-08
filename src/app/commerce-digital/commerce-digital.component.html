@@ -1,0 +1,81 @@
+<header>
+    <div class="container">
+        <div class="row">
+        <div class="col">
+<h3>Solutions-web</h3>
+<h1>CraftedWebSite</h1>
+<h2>Explorez l'Excellence du Shopping en Ligne</h2>
+<p>Bienvenue dans notre univers d'innovation et de facilité, où le shopping en ligne devient une expérience exceptionnelle. Notre service e-commerce redéfinit les règles du jeu en vous offrant bien plus qu'une simple plateforme d'achat. Nous vous invitons à explorer un monde où la simplicité rencontre l'efficacité, où chaque clic vous rapproche davantage de la satisfaction client ultime.</p>
+<button class="button btn-sm px-0" type="button" routerLink="/solutions-web">En savoir plus&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+</svg><br></button>
+</div>
+<div class="col">
+    <img src="../../assets/img/illustrations/crafted.png" height="350px" width="550px" alt="">
+</div>
+</div>
+</div>
+</header>
+<header class="second">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="../../assets/img/illustrations/engagement.png" height="350px" width="550px" alt="">
+            </div>
+        <div class="col">
+<h2>Faites de CSI votre nouveau partenaire digital ‘Explorez le potentiel numérique’</h2>
+<p>Bienvenue dans notre univers d'innovation et de facilité, où le shopping en ligne devient une expérience exceptionnelle. Notre service e-commerce redéfinit les règles du jeu en vous offrant bien plus qu'une simple plateforme d'achat. Nous vous invitons à explorer un monde où la simplicité rencontre l'efficacité, où chaque clic vous rapproche davantage de la satisfaction client ultime.</p>
+<button class="button btn-sm px-0" type="button" routerLink="/solutions-web">En savoir plus&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+</svg><br></button>
+</div>
+</div>
+</div>
+</header>
+<main [style.height]="mainHeight">
+    <div class="container">
+      <h2>Vitesse et Fiabilité Redéfinies : Une Exécution Dynamique pour un Succès Immédiat et Durable dans Votre Expérience de Vente en Ligne</h2>
+      <div class="row">
+        <div class="col">
+            <p>
+                Plongez dans le monde du CommerceDigital, votre partenaire ultime pour une présence en ligne exceptionnelle. Notre expertise en E-commerce, Conception Web, et Contenu garantit une expérience utilisateur inégalée. Grâce à une personnalisation experte du nombre de produits et une adaptation fine à votre gamme, notre UI/UX Design assure une navigation fluide, responsive sur tous les supports.
+    <br>
+    <br>
+                Notre engagement envers l'optimisation de performance se manifeste à travers un référencement SEO de pointe, incluant une stratégie naturelle, une fiche Google My Business optimisée, et une attention particulière à l'indice de performance Google. Nous excellons également dans le référencement local, plaçant votre entreprise au cœur des communautés qui vous entourent.
+        <br>        
+        <br>        
+                L'accompagnement et le suivi sont au cœur de notre approche. Avec un support 24/7, des corrections rapides de bugs, un hébergement inclus, et des mises à jour régulières de sécurité et de contenu, nous nous assurons que votre site reste performant et à jour.
+            <br>    
+            <br>    
+                La maintenance continue de votre catalogue est notre engagement constant. Nous assurons une sécurité en ligne inébranlable avec un support 24/7, une assistance technique en cas d'urgence, des protocoles de communication sécurisés, une infrastructure robuste, et des contrôles d'accès rigoureux.
+                <br>
+                <br>
+                Avec CommerceDigital, votre présence en ligne est bien plus qu'une simple vitrine. C'est une expérience complète, façonnée par notre expertise et soutenue par notre engagement envers votre succès.
+              </p>
+        </div>
+        <div [ngClass]="{'col': isScreenWidthAbove1000px, 'row': !isScreenWidthAbove1000px}">
+          <ul>
+            <li *ngFor="let item of businessStrategies">
+              <details>
+                <summary style="width: 100%;">{{ item.title }} <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                  </svg></summary>
+                <p>{{ item.content }}</p>
+              </details>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container end">
+        <h1 class="text-center collab">Collaborez avec C S I</h1>
+        <p class="text-center">Là où d'autres solutions peuvent atteindre leurs limites en termes de flexibilité, notre approche se distingue par une évolutivité constante. Nous concevons nos applications pour prospérer dans un environnement en constante mutation, nous assurant que nos clients bénéficient d'une technologie qui s'adapte et se développe avec eux.
+    
+          Choisir notre équipe, c'est choisir l'innovation, la performance et une approche résolument orientée vers l'avenir. 
+       <br>   <button class="button text-center mx-auto">Contactez-nous</button>
+        </p>
+      </div>
+  </main>
+  
+<app-footer></app-footer>

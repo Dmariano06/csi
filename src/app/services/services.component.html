@@ -1,5 +1,6 @@
+<h1 class="text-center"> <span>NOS OFFRES</span></h1>
 <div class="container-fluid">
-    <div *ngFor="let service of services" class="card text-white" [ngClass]="{'bg-1': service.bgClass === '1', 'bg-2': service.bgClass === '2', 'bg': service.bgClass}">
+    <div *ngFor="let service of services; let i = index;" class="card text-white" [ngClass]="{'bg-1': service.bgClass === '1', 'bg-2': service.bgClass === '2', 'bg': service.bgClass}">
         <div class="card-body p-4 d-flex flex-column justify-content-between">
             <div>
                 <div class="d-flex justify-content-between">
@@ -60,7 +61,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <button class="button btn-sm mt-3" type="button" routerLink="/solutions-web">En savoir plus&nbsp;
+                <button class="button btn-sm mt-3" type="button" [routerLink]="getRouterLink(i)">En savoir plus&nbsp;
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" style="fill: white !important;" viewBox="0 0 16 16" class="bi bi-arrow-right">
                         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
                     </svg>

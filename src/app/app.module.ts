@@ -20,6 +20,9 @@ import { BlackholeComponent } from './blackhole/blackhole.component';
 import { HomesliderComponent } from './homeslider/homeslider.component';
 import { FooterComponent } from './footer/footer.component';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { CraftedwebsiteComponent } from './craftedwebsite/craftedwebsite.component';
+import { ShowcasehubComponent } from './showcasehub/showcasehub.component';
+import { CommerceDigitalComponent } from './commerce-digital/commerce-digital.component';
 
 const routes: Routes = [
   { path: 'assets/illustrations/img/services.webp', component: HomesliderComponent }
@@ -37,8 +40,11 @@ const routes: Routes = [
     FaqComponent,
     ModelComponent,
     SceneComponent,
+    CommerceDigitalComponent,
     ServicesComponent,
-    BlackholeComponent
+    CraftedwebsiteComponent,
+    BlackholeComponent,
+    ShowcasehubComponent
   ],
   imports: [
     BrowserModule,

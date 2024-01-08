@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit{
   ]
   presentations = [
     {text:"Découvrez nos sites sur mesure, alliant simplicité d'utilisation et fonctionnalités avancées.", title:"Application Web"},
-    {text:"Nos sites web statiques sont conçu avec expertise pour répondre à vos besoins spécifiques.", title:"Site Vitrine"},
+    {text:"Nos sites web statiques sont conçus avec expertise pour répondre à vos besoins spécifiques.", title:"Site Vitrine"},
     {text: "Choisissez une plateforme e-commerce novatrice, offrant une gamme exceptionnelle de gestion de produits.", title:"Site E-commerce"}
   ];
 
@@ -41,7 +41,14 @@ onWindowScroll() {
   const blurValue = Math.min(scrollPosition / 20, 30);
   this.renderer.setStyle(this.el.nativeElement.querySelector('.scroll-blur'), 'filter', `blur(${blurValue}px)`);
 }
-
-
+getRouterLink(index: number): string {
+  if (index === 0) {
+    return '/craftedwebsite';
+  } else if (index === 1) {
+    return '/showcasehub';
+  } else {
+    return '/commerce-digital';
+  }
+}
 }
 

@@ -17,7 +17,7 @@ constructor(private router: Router) {}
     {text:"Nos sites sur mesure sont conçu avec expertise pour répondre à vos besoins spécifiques.", title:"Site sur mesure"}
   ];
   developpements = [
-    {title:"Réception du projet", text:"À cette étape cruciale, nous écoutons attentivement vos exigences, établissant ainsi une base solide pour le succès à venir."},
+    {title:"Réception du projet", text:"À cette étape cruciale, nous écoutons attentivement vos exigences, établissant ainsi une base solide pour votre succès."},
     {title:"Design", text:"Nous donnons vie à la vision digitale tout en intégrant pleinement l'identité que vous souhaitez transmettre à ses utilisateurs."},
     {title:"Développement", text:"Du design au développement, chaque étape est soigneusement orchestrée pour donner vie à votre site web."},
     {title:"Déploiement", text:"Votre site se concrétise : le déploiement, étape cruciale, pour offrir une présence en ligne exceptionnelle."}

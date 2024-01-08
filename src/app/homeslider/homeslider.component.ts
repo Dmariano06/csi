@@ -185,4 +185,14 @@ onMouseWheel(event: WheelEvent) {
 
   this.lastAnimation = timeNow;
 }
+getRouterLink(index: number): string {
+  if (index === 0) {
+    return '/craftedwebsite';
+  } else if (index === 1) {
+    return '/showcasehub';
+  } else {
+    return '/commerce-digital';
+  }
+}
+
 }
