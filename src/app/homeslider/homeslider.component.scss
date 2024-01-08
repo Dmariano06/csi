@@ -81,12 +81,12 @@ margin: auto;
 .page-content {
   padding-top: 10px;
   p{
-    width: 80%;
     font-weight: 500;
   }
   img{
-    width:40vw;
-    height:25vw;
+height: 400px;
+width: 630px;
+margin-left: 15px;
     border-radius: 13px;
   }
   img:hover{
@@ -145,20 +145,24 @@ border-radius: 18px !important;
   }
 }
 
-@media(max-width:800px) {
+@media(max-width:1200px) {
 
   .page-content{
-    p{
-     width: 80vw !important;
-    }
   }
   .test{
+    display: grid;
     img{
-      display: none;
+      height: 160px;
+      width: 300px;
     }
     h2,h3,h5{
       width: 80%;
     }
   }
 
+}
+@media(max-width:800px) {
+  img{
+    display: none;
+  }
 }

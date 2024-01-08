@@ -5,7 +5,14 @@
     <div class="container-fluid">
       <ul class="navbar-nav flex-row  me-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link" routerLink="home" (click)="navigateTo('/home')" routerLinkActive="active">Accueil</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="solutions-web"  routerLinkActive="active">Solutions Web</a></li>
+        <li class="nav-item"><a class="nav-link"><div class="dropdown">
+              <button class="dropbtn" routerLinkActive="active"  routerLink="solutions-web">Solutions Web</button>
+              <div class="dropdown-content">
+                <a routerLink="craftedwebsite">CraftedWebSite</a>
+                <a routerLink="showcasehub">ShowCaseHub</a>
+                <a routerLink="commerce-digital">CommerceDigital</a>
+              </div>
+            </div></a></li>
         <li class="nav-item"><a class="nav-link" routerLink="about" (click)="navigateTo('/about')"routerLinkActive="active">Qui Nous Sommes</a></li>
       </ul>
 
@@ -43,6 +50,15 @@
             <li class="nav-item"><a class="nav-link" routerLink="home"  (click)="navigateTo('')" routerLinkActive="active">Accueil</a></li>
             <li class="nav-item"><a class="nav-link" routerLink="integrations" (click)="navigateTo('/integrations')" routerLinkActive="active">Solutions Web</a></li>
             <li class="nav-item"><a class="nav-link" routerLink="about"  routerLinkActive="active">Qui Nous Sommes</a></li>
+            <li class="nav-item"><div class="dropdown">
+              <button class="dropbtn">Solutions Web</button>
+              <div class="dropdown-content">
+                <a routerLink="craftedwebsite">CraftedWebSite</a>
+                <a routerLink="showcasehub">ShowCaseHub</a>
+                <a routerLink="commerce-digital">CommerceDigital</a>
+              </div>
+            </div>
+            </li>
            <li class="nav-item"><a class="nav-link button" routerLink="contacts"  (click)="navigateTo('/contacts')">Contact</a></li>
          
           </ul>
