@@ -93,6 +93,9 @@ main{
       }
   
 }
+img{
+    animation: fadeIn  forwards .5  s;
+}
 .end{
     margin-top: 25px;
     background-color:rgba(15, 30, 44, 0.3);

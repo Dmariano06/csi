@@ -28,6 +28,9 @@ header{
         margin-bottom: 28px;
     }
 }
+img{
+    animation: fadeIn  forwards .5s;
+}
 .button{
     margin-bottom: 15px;
     background-color: #cf3ab5 !important;
