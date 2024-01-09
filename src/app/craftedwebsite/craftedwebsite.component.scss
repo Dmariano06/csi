@@ -60,8 +60,6 @@ main{
         summary{
             width: 100%;
         }
-   
-      //  background-color: #f8f8f8;
       background-color: #f8f8f8;
         margin: 5px;
         padding: 8px;
@@ -114,6 +112,11 @@ main{
 @media(max-width:500px) {
     img{
         height:250px;
-         width:98vw;
+         width:95vw;
+    }
+    main{
+        li{
+            width: 100%;
+        }
     }
 }
