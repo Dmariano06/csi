@@ -24,9 +24,15 @@ header{
     }
 }
 .button{
+    margin-bottom: 15px;
     background-color: #2ec4f4  !important;
     box-shadow: rgba(31, 255, 255, 0.1) 0px 34px 35px, rgba(1, 215, 243, 0.3) 0px -8px 15px, rgba(0, 196, 231, 0.12) 0px 4px 6px, rgba(0, 158, 231, 0.17) 0px 8px 9px, rgba(1, 149, 235, 0.09) 0px -3px 5px;
+    width: 125px;
 }
+.button:hover{
+    background-color:#1d7694  !important;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
 .second{
     background-image: none;
     background-color: #f8f8f8;
@@ -42,7 +48,7 @@ header{
 }
 main{
     h2{
-        background-color: rgba(46, 196, 244,0.4);
+        color: rgba(46, 196, 244);
         margin-bottom: 25px;
     }
     height: 550px;
@@ -91,5 +97,12 @@ main{
     button{
       margin: auto;
       margin-top: 20px;
+      width: fit-content !important;
     }
   }
+  @media(max-width:500px) {
+    img{
+        height:250px;
+         width:98vw;
+    }
+}

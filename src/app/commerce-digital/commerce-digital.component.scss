@@ -28,6 +28,9 @@ header{
         margin-bottom: 28px;
     }
 }
+.button{
+    width: 125px;
+}
 .second{
     background-image: none;
     background-color: #f8f8f8;
@@ -43,7 +46,7 @@ header{
 }
 main{
     h2{
-        background-color: rgba(0, 231, 167,0.4);
+        color: #00e7a7;
         margin-bottom: 25px;
     }
     height: 550px;
@@ -51,13 +54,13 @@ main{
     background-color: #1d2930;
     color: white;
     li{
-
+        width: 84%;
         summary{
             width: 100%;
         }
    
-      //  background-color: #f8f8f8;
-      background-color: rgba(0, 231, 167,0.4);
+        background-color: #f8f8f8;
+      color: #1d2930;
         margin: 5px;
         padding: 8px;
        font-weight: bold;
@@ -98,5 +101,12 @@ main{
     button{
       margin: auto;
       margin-top: 20px;
+      width: fit-content;
     }
   }
+  @media(max-width:500px) {
+    img{
+        height:250px;
+         width:98vw;
+    }
+}

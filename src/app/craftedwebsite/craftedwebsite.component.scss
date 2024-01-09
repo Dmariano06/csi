@@ -17,11 +17,7 @@ header{
     h3{
         font-size: 22px;
     }
-    .button{
-        margin-bottom: 15px;
-        background-color: #cf3ab5 !important;
-        box-shadow: rgba(248, 31, 255, 0.1) 0px 34px 35px, rgba(235, 1, 243, 0.3) 0px -8px 15px, rgba(231, 0, 219, 0.12) 0px 4px 6px, rgba(204, 0, 231, 0.17) 0px 8px 9px, rgba(207, 1, 235, 0.09) 0px -3px 5px;
-    }
+ 
     p{
         color: aliceblue !important;
         font-size: 18px;
@@ -29,6 +25,12 @@ header{
     img{
         margin-bottom: 28px;
     }
+}
+.button{
+    margin-bottom: 15px;
+    background-color: #cf3ab5 !important;
+    width: 125px;
+    box-shadow: rgba(248, 31, 255, 0.1) 0px 34px 35px, rgba(235, 1, 243, 0.3) 0px -8px 15px, rgba(231, 0, 219, 0.12) 0px 4px 6px, rgba(204, 0, 231, 0.17) 0px 8px 9px, rgba(207, 1, 235, 0.09) 0px -3px 5px;
 }
 .second{
     background-image: none;
@@ -45,7 +47,7 @@ header{
 }
 main{
     h2{
-        background-color: rgba(207, 58, 181,0.4) ;
+        color: rgba(207, 58, 181) ;
         margin-bottom: 25px;
     }
     height: 550px;
@@ -53,15 +55,16 @@ main{
     background-color: #1d2930;
     color: white;
     li{
-
+        width: 78%;
         summary{
             width: 100%;
         }
    
       //  background-color: #f8f8f8;
-      background-color: rgba(207, 58, 181,0.4) ;
+      background-color: #f8f8f8;
         margin: 5px;
         padding: 8px;
+        color: #1d2930;
        font-weight: bold;
           
             display: flex;
@@ -97,10 +100,19 @@ main{
       font-weight: bolder;
       color: whitesmoke;
     }
-    button{
-        background-color: #cf3ab5 !important;
-        box-shadow: rgba(248, 31, 255, 0.1) 0px 34px 35px, rgba(235, 1, 243, 0.3) 0px -8px 15px, rgba(231, 0, 219, 0.12) 0px 4px 6px, rgba(204, 0, 231, 0.17) 0px 8px 9px, rgba(207, 1, 235, 0.09) 0px -3px 5px;
+    .button{
+        width: fit-content;
       margin: auto;
       margin-top: 20px;
     }
   }
+  .button:hover{
+    box-shadow: rgba(92, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    background-color: #7a236c !important;
+}
+@media(max-width:500px) {
+    img{
+        height:250px;
+         width:98vw;
+    }
+}

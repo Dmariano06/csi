@@ -31,9 +31,8 @@ a:hover{
     height:60px;
     opacity: 0.8;
    // border-radius: 8px;
-       // box-shadow:  rgba(0, 231, 167, 0.4) 0px 5px 7.5px, rgba(0, 231, 167, 0.8) 0px -4px 7px, rgba(0, 231, 167, 0.5) 0px 2px 3px, rgba(0, 231, 167, 0.5) 0px 4px 5px, rgba(0, 231, 167, 0.4) 0px -2px 3px !important;
-    }
-
+  // box-shadow: rgba(0, 231, 167, 0.4) 0px 5px 7.5px, rgba(0, 231, 167, 0.8) 0px -4px 7px, rgba(0, 231, 167, 0.5) 0px 2px 3px, rgba(0, 231, 167, 0.5) 0px 4px 5px, rgba(0, 231, 167, 0.4) 0px -2px 3px !important;    
+  }
 }
 
 .hide-footer{
@@ -47,11 +46,10 @@ body{
     overflow: hidden;
 }
 
-
-
 .btn-close{
     box-shadow: rgba(0, 231, 167, 0.25) 0px 30px 60px -12px inset, rgba(0, 231, 167, 0.3) 0px 18px 36px -18px inset;
 }
+
 .transparent-navbar {
     background: transparent !important;
     transition: background-color 0.5s ease;
@@ -82,11 +80,11 @@ body{
         color: white;
     }
   }
- 
+
   .contact{
     padding-right: 20px;
   }
- 
+
 .navbar-toggler{
     display: none;
     border: none !important;
@@ -97,7 +95,7 @@ body{
   .active {
     color:#00e7a7 !important;
     font-weight: 700;
-    text-underline-offset: 23px;
+    text-underline-offset: 15px;
     text-shadow: none !important;
   }
 
@@ -117,12 +115,16 @@ body{
     h3{
         color: #00e7a7 !important;
     }
-    a,p{color: white !important;
-        text-shadow: none !important;
-    font-weight: normal !important;
+    a,p{
+      color: white !important;
+      text-shadow: none !important;
+      font-weight: normal !important;
+
 span{
     text-transform: lowercase !important;
-}}
+}
+
+}
 a:hover{
     color: #00e7a7 !important;
 }
@@ -155,12 +157,9 @@ a:hover{
   
   .dropdown-content a {
     margin: 0;
+    padding: 15px;
     text-decoration: none;
     display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #ddd;
   }
   
   .dropdown:hover .dropdown-content {
@@ -177,7 +176,6 @@ a:hover{
         }
         li:hover{
             transition: ease 0.5s;
-            
         }
     }
     .button{
