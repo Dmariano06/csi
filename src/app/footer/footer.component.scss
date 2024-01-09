@@ -1,4 +1,7 @@
 footer{
+    hr{
+        color: white !important;
+    }
     background-color: #1d2930;
     h3{
         color: #00e7a7 !important;
@@ -12,6 +15,9 @@ span{
 }}
 a:hover{
     color: #00e7a7 !important;
+}
+svg{
+    color: white;
 }
   }
   @media(max-width:800px) {

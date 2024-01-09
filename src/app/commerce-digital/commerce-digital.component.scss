@@ -22,6 +22,7 @@ header{
         margin-bottom: 15px;
     }
     p{
+        text-align: justify;
         color: aliceblue !important;
         font-size: 18px;
     }
@@ -42,10 +43,14 @@ header{
         color: black;
     }
     p{
+        text-align: justify !important;
         color: black !important;
     }
 }
 main{
+    p{
+        text-align: justify;
+    }
     h2{
         color: #00e7a7;
         margin-bottom: 25px;
@@ -75,7 +80,7 @@ main{
             margin-left: auto;
           }
           p{
-
+            
             font-weight: 500;
             padding: 8px;
           //  background-color: rgba(248, 248, 248);
@@ -89,6 +94,7 @@ main{
   
 }
 .end{
+    margin-top: 25px;
     background-color:rgba(15, 30, 44, 0.3);
     color: white;
    padding-bottom: 25px;

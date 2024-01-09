@@ -18,6 +18,11 @@ img{
   transition: all ease-in-out 0.3s;
 }
 .bg-2 {
+  .button{
+    margin-bottom: 15px;
+    background-color: #2ec4f4  !important;
+    box-shadow: rgba(31, 255, 255, 0.1) 0px 34px 35px, rgba(1, 215, 243, 0.3) 0px -8px 15px, rgba(0, 196, 231, 0.12) 0px 4px 6px, rgba(0, 158, 231, 0.17) 0px 8px 9px, rgba(1, 149, 235, 0.09) 0px -3px 5px;
+}
 
   background-image: url('../../assets/img/illustrations/services2.png');
   background-repeat: no-repeat;
@@ -70,6 +75,11 @@ img{
       background-color:rgba(207, 58, 181,0.8);
     }
   }
+  .button{
+    margin-bottom: 15px;
+    background-color: #cf3ab5 !important;
+    box-shadow: rgba(248, 31, 255, 0.1) 0px 34px 35px, rgba(235, 1, 243, 0.3) 0px -8px 15px, rgba(231, 0, 219, 0.12) 0px 4px 6px, rgba(204, 0, 231, 0.17) 0px 8px 9px, rgba(207, 1, 235, 0.09) 0px -3px 5px;
+}
   background-repeat: no-repeat;
   background-size: cover;
   h4{

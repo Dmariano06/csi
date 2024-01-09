@@ -17,6 +17,7 @@ header{
         font-size: 22px;
     }
     p{
+        text-align: justify;
         color: aliceblue !important;
         font-size: 18px;
     }
@@ -44,10 +45,14 @@ header{
         color: black;
     }
     p{
+        text-align: justify;
         color: black !important;
     }
 }
 main{
+    p{
+        text-align: justify;
+    }
     h2{
         color: rgba(46, 196, 244);
         margin-bottom: 25px;
@@ -87,6 +92,7 @@ main{
 .end{
     background-color:rgba(15, 30, 44, 0.3);
     color: white;
+    margin-top: 25px;
    padding-bottom: 25px;
     p{
       padding: 10px;
