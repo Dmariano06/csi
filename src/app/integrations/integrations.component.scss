@@ -140,10 +140,11 @@ border-radius: 18px !important;
 
  @media(max-width:1000px) {
   img{
-    display: none;
+   // display: none;
   }
   p{
     width: 100% !important;
+    font-size: 10.5px ;
   }
 
  }
