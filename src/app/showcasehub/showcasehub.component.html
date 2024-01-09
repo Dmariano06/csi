@@ -6,7 +6,7 @@
 <h1>ShowCaseHub</h1>
 <h2>Délpoyez votre présence en ligne avec élégance</h2>
 <p>Découvrez l'art de l'expression en ligne avec CSI. Nous créons des sites vitrines qui captivent, reflètent votre essence et séduisent votre audience. Choisissez CSI pour une présence digitale qui transcende les attentes.</p>
-<button class="button btn-sm px-0" type="button" routerLink="/solutions-web">En savoir plus&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+<button class="button btn-sm px-0" (click)="scrollToElement()" type="button">En savoir plus&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
 </svg><br></button>
 </div>
@@ -25,14 +25,14 @@
         <div class="col">
 <h2>Faites de CSI votre nouveau partenaire digital ‘Explorez le potentiel numérique’</h2>
 <p>Nos sites vitrines vous offrent bien plus qu'une simple présence en ligne. Ils sont le reflet de votre professionnalisme et de votre engagement envers une expérience utilisateur exceptionnelle. Dans un monde numérique en constante évolution, choisissez CSI pour une présence en ligne qui allie élégance, fiabilité et croissance continue. Transformez votre image digitale dès aujourd'hui.</p>
-<button class="button btn-sm px-0" type="button" routerLink="/solutions-web">En savoir plus&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+<button class="button btn-sm px-0" type="button" routerLink="/about">En savoir plus&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
 </svg><br></button>
 </div>
 </div>
 </div>
 </header>
-<main [style.height]="mainHeight">
+<main [style.height]="mainHeight" #elementCible>
     <div class="container">
       <h2>Performance Excellente : Une Exécution Agile, Sûre et Élégante pour Votre Réussite Immédiate et Durable</h2>
       <div class="row">

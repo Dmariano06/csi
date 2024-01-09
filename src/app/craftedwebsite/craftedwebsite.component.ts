@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-craftedwebsite',
@@ -34,6 +34,12 @@ export class CraftedwebsiteComponent {
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
     this.isScreenWidthAbove1000px = window.innerWidth > 1000;
+  }
+ 
+  @ViewChild('elementCible') private elementCible: ElementRef | undefined;
+
+  scrollToElement() {
+    this.elementCible!.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
   }
  
 }

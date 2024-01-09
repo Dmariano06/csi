@@ -126,9 +126,9 @@ uls=[{name:"Porte d'Entrée Digitale"},];
   ];
   getRouterLink(index: number): string {
     if (index === 0) {
-      return '/craftedwebsite';
-    } else if (index === 1) {
       return '/showcasehub';
+    } else if (index === 1) {
+      return '/craftedwebsite';
     } else {
       return '/commerce-digital';
     }
