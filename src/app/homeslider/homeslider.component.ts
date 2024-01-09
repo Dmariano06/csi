@@ -36,6 +36,7 @@ export class HomesliderComponent {
         { heading: 'Performance Angular', description: "Excellence dans la création d'expériences dynamiques. Le système de routing fluide permet une navigation instantanée, offrant une expérience utilisateur sans heurts. Cette approche dynamique, garantit des performances optimales, surpassant la simplicité des sites vitrines classiques." }
       ],
       imageUrl: '../../assets/img/illustrations/template3.webp',
+      imagePng: '../../assets/img/illustrations/template3.png',
     },
     {
       title: 'ShowCaseHub',
@@ -46,6 +47,7 @@ export class HomesliderComponent {
         { heading: 'Adapté aux Petites Entreprises', description: 'Soulignez que le site vitrine est parfaitement adapté aux petites entreprises. Son coût abordable, sa gestion facile et son impact visuel en font une solution idéale pour les entreprises de petite envergure.' },
       ],
       imageUrl: '../../assets/img/illustrations/template4.webp',
+      imagePng: '../../assets/img/illustrations/template4.png',
     },
     {
       title: 'CommerceDigitalXcellence',
@@ -155,6 +157,7 @@ ngOnInit(): void {
   this.imagePreloaderService.preloadImage('assets/img/illustrations/services.png');
   this.imagePreloaderService.preloadImage('assets/img/illustrations/services2.png');
   this.imagePreloaderService.preloadImage('assets/img/illustrations/services5.png');
+  this.imagePreloaderService.preloadImage('assets/img/illustrations/services5.webp');
 }
 scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
