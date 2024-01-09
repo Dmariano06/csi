@@ -24,7 +24,7 @@
           </picture>
         </a>
         </div>
-  
+        
       <ul class="navbar-nav flex-row contact">
         <li class="nav-item"><a class="nav-link button" routerLink="contacts" (click)="navigateTo('/contacts')">Contact</a></li>
       </ul>
@@ -38,7 +38,7 @@
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
-            <picture>
+            <picture class="brand flex-fill">
               <img src="../assets/img/illustrations/logo.png" alt="Logo">
             </picture>
           </h5>
@@ -50,15 +50,6 @@
             <li class="nav-item"><a class="nav-link" routerLink="home"  (click)="navigateTo('')" routerLinkActive="active">Accueil</a></li>
             <li class="nav-item"><a class="nav-link" routerLink="integrations" (click)="navigateTo('/integrations')" routerLinkActive="active">Solutions Web</a></li>
             <li class="nav-item"><a class="nav-link" routerLink="about"  routerLinkActive="active">Qui Nous Sommes</a></li>
-            <li class="nav-item"><div class="dropdown">
-              <div class="dropbtn">Solutions Web</div>
-              <div class="dropdown-content">
-                <a routerLink="craftedwebsite">CraftedWebSite</a>
-                <a routerLink="showcasehub">ShowCaseHub</a>
-                <a routerLink="commerce-digital">CommerceDigital</a>
-              </div>
-            </div>
-            </li>
            <li class="nav-item"><a class="nav-link button" routerLink="contacts"  (click)="navigateTo('/contacts')">Contact</a></li>
          
           </ul>
