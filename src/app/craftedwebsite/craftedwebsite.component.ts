@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { ImageloaderService } from '../imageloader.service';
 
 @Component({
   selector: 'app-craftedwebsite',
@@ -7,6 +8,16 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
   styleUrl: './craftedwebsite.component.scss'
 })
 export class CraftedwebsiteComponent {
+
+  constructor(private imagePreloaderService: ImageloaderService,) {
+
+  }
+  ngOnInit() {
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/crafted.webp');
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/crafted.png');
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/engagement.webp');
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/engagement.png');
+  }
   public mainHeight = 'auto';
 
   public onToggleDetails(): void {

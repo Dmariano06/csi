@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { ImageloaderService } from '../imageloader.service';
 
 @Component({
   selector: 'app-showcasehub',
@@ -6,6 +7,16 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
   styleUrl: './showcasehub.component.scss'
 })
 export class ShowcasehubComponent {
+
+  constructor(private imagePreloaderService: ImageloaderService,) {
+
+  }
+  ngOnInit() {
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/showcase.webp');
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/showcase.png');
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/engagement1.webp');
+    this.imagePreloaderService.preloadImage('assets/img/illustrations/engagement1.png');
+  }
   public mainHeight = 'auto';
 
   public onToggleDetails(): void {

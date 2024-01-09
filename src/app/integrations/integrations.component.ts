@@ -19,6 +19,7 @@ export class IntegrationsComponent {
         { heading: 'Performance Angular', description: "Excellence dans la création d'expériences dynamiques. Le système de routing fluide permet une navigation instantanée, offrant une expérience utilisateur sans heurts. Cette approche dynamique, associée à une gestion efficace de l'état, garantit des performances optimales, surpassant la simplicité des sites vitrines classiques." }
       ],
       imageUrl: 'assets/img/illustrations/template3.webp',
+      imagePng: 'assets/img/illustrations/template3.png',
     },
     {
       title: 'ShowCaseHub',
@@ -28,7 +29,8 @@ export class IntegrationsComponent {
         { heading: 'Rapidité de Mise en Place', description: "Assurez-vous de la facilité et de la rapidité avec lesquelles votre site vitrine peut être mis en place. La simplicité d'accès à votre plateforme est un atout supplémentaire, rendant votre solution attractive et conviviale pour tous." },
         { heading: 'Adapté aux Petites Entreprises', description: 'Soulignez que le site vitrine est parfaitement adapté aux petites entreprises. Son coût abordable, sa gestion facile et son impact visuel en font une solution idéale pour les entreprises de petite envergure.' },
       ],
-    imageUrl: 'assets/img/illustrations/template.png',
+    imagePng: 'assets/img/illustrations/template4.png',
+    imageUrl: 'assets/img/illustrations/template4.webp'
     },
     {
       title: 'CommerceDigitalXcellence',
@@ -38,6 +40,8 @@ export class IntegrationsComponent {
         { heading: "Adapté à Toutes les Tailles d'Entreprises", description: "Soulignez l'adaptabilité de l'application e-commerce à toutes les tailles d'entreprises, des petites et moyennes aux plus grandes. Proposez une solution abordable, facile à gérer et personnalisable" },
         { heading: 'Optimisation des Performances E-commerce', description: "Mettez l'accent sur l'optimisation des performances de votre application e-commerce. Un chargement rapide des pages, une navigation fluide et des transactions sécurisées sont essentiels pour fidéliser la clientèle" }
       ],
+      imageUrl: 'assets/img/illustrations/template5.webp',
+      imagePng: 'assets/img/illustrations/template5.png'
   
     },
   ];

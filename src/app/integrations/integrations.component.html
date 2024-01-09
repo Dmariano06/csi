@@ -44,7 +44,10 @@
           </div>
         </div>       
       </div>    
-      <img [src]="sections[page].imageUrl" alt="" >
+      <picture>
+        <source [srcset]="sections[page].imageUrl" type="image/webp">
+        <img [src]="sections[page].imagePng" alt="Description de l'image">
+    </picture>  
     </div>
     </div>
       <div class="button" [routerLink]="getRouterLink(j)">learn more</div>

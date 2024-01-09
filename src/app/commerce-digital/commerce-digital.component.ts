@@ -1,12 +1,19 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { ImageloaderService } from '../imageloader.service';
 
 @Component({
   selector: 'app-commerce-digital',
   templateUrl: './commerce-digital.component.html',
   styleUrl: './commerce-digital.component.scss'
 })
-export class CommerceDigitalComponent {
+export class CommerceDigitalComponent implements OnInit {
   public mainHeight = 'auto';
+  constructor(private imagePreloaderService: ImageloaderService,) {
+
+  }
+  ngOnInit() {
+
+  }
 
   public onToggleDetails(): void {
     this.mainHeight = 'auto';
