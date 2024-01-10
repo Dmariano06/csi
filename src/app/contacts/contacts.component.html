@@ -19,18 +19,22 @@
                           <input id="name-1" class="form-control" type="text" name="company" [(ngModel)]="entity.company" placeholder="Nom de votre société" />
                         </div>
                         <div class="mb-3">
+                          <input id="name-1" class="form-control" type="text" name="activity" [(ngModel)]="entity.activity" placeholder="Quel est votre secteur d'activité?" />
+                        </div>
+                        <div class="mb-3">
                           <input class="form-control"  type="tel" id="phone" name="phone"  [(ngModel)]="entity.phone"  required />
                         </div>
                         <div class="mb-3 larger">
                           <input id="email-1" class="form-control" type="email" name="email" [(ngModel)]="entity.email" placeholder="Email" required />
                         </div>
-                        <h4>Par quel type de site seriez-vous intéressé ?</h4>
+                        <h4>Quels types de sites captureraient votre intérêt de manière particulièrement significative ?</h4>
                         <div class="mb-3" class="form-group">
                           <select class="form-control larger" aria-label="Type de site" type="text" [(ngModel)]="entity.site" name="site" required>
                             <option value="" disabled selected>Choisissez un type de site</option>
                             <option value="CraftedWebSite - Applications Web">CraftedWebSite - Applications Web</option>
                             <option value="ShowCaseHub - Site Vitrine">ShowCaseHub - Site Vitrine</option>
                             <option value="CommercialDigital - E-commerce">CommercialDigital - E-commerce</option>
+                            <option value="Autres">Autres...</option>
                           </select>
                         </div>
                         <br>

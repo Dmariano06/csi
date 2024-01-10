@@ -9,7 +9,7 @@ import intlTelInput from 'intl-tel-input';
   styleUrl: './contacts.component.scss'
 })
 export class ContactsComponent {
-  entity = { name: '', email: '', message: '' ,phone:'',firstname:'',company:'', site:''};
+  entity = { name: '', email: '', message: '' ,phone:'',firstname:'',company:'', site:'',activity:''};
   @ViewChild('formRef') formRef: NgForm | undefined;
 
   constructor(private http: HttpClient) {}
@@ -28,7 +28,8 @@ export class ContactsComponent {
               message: '',
               phone: '',
               company:'',
-              site:''
+              site:'',
+              activity:''
             };
           },
           (error) => {

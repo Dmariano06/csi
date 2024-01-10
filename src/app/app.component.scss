@@ -137,7 +137,10 @@ a:hover{
   
   .dropbtn {
     font-weight: 600;
-    color: white;
+    letter-spacing: 0.2px;
+    color: white !important;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px black;
     background-color: transparent;
     border: none;
     cursor: pointer;
