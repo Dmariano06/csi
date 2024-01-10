@@ -23,6 +23,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { CraftedwebsiteComponent } from './craftedwebsite/craftedwebsite.component';
 import { ShowcasehubComponent } from './showcasehub/showcasehub.component';
 import { CommerceDigitalComponent } from './commerce-digital/commerce-digital.component';
+import { MentionsComponent } from './mentions/mentions.component';
 
 const routes: Routes = [
   { path: 'assets/illustrations/img/services.webp', component: HomesliderComponent }
@@ -38,7 +39,9 @@ const routes: Routes = [
     HomeComponent,
     ComposantComponent,
     FaqComponent,
+    MentionsComponent,
     ModelComponent,
+    FooterComponent,
     SceneComponent,
     CommerceDigitalComponent,
     ServicesComponent,
@@ -51,7 +54,6 @@ const routes: Routes = [
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FooterComponent,
     FormsModule,
     RouterModule.forRoot(routes,{scrollOffset: [0, 0], scrollPositionRestoration: 'enabled' }),
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })

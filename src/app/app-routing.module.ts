@@ -8,6 +8,7 @@ import { HomesliderComponent } from './homeslider/homeslider.component';
 import { CraftedwebsiteComponent } from './craftedwebsite/craftedwebsite.component';
 import { ShowcasehubComponent } from './showcasehub/showcasehub.component';
 import { CommerceDigitalComponent } from './commerce-digital/commerce-digital.component';
+import { MentionsComponent } from './mentions/mentions.component';
 
 const routes: Routes = [
     {path: "home", component: HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
     {path: "showcasehub", component: ShowcasehubComponent},
     {path: "commerce-digital", component: CommerceDigitalComponent},
     {path: "contacts", component:  ContactsComponent},
+    {path: "mentions-légales", component:  MentionsComponent},
     {path: '', redirectTo:"home", pathMatch: 'full'}
 ];
 
