@@ -96,11 +96,6 @@ height: auto;
   }
 }
 
-@supports not (background-image: url('../../assets/img/illustrations/header.webp')) {
-  header {
-    background-image: url('../../assets/img/illustrations/header.png');
-  }
-}
 .parallax { 
   height: 100vh;
   background-attachment: fixed;
