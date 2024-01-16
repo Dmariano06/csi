@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { ImageloaderService } from '../imageloader.service';
 import { NavigationEnd, Router } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 
 
 
@@ -11,16 +12,17 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class FeaturesComponent  {
 
-  constructor( private imagePreloaderService: ImageloaderService,private router: Router) {}
+  constructor( private imagePreloaderService: ImageloaderService,private router: Router,private viewportScroller: ViewportScroller) {}
   navigateTo(route: string) {
     this.router.navigate([route]);
   this.scrollToTop();
 }
-scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+ scrollToTop() {
+    this.viewportScroller.scrollToPosition([0, 0]);
+  }
 
   ngOnInit(): void {
+    this.scrollToTop();
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         window.scrollTo(0, 0);
